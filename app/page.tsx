@@ -6,7 +6,13 @@ import type { LyricAnalysis } from "@/lib/analysis/types";
 import type { DeliveryLineGuide } from "@/lib/analysis/deliveryGuide";
 import type { RhymeGroup, RhymeSummary } from "@/lib/analysis/rhymeGroups";
 import { PracticePanel, LyricsWithGuide } from "@/components/PracticePanel";
+import { SongStructureEditor } from "@/components/SongStructureEditor";
 import { englishMixLabel, formatVowelTail } from "@/lib/ui/labels";
+import {
+  defaultStructureForArtist,
+  THEME_PRESETS,
+  type SongSectionConfig,
+} from "@/lib/llm/songStructure";
 
 type ArtistListItem = {
   slug: string;
@@ -39,6 +45,10 @@ export default function HomePage() {
 
   const [theme, setTheme] = useState("成り上がりとアンチへの返し");
   const [bars, setBars] = useState<4 | 8 | 16>(8);
+  const [generateFormat, setGenerateFormat] = useState<"bars" | "full">("full");
+  const [songSections, setSongSections] = useState<SongSectionConfig[]>(() =>
+    defaultStructureForArtist("masato-hayashi"),
+  );
   const [generated, setGenerated] = useState("");
   const [generateLoading, setGenerateLoading] = useState(false);
   const [generateError, setGenerateError] = useState("");
@@ -56,6 +66,7 @@ export default function HomePage() {
 
   useEffect(() => {
     if (DEFAULT_BPM[slug]) setBpm(DEFAULT_BPM[slug]);
+    setSongSections(defaultStructureForArtist(slug));
   }, [slug]);
 
   useEffect(() => {
@@ -113,7 +124,15 @@ export default function HomePage() {
       const res = await fetch("/api/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug, theme, bpm, bars, strongRhyme }),
+        body: JSON.stringify({
+          slug,
+          theme,
+          bpm,
+          bars,
+          format: generateFormat,
+          sections: generateFormat === "full" ? songSections : undefined,
+          strongRhyme,
+        }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "生成失敗");
@@ -364,9 +383,24 @@ export default function HomePage() {
           <section className="grid gap-6 lg:grid-cols-2">
             <Panel title="生成条件">
               <label className="mb-1 block text-sm text-zinc-400">テーマ</label>
+              {THEME_PRESETS[slug] && (
+                <div className="mb-2 flex flex-wrap gap-2">
+                  {THEME_PRESETS[slug].map((p) => (
+                    <button
+                      key={p.label}
+                      type="button"
+                      onClick={() => setTheme(p.theme)}
+                      className="rounded bg-zinc-800 px-2 py-1 text-xs hover:bg-zinc-700"
+                    >
+                      {p.label}
+                    </button>
+                  ))}
+                </div>
+              )}
               <input
                 value={theme}
                 onChange={(e) => setTheme(e.target.value)}
+                placeholder="例: Gangに愛はない。仲間に見せたい drama"
                 className="mb-4 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
               />
               <label className="mb-1 block text-sm text-zinc-400">
@@ -380,16 +414,39 @@ export default function HomePage() {
                 onChange={(e) => setBpm(Number(e.target.value))}
                 className="mb-4 w-full"
               />
-              <label className="mb-1 block text-sm text-zinc-400">行数</label>
+              <label className="mb-1 block text-sm text-zinc-400">生成モード</label>
               <select
-                value={bars}
-                onChange={(e) => setBars(Number(e.target.value) as 4 | 8 | 16)}
+                value={generateFormat}
+                onChange={(e) =>
+                  setGenerateFormat(e.target.value as "bars" | "full")
+                }
                 className="mb-4 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
               >
-                <option value={4}>4小節（約4行）</option>
-                <option value={8}>8小節（約8行）</option>
-                <option value={16}>16小節（約16行）</option>
+                <option value="full">曲全体（Intro / Verse / Hook…）</option>
+                <option value="bars">一部だけ（4 / 8 / 16 小節）</option>
               </select>
+              {generateFormat === "bars" ? (
+                <>
+                  <label className="mb-1 block text-sm text-zinc-400">行数</label>
+                  <select
+                    value={bars}
+                    onChange={(e) =>
+                      setBars(Number(e.target.value) as 4 | 8 | 16)
+                    }
+                    className="mb-4 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
+                  >
+                    <option value={4}>4小節（約4行）</option>
+                    <option value={8}>8小節（約8行）</option>
+                    <option value={16}>16小節（約16行）</option>
+                  </select>
+                </>
+              ) : (
+                <SongStructureEditor
+                  sections={songSections}
+                  onChange={setSongSections}
+                  artistSlug={slug}
+                />
+              )}
               <label className="mb-3 flex cursor-pointer items-center gap-2 text-sm text-zinc-300">
                 <input
                   type="checkbox"
@@ -406,10 +463,14 @@ export default function HomePage() {
                 className="rounded-lg bg-amber-500 px-4 py-2 font-medium text-black disabled:opacity-50"
               >
                 {generateLoading
-                  ? strongRhyme
-                    ? "韻を踏みながら生成中…"
-                    : "生成中…"
-                  : `${profile?.name ?? "アーティスト"}風に生成`}
+                  ? generateFormat === "full"
+                    ? "曲全体を生成中…（パートごとに数分かかります）"
+                    : strongRhyme
+                      ? "韻を踏みながら生成中…"
+                      : "生成中…"
+                  : generateFormat === "full"
+                    ? "曲全体を生成"
+                    : `${profile?.name ?? "アーティスト"}風に生成`}
               </button>
               {generateError && (
                 <p className="mt-3 text-sm text-red-400">{generateError}</p>
