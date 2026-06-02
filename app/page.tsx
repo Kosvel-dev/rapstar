@@ -42,6 +42,11 @@ export default function HomePage() {
   const [generated, setGenerated] = useState("");
   const [generateLoading, setGenerateLoading] = useState(false);
   const [generateError, setGenerateError] = useState("");
+  const [strongRhyme, setStrongRhyme] = useState(true);
+  const [generatedRhymeCoverage, setGeneratedRhymeCoverage] = useState<
+    number | null
+  >(null);
+  const [rhymeRefined, setRhymeRefined] = useState(false);
 
   const [rhymeQuery, setRhymeQuery] = useState("フロー");
   const [rhymes, setRhymes] = useState<
@@ -102,16 +107,20 @@ export default function HomePage() {
     setGenerateLoading(true);
     setGenerateError("");
     setGenerated("");
+    setGeneratedRhymeCoverage(null);
+    setRhymeRefined(false);
     try {
       const res = await fetch("/api/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug, theme, bpm, bars }),
+        body: JSON.stringify({ slug, theme, bpm, bars, strongRhyme }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "生成失敗");
       setGenerated(data.lyrics);
       setLyrics(data.lyrics);
+      setGeneratedRhymeCoverage(data.rhymeCoverage ?? null);
+      setRhymeRefined(Boolean(data.rhymeRefined));
     } catch (e) {
       setGenerateError(e instanceof Error ? e.message : "エラー");
     } finally {
@@ -381,13 +390,26 @@ export default function HomePage() {
                 <option value={8}>8小節（約8行）</option>
                 <option value={16}>16小節（約16行）</option>
               </select>
+              <label className="mb-3 flex cursor-pointer items-center gap-2 text-sm text-zinc-300">
+                <input
+                  type="checkbox"
+                  checked={strongRhyme}
+                  onChange={(e) => setStrongRhyme(e.target.checked)}
+                  className="rounded border-zinc-600"
+                />
+                韻を強めに生成（AABB + 韻候補 + 自動修正）
+              </label>
               <button
                 type="button"
                 onClick={runGenerate}
                 disabled={generateLoading}
                 className="rounded-lg bg-amber-500 px-4 py-2 font-medium text-black disabled:opacity-50"
               >
-                {generateLoading ? "生成中…" : `${profile?.name ?? "アーティスト"}風に生成`}
+                {generateLoading
+                  ? strongRhyme
+                    ? "韻を踏みながら生成中…"
+                    : "生成中…"
+                  : `${profile?.name ?? "アーティスト"}風に生成`}
               </button>
               {generateError && (
                 <p className="mt-3 text-sm text-red-400">{generateError}</p>
@@ -397,6 +419,13 @@ export default function HomePage() {
               </p>
             </Panel>
             <Panel title="生成結果">
+              {generatedRhymeCoverage !== null && (
+                <p className="mb-3 text-sm text-amber-300">
+                  韻カバー: {generatedRhymeCoverage}%
+                  {rhymeRefined && "（韻が弱かったので自動で行末を修正しました）"}
+                  {generatedRhymeCoverage >= 55 && !rhymeRefined && " — 韻がしっかり取れています"}
+                </p>
+              )}
               <pre className="whitespace-pre-wrap text-sm leading-relaxed text-zinc-200">
                 {generated || "ここに生成された歌詞が表示されます"}
               </pre>

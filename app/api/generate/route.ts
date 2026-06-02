@@ -13,6 +13,7 @@ export async function POST(request: Request) {
     bpm?: number;
     bars?: 4 | 8 | 16;
     referenceLine?: string;
+    strongRhyme?: boolean;
   };
 
   if (!body.slug || !body.theme?.trim()) {
@@ -25,15 +26,21 @@ export async function POST(request: Request) {
   try {
     const corpus = await loadArtistCorpus(body.slug);
     const profile = await buildArtistProfile(body.slug, corpus);
-    const lyrics = await generateLyricsInStyle({
+    const result = await generateLyricsInStyle({
       artistProfile: profile,
       theme: body.theme.trim(),
       bpm: body.bpm,
       bars: body.bars ?? 8,
       referenceLine: body.referenceLine,
+      strongRhyme: body.strongRhyme !== false,
     });
 
-    return NextResponse.json({ lyrics, profileName: profile.name });
+    return NextResponse.json({
+      lyrics: result.lyrics,
+      profileName: profile.name,
+      rhymeCoverage: result.rhymeCoverage,
+      rhymeRefined: result.rhymeRefined,
+    });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Generation failed";
     return NextResponse.json({ error: message }, { status: 500 });

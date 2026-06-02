@@ -1,6 +1,9 @@
 import { bpmFlowInstruction } from "@/lib/analysis/bpm";
 import type { ArtistProfile } from "@/lib/artist/types";
 import { deepseekChat } from "@/lib/llm/deepseekChat";
+import { measureRhymeCoverage, maybeRefineRhymes } from "@/lib/llm/refineRhymes";
+import { buildRhymePlan, type RhymeScheme } from "@/lib/llm/rhymePlan";
+import { formatVowelTail } from "@/lib/ui/labels";
 
 export type GenerateInStyleRequest = {
   artistProfile: ArtistProfile;
@@ -8,67 +11,111 @@ export type GenerateInStyleRequest = {
   bpm?: number;
   bars?: 4 | 8 | 16;
   referenceLine?: string;
+  /** 韻を強めに生成 + 不足時は自動修正 */
+  strongRhyme?: boolean;
+};
+
+export type GenerateInStyleResult = {
+  lyrics: string;
+  rhymeCoverage: number;
+  rhymeRefined: boolean;
 };
 
 export async function generateLyricsInStyle(
   req: GenerateInStyleRequest,
-): Promise<string> {
+): Promise<GenerateInStyleResult> {
   const bars = req.bars ?? 8;
   const bpm = req.bpm ?? 110;
   const profile = req.artistProfile;
+  const strongRhyme = req.strongRhyme !== false;
 
   const topWords = profile.vocabulary.topWords
     .slice(0, 15)
     .map((w) => w.word)
     .join("、");
 
-  const vowelTails = profile.rhyme.commonEndVowelTails
-    .slice(0, 6)
-    .map((v) => v.tail)
-    .join(" / ");
+  const artistTails = profile.rhyme.commonEndVowelTails.map((v) => v.tail);
+  const scheme: RhymeScheme = "AABB";
+  const rhymePlan = strongRhyme
+    ? await buildRhymePlan({
+        bars,
+        theme: req.theme,
+        artistVowelTails: artistTails,
+        scheme,
+      })
+    : null;
 
-  const system = `あなたは日本語ラップの作詞家です。
-指定アーティストの文体・韻・フロー・歌い方に寄せて歌詞を書きます。
-既存フレーズの丸写しは禁止。オリジナルだが特徴は再現してください。
+  const vowelHint =
+    artistTails.length > 0
+      ? artistTails.slice(0, 4).map((t) => formatVowelTail(t)).join(" / ")
+      : "オウ（ou） / アイ（ai）";
 
-【韻のルール — 最重要】
-- 2行ごと、または4行ごとに行末の母音韵を揃える（AABB または AAAA）
-- 同じ韻グループは最低2行以上
-- 内部韻（行の途中で同系統の音）も1〜2箇所入れる
-- 韻のために不自然な語順にはしない`;
+  const system = strongRhyme
+    ? `あなたは日本語ラップの作詞家です。韻（ライム）を最優先に歌詞を書きます。
+指定アーティストの文体に寄せつつ、行末の母音韵を必ずスキーム通りに揃えてください。
+既存フレーズの丸写しは禁止。
 
-  const rhymeInstruction = vowelTails
-    ? `このアーティストがよく使う韻尾母音: ${vowelTails} — 行末に意識して踏む`
-    : "行末の母音を2行単位で揃える";
+【韻の書き方 — 厳守】
+1. 各行の「最後の語」の読みの末尾2母音をスキームに合わせる
+2. 2行セットで同じ韻尾（AABB）— 1行目と2行目は同じ韻、3行目と4行目は別韻
+3. 韻候補語があれば行末に積極的に使う
+4. 韻のために1行を短く切る・語順を入れ替えるのはOK
+5. 内部韻（行中の母音の反復）も1〜2箇所
 
-  const user = [
+悪い例: 各行末がバラバラ（あ/い/う/え）
+良い例（AABB・ou）:
+  夜の街を駆け抜けるフロウ
+  誰も止められないこの行路
+  頂点を狙う俺のスタイル
+  アンチの声も全部サイレン`
+    : `あなたは日本語ラップの作詞家です。
+指定アーティストの文体・韻・フローに寄せて歌詞を書きます。
+2行ごとに行末の母音韵を揃える（AABB）。`;
+
+  const userParts = [
     `# アーティスト: ${profile.name}`,
     `## 文体サマリー\n${profile.delivery.styleSummary}`,
     `## 特徴\n${profile.delivery.traits.join("、") || "なし"}`,
     `## 語彙傾向\n${topWords}`,
-    `## ${rhymeInstruction}`,
+    strongRhyme && rhymePlan
+      ? rhymePlan.promptBlock
+      : `## 韻\nよく使う韻尾: ${vowelHint} — 2行ごとに揃える`,
     `## フロー\n平均 ${profile.flow.averageMorasPerLine} モーラ/行、均一性 ${profile.flow.uniformityScore}/100`,
     `## 英語混ぜ\n${profile.delivery.englishMixLevel}`,
-    `## 歌い方\nシャウト・アドリブ・英語フレーズを適所に（フックは強め）`,
     "",
     `# 今回の条件`,
     `テーマ: ${req.theme}`,
     bpmFlowInstruction(bpm),
-    `行数: 約${bars}行`,
+    `行数: 正確に ${bars} 行（セクション見出し [Verse] 等は行数に含めない）`,
     req.referenceLine ? `参考雰囲気: ${req.referenceLine}` : "",
     "",
-    "出力: 歌詞本文のみ。[Verse] [Hook] 等OK。韻が取れていることを行末で意識。",
-  ]
-    .filter(Boolean)
-    .join("\n");
+    strongRhyme
+      ? "出力: 歌詞本文のみ。ラップ行は必ず指定行数。各行末の韻尾をスキーム通りに。"
+      : "出力: 歌詞本文のみ。[Verse] [Hook] 等OK。",
+  ].filter(Boolean);
 
-  return deepseekChat({
+  const draft = await deepseekChat({
     messages: [
       { role: "system", content: system },
-      { role: "user", content: user },
+      { role: "user", content: userParts.join("\n") },
     ],
-    maxTokens: bars <= 4 ? 600 : bars <= 8 ? 1000 : 1500,
+    maxTokens: bars <= 4 ? 700 : bars <= 8 ? 1100 : 1600,
     thinking: false,
-    temperature: 0.85,
+    temperature: strongRhyme ? 0.78 : 0.85,
   });
+
+  if (!strongRhyme || !rhymePlan) {
+    const coverage = await measureRhymeCoverage(draft);
+    return { lyrics: draft, rhymeCoverage: coverage, rhymeRefined: false };
+  }
+
+  const { lyrics, coverage, refined } = await maybeRefineRhymes({
+    lyrics: draft,
+    rhymePlan,
+    profile,
+    theme: req.theme,
+    enabled: true,
+  });
+
+  return { lyrics, rhymeCoverage: coverage, rhymeRefined: refined };
 }
