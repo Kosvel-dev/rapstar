@@ -1,0 +1,152 @@
+{
+  "artist": {
+    "id": 2896246,
+    "name": "Masato Hayashi",
+    "url": "https://genius.com/artists/Masato-hayashi",
+    "genius_song_count": 23,
+    "lyrics_complete_count": 23,
+    "lyrics_missing_count": 0
+  },
+  "fetched_at": "2026-06-02T02:18:24.027567+00:00",
+  "songs_with_lyrics": [
+    {
+      "id": 6011224,
+      "title": "2017 Good Love",
+      "release_date": "October 1, 2020",
+      "url": "https://genius.com/Joe-iron-2017-good-love-lyrics"
+    },
+    {
+      "id": 12845611,
+      "title": "6.12inches",
+      "release_date": "November 26, 2025",
+      "url": "https://genius.com/Airie-612inches-lyrics"
+    },
+    {
+      "id": 12849737,
+      "title": "Ain’t No Love",
+      "release_date": "March 4, 2025",
+      "url": "https://genius.com/Masato-hayashi-and-nosh-aint-no-love-lyrics"
+    },
+    {
+      "id": 12797010,
+      "title": "BOOM!",
+      "release_date": "June 20, 2025",
+      "url": "https://genius.com/Evp-boom-lyrics"
+    },
+    {
+      "id": 4465515,
+      "title": "Buri Buri",
+      "release_date": "October 4, 2018",
+      "url": "https://genius.com/G-yamazawa-buri-buri-lyrics"
+    },
+    {
+      "id": 10421035,
+      "title": "By Your Side",
+      "release_date": "August 23, 2023",
+      "url": "https://genius.com/Masato-hayashi-by-your-side-lyrics"
+    },
+    {
+      "id": 12577184,
+      "title": "Crazy City",
+      "release_date": "October 18, 2025",
+      "url": "https://genius.com/Dj-tatsuki-crazy-city-lyrics"
+    },
+    {
+      "id": 4894766,
+      "title": "EMPTY",
+      "release_date": "July 3, 2019",
+      "url": "https://genius.com/Masato-hayashi-empty-lyrics"
+    },
+    {
+      "id": 11139412,
+      "title": "Eyes on you",
+      "release_date": "November 20, 2024",
+      "url": "https://genius.com/Amo-jpn-eyes-on-you-lyrics"
+    },
+    {
+      "id": 11317499,
+      "title": "From The Inside",
+      "release_date": "January 8, 2025",
+      "url": "https://genius.com/Masato-hayashi-from-the-inside-lyrics"
+    },
+    {
+      "id": 6001739,
+      "title": "Good Die Young",
+      "release_date": "April 25, 2018",
+      "url": "https://genius.com/Dj-chari-and-dj-tatsuki-good-die-young-lyrics"
+    },
+    {
+      "id": 12671946,
+      "title": "HIROYUKI",
+      "release_date": "January 28, 2026",
+      "url": "https://genius.com/Masato-hayashi-hiroyuki-lyrics"
+    },
+    {
+      "id": 12601144,
+      "title": "HOOD STAGE",
+      "release_date": "November 1, 2025",
+      "url": "https://genius.com/Masato-hayashi-hood-stage-lyrics"
+    },
+    {
+      "id": 7239571,
+      "title": "KEEP IT COMING",
+      "release_date": "September 15, 2021",
+      "url": "https://genius.com/Taeyoung-boy-keep-it-coming-lyrics"
+    },
+    {
+      "id": 9155675,
+      "title": "マトモになれない (Matomo ni Narenai)",
+      "release_date": "March 30, 2022",
+      "url": "https://genius.com/Masato-hayashi-matomo-ni-narenai-lyrics"
+    },
+    {
+      "id": 10624536,
+      "title": "Moonlight",
+      "release_date": "June 19, 2024",
+      "url": "https://genius.com/Masato-hayashi-moonlight-lyrics"
+    },
+    {
+      "id": 9155674,
+      "title": "Process",
+      "release_date": "April 27, 2022",
+      "url": "https://genius.com/Masato-hayashi-process-lyrics"
+    },
+    {
+      "id": 12707513,
+      "title": "Remember Days",
+      "release_date": "September 1, 2025",
+      "url": "https://genius.com/Rykey-remember-days-lyrics"
+    },
+    {
+      "id": 7957210,
+      "title": "やるしかねえ (Yarushikane)",
+      "release_date": "February 23, 2022",
+      "url": "https://genius.com/Masato-hayashi-yarushikane-lyrics"
+    },
+    {
+      "id": 9155676,
+      "title": "Yen Yen",
+      "release_date": "March 4, 2022",
+      "url": "https://genius.com/Masato-hayashi-yen-yen-lyrics"
+    },
+    {
+      "id": 6041934,
+      "title": "ビッチと会う (Bitch To Au)",
+      "release_date": "August 18, 2017",
+      "url": "https://genius.com/Dj-chari-and-dj-tatsuki-bitch-to-au-lyrics"
+    },
+    {
+      "id": 9883399,
+      "title": "死ぬほど (Shinuhodo)",
+      "release_date": "December 6, 2023",
+      "url": "https://genius.com/Masato-hayashi-shinuhodo-lyrics"
+    },
+    {
+      "id": 3295699,
+      "title": "死ぬまで (Shinu Made)",
+      "release_date": "October 30, 2017",
+      "url": "https://genius.com/Direcky-shinu-made-lyrics"
+    }
+  ],
+  "songs_without_lyrics": []
+}

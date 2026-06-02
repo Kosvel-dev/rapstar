@@ -1,0 +1,407 @@
+{
+  "slug": "masato-hayashi",
+  "name": "Masato Hayashi",
+  "geniusUrl": "https://genius.com/artists/Masato-hayashi",
+  "songCount": 23,
+  "lineCount": 1606,
+  "flow": {
+    "averageMorasPerLine": 7.3,
+    "stdDevMoras": 4.3,
+    "uniformityScore": 48,
+    "typicalBpmRange": [
+      90,
+      130
+    ],
+    "flowStyles": [
+      {
+        "bpmRange": "80",
+        "targetMorasPerBar": 10,
+        "label": "標準フロー",
+        "description": "BPM 80（ミドル） / 4/4 拍子 / 1行 ≒ 10 モーラ（ひらがな10文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "95",
+        "targetMorasPerBar": 8,
+        "label": "相性◎",
+        "description": "BPM 95（ミドル） / 4/4 拍子 / 1行 ≒ 8 モーラ（ひらがな8文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "110",
+        "targetMorasPerBar": 7,
+        "label": "相性◎",
+        "description": "BPM 110（速め） / 4/4 拍子 / 1行 ≒ 7 モーラ（ひらがな7文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "128",
+        "targetMorasPerBar": 6,
+        "label": "相性◎",
+        "description": "BPM 128（速め） / 4/4 拍子 / 1行 ≒ 6 モーラ（ひらがな6文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "145",
+        "targetMorasPerBar": 5,
+        "label": "標準フロー",
+        "description": "BPM 145（ハイテンポ） / 4/4 拍子 / 1行 ≒ 5 モーラ（ひらがな5文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      }
+    ]
+  },
+  "rhyme": {
+    "averageEndRhymeScore": 0,
+    "averageInternalRhymeScore": 0,
+    "commonEndVowelTails": [
+      {
+        "tail": "ai",
+        "count": 134
+      },
+      {
+        "tail": "aa",
+        "count": 82
+      },
+      {
+        "tail": "ou",
+        "count": 69
+      },
+      {
+        "tail": "ee",
+        "count": 69
+      },
+      {
+        "tail": "au",
+        "count": 54
+      },
+      {
+        "tail": "eu",
+        "count": 53
+      },
+      {
+        "tail": "ae",
+        "count": 52
+      },
+      {
+        "tail": "ii",
+        "count": 45
+      },
+      {
+        "tail": "eo",
+        "count": 42
+      },
+      {
+        "tail": "ia",
+        "count": 39
+      },
+      {
+        "tail": "oi",
+        "count": 33
+      },
+      {
+        "tail": "io",
+        "count": 31
+      }
+    ]
+  },
+  "vocabulary": {
+    "topWords": [
+      {
+        "word": "yeah",
+        "count": 59
+      },
+      {
+        "word": "boom",
+        "count": 55
+      },
+      {
+        "word": "you",
+        "count": 35
+      },
+      {
+        "word": "Wow",
+        "count": 32
+      },
+      {
+        "word": "know",
+        "count": 32
+      },
+      {
+        "word": "Boom",
+        "count": 29
+      },
+      {
+        "word": "Yeah",
+        "count": 26
+      },
+      {
+        "word": "don",
+        "count": 24
+      },
+      {
+        "word": "huh",
+        "count": 20
+      },
+      {
+        "word": "wanna",
+        "count": 17
+      },
+      {
+        "word": "your",
+        "count": 15
+      },
+      {
+        "word": "side",
+        "count": 15
+      },
+      {
+        "word": "god",
+        "count": 15
+      },
+      {
+        "word": "way",
+        "count": 15
+      },
+      {
+        "word": "too",
+        "count": 13
+      },
+      {
+        "word": "pussy",
+        "count": 13
+      },
+      {
+        "word": "die",
+        "count": 12
+      },
+      {
+        "word": "All",
+        "count": 12
+      },
+      {
+        "word": "friend",
+        "count": 12
+      },
+      {
+        "word": "美人",
+        "count": 12
+      },
+      {
+        "word": "talk",
+        "count": 12
+      },
+      {
+        "word": "much",
+        "count": 12
+      },
+      {
+        "word": "crazy",
+        "count": 11
+      },
+      {
+        "word": "bitch",
+        "count": 10
+      },
+      {
+        "word": "時間は",
+        "count": 10
+      },
+      {
+        "word": "Ride",
+        "count": 10
+      },
+      {
+        "word": "that",
+        "count": 9
+      },
+      {
+        "word": "moonlight",
+        "count": 9
+      },
+      {
+        "word": "運命",
+        "count": 9
+      },
+      {
+        "word": "Hmmm",
+        "count": 9
+      }
+    ],
+    "englishTokenRatio": 0.554,
+    "uniqueWordCount": 30
+  },
+  "delivery": {
+    "traits": [
+      "日英ミックス",
+      "コール＆レスポンス型フック",
+      "英語アドリブでテンションを上げる",
+      "アンチ・世間への言及が多い",
+      "成り上がり・野心テーマ"
+    ],
+    "adlibPatterns": [
+      {
+        "pattern": "英語フック・アドリブ",
+        "count": 108
+      },
+      {
+        "pattern": "Ah huh 系レスポンス",
+        "count": 20
+      },
+      {
+        "pattern": "括弧内アドリブ",
+        "count": 120
+      },
+      {
+        "pattern": "伸ばし・余韻",
+        "count": 12
+      },
+      {
+        "pattern": "連続笑い声",
+        "count": 1
+      },
+      {
+        "pattern": "ラップ用語混ぜ",
+        "count": 5
+      }
+    ],
+    "englishMixLevel": "high",
+    "punchlineDensity": 0.01,
+    "styleSummary": "日英ミックス、コール＆レスポンス型フック、英語アドリブでテンションを上げる、アンチ・世間への言及が多い、成り上がり・野心テーマ。英語フレーズを随所に挟む。フックで同じフレーズを反復しやすい"
+  },
+  "songs": [
+    {
+      "id": 6011224,
+      "title": "2017 Good Love",
+      "releaseDate": "October 1, 2020",
+      "url": "https://genius.com/Joe-iron-2017-good-love-lyrics"
+    },
+    {
+      "id": 12845611,
+      "title": "6.12inches",
+      "releaseDate": "November 26, 2025",
+      "url": "https://genius.com/Airie-612inches-lyrics"
+    },
+    {
+      "id": 12849737,
+      "title": "Ain’t No Love",
+      "releaseDate": "March 4, 2025",
+      "url": "https://genius.com/Masato-hayashi-and-nosh-aint-no-love-lyrics"
+    },
+    {
+      "id": 12797010,
+      "title": "BOOM!",
+      "releaseDate": "June 20, 2025",
+      "url": "https://genius.com/Evp-boom-lyrics"
+    },
+    {
+      "id": 4465515,
+      "title": "Buri Buri",
+      "releaseDate": "October 4, 2018",
+      "url": "https://genius.com/G-yamazawa-buri-buri-lyrics"
+    },
+    {
+      "id": 10421035,
+      "title": "By Your Side",
+      "releaseDate": "August 23, 2023",
+      "url": "https://genius.com/Masato-hayashi-by-your-side-lyrics"
+    },
+    {
+      "id": 12577184,
+      "title": "Crazy City",
+      "releaseDate": "October 18, 2025",
+      "url": "https://genius.com/Dj-tatsuki-crazy-city-lyrics"
+    },
+    {
+      "id": 4894766,
+      "title": "EMPTY",
+      "releaseDate": "July 3, 2019",
+      "url": "https://genius.com/Masato-hayashi-empty-lyrics"
+    },
+    {
+      "id": 11139412,
+      "title": "Eyes on you",
+      "releaseDate": "November 20, 2024",
+      "url": "https://genius.com/Amo-jpn-eyes-on-you-lyrics"
+    },
+    {
+      "id": 11317499,
+      "title": "From The Inside",
+      "releaseDate": "January 8, 2025",
+      "url": "https://genius.com/Masato-hayashi-from-the-inside-lyrics"
+    },
+    {
+      "id": 6001739,
+      "title": "Good Die Young",
+      "releaseDate": "April 25, 2018",
+      "url": "https://genius.com/Dj-chari-and-dj-tatsuki-good-die-young-lyrics"
+    },
+    {
+      "id": 12671946,
+      "title": "HIROYUKI",
+      "releaseDate": "January 28, 2026",
+      "url": "https://genius.com/Masato-hayashi-hiroyuki-lyrics"
+    },
+    {
+      "id": 12601144,
+      "title": "HOOD STAGE",
+      "releaseDate": "November 1, 2025",
+      "url": "https://genius.com/Masato-hayashi-hood-stage-lyrics"
+    },
+    {
+      "id": 7239571,
+      "title": "KEEP IT COMING",
+      "releaseDate": "September 15, 2021",
+      "url": "https://genius.com/Taeyoung-boy-keep-it-coming-lyrics"
+    },
+    {
+      "id": 9155675,
+      "title": "マトモになれない (Matomo ni Narenai)",
+      "releaseDate": "March 30, 2022",
+      "url": "https://genius.com/Masato-hayashi-matomo-ni-narenai-lyrics"
+    },
+    {
+      "id": 10624536,
+      "title": "Moonlight",
+      "releaseDate": "June 19, 2024",
+      "url": "https://genius.com/Masato-hayashi-moonlight-lyrics"
+    },
+    {
+      "id": 9155674,
+      "title": "Process",
+      "releaseDate": "April 27, 2022",
+      "url": "https://genius.com/Masato-hayashi-process-lyrics"
+    },
+    {
+      "id": 12707513,
+      "title": "Remember Days",
+      "releaseDate": "September 1, 2025",
+      "url": "https://genius.com/Rykey-remember-days-lyrics"
+    },
+    {
+      "id": 7957210,
+      "title": "やるしかねえ (Yarushikane)",
+      "releaseDate": "February 23, 2022",
+      "url": "https://genius.com/Masato-hayashi-yarushikane-lyrics"
+    },
+    {
+      "id": 9155676,
+      "title": "Yen Yen",
+      "releaseDate": "March 4, 2022",
+      "url": "https://genius.com/Masato-hayashi-yen-yen-lyrics"
+    },
+    {
+      "id": 6041934,
+      "title": "ビッチと会う (Bitch To Au)",
+      "releaseDate": "August 18, 2017",
+      "url": "https://genius.com/Dj-chari-and-dj-tatsuki-bitch-to-au-lyrics"
+    },
+    {
+      "id": 9883399,
+      "title": "死ぬほど (Shinuhodo)",
+      "releaseDate": "December 6, 2023",
+      "url": "https://genius.com/Masato-hayashi-shinuhodo-lyrics"
+    },
+    {
+      "id": 3295699,
+      "title": "死ぬまで (Shinu Made)",
+      "releaseDate": "October 30, 2017",
+      "url": "https://genius.com/Direcky-shinu-made-lyrics"
+    }
+  ],
+  "generatedAt": "2026-06-02T02:24:47.704Z"
+}
