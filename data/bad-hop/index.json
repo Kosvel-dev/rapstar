@@ -1,0 +1,692 @@
+{
+  "artist": {
+    "id": 611655,
+    "name": "BAD HOP",
+    "url": "https://genius.com/artists/Bad-hop",
+    "genius_song_count": 113,
+    "lyrics_complete_count": 113,
+    "lyrics_missing_count": 0
+  },
+  "fetched_at": "2026-06-02T05:12:39.090232+00:00",
+  "songs_with_lyrics": [
+    {
+      "id": 3648924,
+      "title": "Kawasaki Drift",
+      "release_date": "April 5, 2018",
+      "url": "https://genius.com/Bad-hop-kawasaki-drift-lyrics"
+    },
+    {
+      "id": 5817321,
+      "title": "High Land",
+      "release_date": "August 7, 2020",
+      "url": "https://genius.com/Bad-hop-high-land-lyrics"
+    },
+    {
+      "id": 6247243,
+      "title": "Suicide (Remix)",
+      "release_date": "December 6, 2020",
+      "url": "https://genius.com/Bad-hop-suicide-remix-lyrics"
+    },
+    {
+      "id": 9258139,
+      "title": "Champion Road",
+      "release_date": "June 21, 2023",
+      "url": "https://genius.com/Bad-hop-champion-road-lyrics"
+    },
+    {
+      "id": 9971668,
+      "title": "guidance",
+      "release_date": "January 28, 2024",
+      "url": "https://genius.com/Bad-hop-guidance-lyrics"
+    },
+    {
+      "id": 3325690,
+      "title": "Ocean View",
+      "release_date": "September 5, 2017",
+      "url": "https://genius.com/Bad-hop-ocean-view-lyrics"
+    },
+    {
+      "id": 10052964,
+      "title": "Day N Night",
+      "release_date": "February 14, 2024",
+      "url": "https://genius.com/Bad-hop-day-n-night-lyrics"
+    },
+    {
+      "id": 10046197,
+      "title": "B2B",
+      "release_date": "February 11, 2024",
+      "url": "https://genius.com/Bad-hop-b2b-lyrics"
+    },
+    {
+      "id": 10189250,
+      "title": "Fam*ly",
+      "release_date": "March 22, 2024",
+      "url": "https://genius.com/Bad-hop-famly-lyrics"
+    },
+    {
+      "id": 3615790,
+      "title": "2018",
+      "release_date": "March 9, 2018",
+      "url": "https://genius.com/Bad-hop-2018-lyrics"
+    },
+    {
+      "id": 6400987,
+      "title": "Friends",
+      "release_date": "February 11, 2021",
+      "url": "https://genius.com/Bad-hop-friends-lyrics"
+    },
+    {
+      "id": 5390502,
+      "title": "Hood Gospel",
+      "release_date": "March 26, 2020",
+      "url": "https://genius.com/Bad-hop-hood-gospel-lyrics"
+    },
+    {
+      "id": 10034502,
+      "title": "Last Party Never End",
+      "release_date": "February 9, 2024",
+      "url": "https://genius.com/Bad-hop-last-party-never-end-lyrics"
+    },
+    {
+      "id": 5033770,
+      "title": "Foreign",
+      "release_date": "November 15, 2019",
+      "url": "https://genius.com/Bad-hop-foreign-lyrics"
+    },
+    {
+      "id": 2382271,
+      "title": "B.H.G",
+      "release_date": null,
+      "url": "https://genius.com/Bad-hop-bhg-lyrics"
+    },
+    {
+      "id": 5817322,
+      "title": "Bayside Dream",
+      "release_date": "August 6, 2020",
+      "url": "https://genius.com/Bad-hop-bayside-dream-lyrics"
+    },
+    {
+      "id": 2445559,
+      "title": "Liberty",
+      "release_date": null,
+      "url": "https://genius.com/Bad-hop-liberty-lyrics"
+    },
+    {
+      "id": 3325596,
+      "title": "Super Car",
+      "release_date": "September 1, 2017",
+      "url": "https://genius.com/Bad-hop-super-car-lyrics"
+    },
+    {
+      "id": 3325530,
+      "title": "Mobb Life",
+      "release_date": "August 27, 2017",
+      "url": "https://genius.com/Bad-hop-mobb-life-lyrics"
+    },
+    {
+      "id": 3325420,
+      "title": "これ以外 (Koreigai)",
+      "release_date": "September 29, 2017",
+      "url": "https://genius.com/Bad-hop-koreigai-lyrics"
+    },
+    {
+      "id": 5200279,
+      "title": "Prologue",
+      "release_date": "November 11, 2018",
+      "url": "https://genius.com/Bad-hop-prologue-lyrics"
+    },
+    {
+      "id": 10052954,
+      "title": "South Side Night",
+      "release_date": "February 7, 2024",
+      "url": "https://genius.com/Bad-hop-south-side-night-lyrics"
+    },
+    {
+      "id": 10167932,
+      "title": "SOHO",
+      "release_date": "March 22, 2024",
+      "url": "https://genius.com/Bad-hop-soho-lyrics"
+    },
+    {
+      "id": 5817318,
+      "title": "Suicide",
+      "release_date": "August 7, 2020",
+      "url": "https://genius.com/Bad-hop-suicide-lyrics"
+    },
+    {
+      "id": 10049083,
+      "title": "4L",
+      "release_date": "February 12, 2024",
+      "url": "https://genius.com/Bad-hop-4l-lyrics"
+    },
+    {
+      "id": 6400985,
+      "title": "Chop Stick (Remix)",
+      "release_date": "January 24, 2021",
+      "url": "https://genius.com/Bad-hop-chop-stick-remix-lyrics"
+    },
+    {
+      "id": 10182056,
+      "title": "THE FLAME",
+      "release_date": "March 19, 2024",
+      "url": "https://genius.com/Bad-hop-the-flame-lyrics"
+    },
+    {
+      "id": 2376217,
+      "title": "Chain Gang",
+      "release_date": null,
+      "url": "https://genius.com/Bad-hop-chain-gang-lyrics"
+    },
+    {
+      "id": 9855228,
+      "title": "Locker",
+      "release_date": "February 9, 2024",
+      "url": "https://genius.com/Bad-hop-locker-lyrics"
+    },
+    {
+      "id": 10071689,
+      "title": "Mukaijima",
+      "release_date": "February 19, 2024",
+      "url": "https://genius.com/Bad-hop-mukaijima-lyrics"
+    },
+    {
+      "id": 6400983,
+      "title": "Rusty Knife",
+      "release_date": "February 22, 2021",
+      "url": "https://genius.com/Bad-hop-rusty-knife-lyrics"
+    },
+    {
+      "id": 10079280,
+      "title": "Empire Of The Sun",
+      "release_date": "February 20, 2024",
+      "url": "https://genius.com/Bad-hop-empire-of-the-sun-lyrics"
+    },
+    {
+      "id": 5033600,
+      "title": "JET",
+      "release_date": "November 15, 2019",
+      "url": "https://genius.com/Bad-hop-jet-lyrics"
+    },
+    {
+      "id": 10034498,
+      "title": "TOKYO DOME CYPHER",
+      "release_date": "February 9, 2024",
+      "url": "https://genius.com/Bad-hop-tokyo-dome-cypher-lyrics"
+    },
+    {
+      "id": 3327896,
+      "title": "I Feel Like Goku",
+      "release_date": "March 14, 2017",
+      "url": "https://genius.com/Bad-hop-i-feel-like-goku-lyrics"
+    },
+    {
+      "id": 3615718,
+      "title": "White T-shirt",
+      "release_date": "March 15, 2016",
+      "url": "https://genius.com/Bad-hop-white-t-shirt-lyrics"
+    },
+    {
+      "id": 10034499,
+      "title": "IKEGAMI BOYZ",
+      "release_date": "February 9, 2024",
+      "url": "https://genius.com/Bad-hop-ikegami-boyz-lyrics"
+    },
+    {
+      "id": 2376179,
+      "title": "New Root",
+      "release_date": "July 2, 2015",
+      "url": "https://genius.com/Bad-hop-new-root-lyrics"
+    },
+    {
+      "id": 5033694,
+      "title": "Poppin",
+      "release_date": "November 15, 2019",
+      "url": "https://genius.com/Bad-hop-poppin-lyrics"
+    },
+    {
+      "id": 5033644,
+      "title": "Double Up",
+      "release_date": "November 15, 2019",
+      "url": "https://genius.com/Bad-hop-double-up-lyrics"
+    },
+    {
+      "id": 5817323,
+      "title": "Super Wave",
+      "release_date": "August 7, 2020",
+      "url": "https://genius.com/Bad-hop-super-wave-lyrics"
+    },
+    {
+      "id": 8363539,
+      "title": "CALLIN’",
+      "release_date": "September 8, 2022",
+      "url": "https://genius.com/Bad-hop-callin-lyrics"
+    },
+    {
+      "id": 5033866,
+      "title": "House Party",
+      "release_date": null,
+      "url": "https://genius.com/Bad-hop-house-party-lyrics"
+    },
+    {
+      "id": 10185695,
+      "title": "ONE PAN",
+      "release_date": "January 21, 2024",
+      "url": "https://genius.com/Bad-hop-one-pan-lyrics"
+    },
+    {
+      "id": 10068299,
+      "title": "8BALL CYPHER",
+      "release_date": "February 18, 2024",
+      "url": "https://genius.com/Bad-hop-and-nitro-microphone-underground-8ball-cypher-lyrics"
+    },
+    {
+      "id": 5817313,
+      "title": "The Lead",
+      "release_date": "August 7, 2020",
+      "url": "https://genius.com/Bad-hop-the-lead-lyrics"
+    },
+    {
+      "id": 5817315,
+      "title": "BAT MAN",
+      "release_date": "August 7, 2020",
+      "url": "https://genius.com/Bad-hop-bat-man-lyrics"
+    },
+    {
+      "id": 6400982,
+      "title": "BAT MAN (Remix)",
+      "release_date": "February 22, 2021",
+      "url": "https://genius.com/Bad-hop-bat-man-remix-lyrics"
+    },
+    {
+      "id": 10064233,
+      "title": "Shoot My Shot",
+      "release_date": "February 17, 2024",
+      "url": "https://genius.com/Bad-hop-shoot-my-shot-lyrics"
+    },
+    {
+      "id": 2376738,
+      "title": "Stay",
+      "release_date": null,
+      "url": "https://genius.com/Bad-hop-stay-lyrics"
+    },
+    {
+      "id": 10079306,
+      "title": "We Rich",
+      "release_date": "February 21, 2024",
+      "url": "https://genius.com/Bad-hop-we-rich-lyrics"
+    },
+    {
+      "id": 5813826,
+      "title": "Wanted List",
+      "release_date": "July 25, 2020",
+      "url": "https://genius.com/Bad-hop-wanted-list-lyrics"
+    },
+    {
+      "id": 3333834,
+      "title": "口だけ (Kuchidake)",
+      "release_date": "August 29, 2017",
+      "url": "https://genius.com/Bad-hop-kuchidake-lyrics"
+    },
+    {
+      "id": 8299106,
+      "title": "MONEY MAN",
+      "release_date": "August 27, 2022",
+      "url": "https://genius.com/Bad-hop-money-man-lyrics"
+    },
+    {
+      "id": 10034501,
+      "title": "Super Car2",
+      "release_date": "February 9, 2024",
+      "url": "https://genius.com/Bad-hop-super-car2-lyrics"
+    },
+    {
+      "id": 6393571,
+      "title": "No Melody",
+      "release_date": "January 18, 2021",
+      "url": "https://genius.com/Bad-hop-no-melody-lyrics"
+    },
+    {
+      "id": 5203475,
+      "title": "YAGI",
+      "release_date": "November 2, 2018",
+      "url": "https://genius.com/Bad-hop-yagi-lyrics"
+    },
+    {
+      "id": 5033661,
+      "title": "ICHIMANYEN",
+      "release_date": "November 15, 2019",
+      "url": "https://genius.com/Bad-hop-ichimanyen-lyrics"
+    },
+    {
+      "id": 3329953,
+      "title": "Jam Squad",
+      "release_date": "March 9, 2016",
+      "url": "https://genius.com/Bad-hop-jam-squad-lyrics"
+    },
+    {
+      "id": 10189249,
+      "title": "KAWASAKI SONG",
+      "release_date": "March 23, 2024",
+      "url": "https://genius.com/Bad-hop-kawasaki-song-lyrics"
+    },
+    {
+      "id": 5817316,
+      "title": "Project Boy",
+      "release_date": "August 7, 2020",
+      "url": "https://genius.com/Bad-hop-project-boy-lyrics"
+    },
+    {
+      "id": 10064102,
+      "title": "Hell Yeah",
+      "release_date": "January 14, 2024",
+      "url": "https://genius.com/Bad-hop-hell-yeah-lyrics"
+    },
+    {
+      "id": 5191068,
+      "title": "Born This Way",
+      "release_date": "July 4, 2019",
+      "url": "https://genius.com/Bad-hop-born-this-way-lyrics"
+    },
+    {
+      "id": 5817319,
+      "title": "Chop Stick",
+      "release_date": "August 7, 2020",
+      "url": "https://genius.com/Bad-hop-chop-stick-lyrics"
+    },
+    {
+      "id": 5194139,
+      "title": "Life Style",
+      "release_date": "March 15, 2016",
+      "url": "https://genius.com/Bad-hop-life-style-lyrics"
+    },
+    {
+      "id": 3326100,
+      "title": "Handz Up",
+      "release_date": "August 29, 2017",
+      "url": "https://genius.com/Bad-hop-handz-up-lyrics"
+    },
+    {
+      "id": 5033865,
+      "title": "Diamond",
+      "release_date": "December 29, 2017",
+      "url": "https://genius.com/Bad-hop-diamond-lyrics"
+    },
+    {
+      "id": 5033889,
+      "title": "Asian Doll",
+      "release_date": "September 6, 2017",
+      "url": "https://genius.com/Bad-hop-asian-doll-lyrics"
+    },
+    {
+      "id": 3649186,
+      "title": "Mobb Life Tour",
+      "release_date": "April 1, 2018",
+      "url": "https://genius.com/Bad-hop-mobb-life-tour-lyrics"
+    },
+    {
+      "id": 5817320,
+      "title": "18",
+      "release_date": "August 7, 2020",
+      "url": "https://genius.com/Bad-hop-18-lyrics"
+    },
+    {
+      "id": 5813837,
+      "title": "My Turn",
+      "release_date": "July 28, 2020",
+      "url": "https://genius.com/Bad-hop-my-turn-lyrics"
+    },
+    {
+      "id": 5817314,
+      "title": "Round One",
+      "release_date": "August 2, 2020",
+      "url": "https://genius.com/Bad-hop-round-one-lyrics"
+    },
+    {
+      "id": 3325611,
+      "title": "Gucci Scarf",
+      "release_date": "August 29, 2017",
+      "url": "https://genius.com/Bad-hop-gucci-scarf-lyrics"
+    },
+    {
+      "id": 10034503,
+      "title": "OMW",
+      "release_date": "February 9, 2024",
+      "url": "https://genius.com/Bad-hop-omw-lyrics"
+    },
+    {
+      "id": 5203357,
+      "title": "No Sleep",
+      "release_date": "October 29, 2018",
+      "url": "https://genius.com/Bad-hop-no-sleep-lyrics"
+    },
+    {
+      "id": 5817317,
+      "title": "May Day",
+      "release_date": "August 7, 2020",
+      "url": "https://genius.com/Bad-hop-may-day-lyrics"
+    },
+    {
+      "id": 8314898,
+      "title": "Casablanca",
+      "release_date": "August 21, 2022",
+      "url": "https://genius.com/Bad-hop-casablanca-lyrics"
+    },
+    {
+      "id": 5200336,
+      "title": "No New Friends",
+      "release_date": "October 26, 2018",
+      "url": "https://genius.com/Bad-hop-no-new-friends-lyrics"
+    },
+    {
+      "id": 5033887,
+      "title": "3LDK",
+      "release_date": "September 6, 2017",
+      "url": "https://genius.com/Bad-hop-3ldk-lyrics"
+    },
+    {
+      "id": 5817272,
+      "title": "Choice",
+      "release_date": "July 30, 2020",
+      "url": "https://genius.com/Bad-hop-choice-lyrics"
+    },
+    {
+      "id": 10189251,
+      "title": "NAMBA",
+      "release_date": "March 23, 2024",
+      "url": "https://genius.com/Bad-hop-namba-lyrics"
+    },
+    {
+      "id": 10189253,
+      "title": "B-Boy",
+      "release_date": "March 22, 2024",
+      "url": "https://genius.com/Bad-hop-b-boy-lyrics"
+    },
+    {
+      "id": 5033745,
+      "title": "Dead Coaster",
+      "release_date": "November 15, 2019",
+      "url": "https://genius.com/Bad-hop-dead-coaster-lyrics"
+    },
+    {
+      "id": 8363540,
+      "title": "She’s Bad",
+      "release_date": "September 8, 2022",
+      "url": "https://genius.com/Bad-hop-shes-bad-lyrics"
+    },
+    {
+      "id": 6400984,
+      "title": "Championship",
+      "release_date": "January 21, 2021",
+      "url": "https://genius.com/Bad-hop-championship-lyrics"
+    },
+    {
+      "id": 3330225,
+      "title": "Black Bandana",
+      "release_date": "August 29, 2017",
+      "url": "https://genius.com/Bad-hop-black-bandana-lyrics"
+    },
+    {
+      "id": 10052989,
+      "title": "Lonely Child",
+      "release_date": "February 14, 2024",
+      "url": "https://genius.com/Bad-hop-lonely-child-lyrics"
+    },
+    {
+      "id": 6883802,
+      "title": "OVER TIME",
+      "release_date": "August 16, 2021",
+      "url": "https://genius.com/Bad-hop-over-time-lyrics"
+    },
+    {
+      "id": 10034500,
+      "title": "Final Round",
+      "release_date": "February 9, 2024",
+      "url": "https://genius.com/Bad-hop-final-round-lyrics"
+    },
+    {
+      "id": 5033864,
+      "title": "Rich Friday",
+      "release_date": "June 15, 2018",
+      "url": "https://genius.com/Bad-hop-rich-friday-lyrics"
+    },
+    {
+      "id": 6400986,
+      "title": "R.I.P",
+      "release_date": "February 22, 2021",
+      "url": "https://genius.com/Bad-hop-rip-lyrics"
+    },
+    {
+      "id": 8363541,
+      "title": "Slow Motion",
+      "release_date": "September 8, 2022",
+      "url": "https://genius.com/Bad-hop-slow-motion-lyrics"
+    },
+    {
+      "id": 5846804,
+      "title": "Whisper Talk",
+      "release_date": "November 30, 2018",
+      "url": "https://genius.com/Bad-hop-whisper-talk-lyrics"
+    },
+    {
+      "id": 5033863,
+      "title": "Forget About It",
+      "release_date": null,
+      "url": "https://genius.com/Bad-hop-forget-about-it-lyrics"
+    },
+    {
+      "id": 5846803,
+      "title": "No Pain",
+      "release_date": "November 30, 2018",
+      "url": "https://genius.com/Bad-hop-no-pain-lyrics"
+    },
+    {
+      "id": 8363537,
+      "title": "Fragrance",
+      "release_date": "September 8, 2022",
+      "url": "https://genius.com/Bad-hop-fragrance-lyrics"
+    },
+    {
+      "id": 10064137,
+      "title": "NEW ASIAN",
+      "release_date": "February 16, 2024",
+      "url": "https://genius.com/Bad-hop-new-asian-lyrics"
+    },
+    {
+      "id": 5392891,
+      "title": "Walking Dead",
+      "release_date": "November 6, 2018",
+      "url": "https://genius.com/Bad-hop-walking-dead-lyrics"
+    },
+    {
+      "id": 10052992,
+      "title": "Two Tones",
+      "release_date": "February 14, 2024",
+      "url": "https://genius.com/Bad-hop-two-tones-lyrics"
+    },
+    {
+      "id": 5392924,
+      "title": "Whatever",
+      "release_date": "October 24, 2018",
+      "url": "https://genius.com/Bad-hop-whatever-lyrics"
+    },
+    {
+      "id": 3333801,
+      "title": "Magic Shoes",
+      "release_date": "August 29, 2017",
+      "url": "https://genius.com/Bad-hop-magic-shoes-lyrics"
+    },
+    {
+      "id": 8363542,
+      "title": "HANABI",
+      "release_date": "September 8, 2022",
+      "url": "https://genius.com/Bad-hop-hanabi-lyrics"
+    },
+    {
+      "id": 5846802,
+      "title": "Shut Down",
+      "release_date": null,
+      "url": "https://genius.com/Bad-hop-shut-down-lyrics"
+    },
+    {
+      "id": 10052990,
+      "title": "Play For Week",
+      "release_date": "February 14, 2024",
+      "url": "https://genius.com/Bad-hop-play-for-week-lyrics"
+    },
+    {
+      "id": 5392954,
+      "title": "Drip Wave",
+      "release_date": "November 30, 2018",
+      "url": "https://genius.com/Bad-hop-drip-wave-lyrics"
+    },
+    {
+      "id": 5817312,
+      "title": "Intro",
+      "release_date": null,
+      "url": "https://genius.com/Bad-hop-intro-annotated"
+    },
+    {
+      "id": 5033885,
+      "title": "つるまない (Tsurumanai)",
+      "release_date": null,
+      "url": "https://genius.com/Bad-hop-tsurumanai-lyrics"
+    },
+    {
+      "id": 10046201,
+      "title": "DOG YEAR",
+      "release_date": "February 14, 2024",
+      "url": "https://genius.com/Bad-hop-dog-year-lyrics"
+    },
+    {
+      "id": 8363538,
+      "title": "No Stylist",
+      "release_date": "September 8, 2022",
+      "url": "https://genius.com/Bad-hop-no-stylist-lyrics"
+    },
+    {
+      "id": 5844078,
+      "title": "Don’t Touch My Cash",
+      "release_date": "June 25, 2018",
+      "url": "https://genius.com/Bad-hop-dont-touch-my-cash-lyrics"
+    },
+    {
+      "id": 10030184,
+      "title": "Rock Star Shit !!",
+      "release_date": "February 14, 2024",
+      "url": "https://genius.com/Bad-hop-rock-star-shit-lyrics"
+    },
+    {
+      "id": 10052991,
+      "title": "Every Day with You",
+      "release_date": "February 14, 2024",
+      "url": "https://genius.com/Bad-hop-every-day-with-you-lyrics"
+    },
+    {
+      "id": 5033890,
+      "title": "Trouble Man",
+      "release_date": "September 6, 2017",
+      "url": "https://genius.com/Bad-hop-trouble-man-lyrics"
+    }
+  ],
+  "songs_without_lyrics": []
+}

@@ -1,0 +1,291 @@
+{
+  "slug": "sh1t",
+  "name": "sh1t",
+  "geniusUrl": "https://genius.com/artists/Sh1t",
+  "songCount": 6,
+  "lineCount": 445,
+  "flow": {
+    "averageMorasPerLine": 13.8,
+    "stdDevMoras": 6.3,
+    "uniformityScore": 24,
+    "typicalBpmRange": [
+      90,
+      130
+    ],
+    "flowStyles": [
+      {
+        "bpmRange": "80",
+        "targetMorasPerBar": 10,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 80（ミドル） / 4/4 拍子 / 1行 ≒ 10 モーラ（ひらがな10文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "95",
+        "targetMorasPerBar": 8,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 95（ミドル） / 4/4 拍子 / 1行 ≒ 8 モーラ（ひらがな8文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "110",
+        "targetMorasPerBar": 7,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 110（速め） / 4/4 拍子 / 1行 ≒ 7 モーラ（ひらがな7文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "128",
+        "targetMorasPerBar": 6,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 128（速め） / 4/4 拍子 / 1行 ≒ 6 モーラ（ひらがな6文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "145",
+        "targetMorasPerBar": 5,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 145（ハイテンポ） / 4/4 拍子 / 1行 ≒ 5 モーラ（ひらがな5文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      }
+    ]
+  },
+  "rhyme": {
+    "averageEndRhymeScore": 0,
+    "averageInternalRhymeScore": 0,
+    "commonEndVowelTails": [
+      {
+        "tail": "aa",
+        "count": 50
+      },
+      {
+        "tail": "ai",
+        "count": 31
+      },
+      {
+        "tail": "eu",
+        "count": 28
+      },
+      {
+        "tail": "au",
+        "count": 23
+      },
+      {
+        "tail": "ui",
+        "count": 20
+      },
+      {
+        "tail": "ia",
+        "count": 17
+      },
+      {
+        "tail": "ou",
+        "count": 17
+      },
+      {
+        "tail": "ae",
+        "count": 16
+      },
+      {
+        "tail": "ii",
+        "count": 15
+      },
+      {
+        "tail": "oi",
+        "count": 12
+      },
+      {
+        "tail": "oo",
+        "count": 12
+      },
+      {
+        "tail": "ei",
+        "count": 10
+      }
+    ]
+  },
+  "vocabulary": {
+    "topWords": [
+      {
+        "word": "hmm",
+        "count": 12
+      },
+      {
+        "word": "BOW",
+        "count": 10
+      },
+      {
+        "word": "bad",
+        "count": 7
+      },
+      {
+        "word": "like",
+        "count": 6
+      },
+      {
+        "word": "gang",
+        "count": 6
+      },
+      {
+        "word": "big",
+        "count": 6
+      },
+      {
+        "word": "Hmm",
+        "count": 6
+      },
+      {
+        "word": "Yeah",
+        "count": 6
+      },
+      {
+        "word": "shit",
+        "count": 5
+      },
+      {
+        "word": "JET",
+        "count": 5
+      },
+      {
+        "word": "don",
+        "count": 4
+      },
+      {
+        "word": "key",
+        "count": 4
+      },
+      {
+        "word": "って考えてる",
+        "count": 4
+      },
+      {
+        "word": "yeah",
+        "count": 4
+      },
+      {
+        "word": "party",
+        "count": 4
+      },
+      {
+        "word": "got",
+        "count": 3
+      },
+      {
+        "word": "good",
+        "count": 3
+      },
+      {
+        "word": "track",
+        "count": 3
+      },
+      {
+        "word": "need",
+        "count": 3
+      },
+      {
+        "word": "that",
+        "count": 3
+      },
+      {
+        "word": "star",
+        "count": 3
+      },
+      {
+        "word": "get",
+        "count": 3
+      },
+      {
+        "word": "from",
+        "count": 3
+      },
+      {
+        "word": "wanna",
+        "count": 3
+      },
+      {
+        "word": "真っ暗な部屋で歌詞と死を考えた一人",
+        "count": 3
+      },
+      {
+        "word": "今明るい顔で先を考えるダチが数人",
+        "count": 3
+      },
+      {
+        "word": "きっと切っても切れない縁が結ぶこの",
+        "count": 3
+      },
+      {
+        "word": "人と",
+        "count": 3
+      },
+      {
+        "word": "画面越しに夢を見せる原石の数は何人",
+        "count": 3
+      },
+      {
+        "word": "求めてる暮らしは別に普通で良いから",
+        "count": 3
+      }
+    ],
+    "englishTokenRatio": 0.44,
+    "uniqueWordCount": 30
+  },
+  "delivery": {
+    "traits": [
+      "日英ミックス",
+      "英語アドリブでテンションを上げる",
+      "成り上がり・野心テーマ"
+    ],
+    "adlibPatterns": [
+      {
+        "pattern": "英語フック・アドリブ",
+        "count": 13
+      },
+      {
+        "pattern": "括弧内アドリブ",
+        "count": 11
+      },
+      {
+        "pattern": "ラップ用語混ぜ",
+        "count": 6
+      }
+    ],
+    "englishMixLevel": "high",
+    "punchlineDensity": 0.01,
+    "styleSummary": "日英ミックス、英語アドリブでテンションを上げる、成り上がり・野心テーマ。英語フレーズを随所に挟む。フックで同じフレーズを反復しやすい"
+  },
+  "songs": [
+    {
+      "id": 12474368,
+      "title": "SELECTION CYPHER GROUP D",
+      "releaseDate": "September 27, 2025",
+      "url": "https://genius.com/Sh1t-2-kid-pxrge-trxxxper-bibionatrack-and-ichiro-selection-cypher-group-d-lyrics"
+    },
+    {
+      "id": 12671939,
+      "title": "8point",
+      "releaseDate": "November 8, 2025",
+      "url": "https://genius.com/Sh1t-and-neetz-8point-lyrics"
+    },
+    {
+      "id": 12549621,
+      "title": "HOOD STAGE",
+      "releaseDate": "October 11, 2025",
+      "url": "https://genius.com/Sh1t-hood-stage-lyrics"
+    },
+    {
+      "id": 12837513,
+      "title": "reol key",
+      "releaseDate": "2025",
+      "url": "https://genius.com/Sh1t-reol-key-lyrics"
+    },
+    {
+      "id": 8670431,
+      "title": "No angle of view",
+      "releaseDate": "August 20, 2022",
+      "url": "https://genius.com/Jetg-no-angle-of-view-lyrics"
+    },
+    {
+      "id": 9946378,
+      "title": "GET UP",
+      "releaseDate": "July 21, 2023",
+      "url": "https://genius.com/Jetg-get-up-lyrics"
+    }
+  ],
+  "generatedAt": "2026-06-02T08:05:58.850Z"
+}

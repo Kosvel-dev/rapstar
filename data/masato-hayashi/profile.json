@@ -5,9 +5,9 @@
   "songCount": 23,
   "lineCount": 1606,
   "flow": {
-    "averageMorasPerLine": 7.3,
-    "stdDevMoras": 4.3,
-    "uniformityScore": 48,
+    "averageMorasPerLine": 9.3,
+    "stdDevMoras": 5.5,
+    "uniformityScore": 34,
     "typicalBpmRange": [
       90,
       130
@@ -16,7 +16,7 @@
       {
         "bpmRange": "80",
         "targetMorasPerBar": 10,
-        "label": "標準フロー",
+        "label": "相性◎",
         "description": "BPM 80（ミドル） / 4/4 拍子 / 1行 ≒ 10 モーラ（ひらがな10文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
       },
       {
@@ -28,19 +28,19 @@
       {
         "bpmRange": "110",
         "targetMorasPerBar": 7,
-        "label": "相性◎",
+        "label": "標準フロー",
         "description": "BPM 110（速め） / 4/4 拍子 / 1行 ≒ 7 モーラ（ひらがな7文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
       },
       {
         "bpmRange": "128",
         "targetMorasPerBar": 6,
-        "label": "相性◎",
+        "label": "ゆったり・伸ばし向き",
         "description": "BPM 128（速め） / 4/4 拍子 / 1行 ≒ 6 モーラ（ひらがな6文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
       },
       {
         "bpmRange": "145",
         "targetMorasPerBar": 5,
-        "label": "標準フロー",
+        "label": "ゆったり・伸ばし向き",
         "description": "BPM 145（ハイテンポ） / 4/4 拍子 / 1行 ≒ 5 モーラ（ひらがな5文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
       }
     ]
@@ -51,7 +51,7 @@
     "commonEndVowelTails": [
       {
         "tail": "ai",
-        "count": 134
+        "count": 139
       },
       {
         "tail": "aa",
@@ -59,43 +59,43 @@
       },
       {
         "tail": "ou",
-        "count": 69
+        "count": 72
       },
       {
         "tail": "ee",
-        "count": 69
+        "count": 70
       },
       {
         "tail": "au",
-        "count": 54
-      },
-      {
-        "tail": "eu",
-        "count": 53
+        "count": 58
       },
       {
         "tail": "ae",
-        "count": 52
+        "count": 56
+      },
+      {
+        "tail": "eu",
+        "count": 50
       },
       {
         "tail": "ii",
-        "count": 45
-      },
-      {
-        "tail": "eo",
-        "count": 42
+        "count": 48
       },
       {
         "tail": "ia",
-        "count": 39
+        "count": 42
       },
       {
-        "tail": "oi",
-        "count": 33
+        "tail": "eo",
+        "count": 41
+      },
+      {
+        "tail": "ui",
+        "count": 38
       },
       {
         "tail": "io",
-        "count": 31
+        "count": 29
       }
     ]
   },
@@ -403,5 +403,5 @@
       "url": "https://genius.com/Direcky-shinu-made-lyrics"
     }
   ],
-  "generatedAt": "2026-06-02T02:24:47.704Z"
+  "generatedAt": "2026-06-02T08:05:58.582Z"
 }

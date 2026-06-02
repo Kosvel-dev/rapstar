@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "node scripts/setup-kuromoji-dict.mjs",
+    "build-profiles": "tsx scripts/build-profiles.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -27,6 +29,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.7",
     "tailwindcss": "^4",
+    "tsx": "^4.20.3",
     "typescript": "^5"
   }
 }

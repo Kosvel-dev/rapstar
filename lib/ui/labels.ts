@@ -57,4 +57,4 @@ export function deliveryLegendText(): string {
 }
 
 export const RHYME_HELP =
-  "左の色付きライン = 同じ韻グループ。行末の母音（アイ・オウなど）が揃っていると韻が踏めています。";
+  "同じ色の語句 = 同じ母音韻グループ。最低3音節、理想4〜6音節の内部韻と4小節チェーンを評価します。";

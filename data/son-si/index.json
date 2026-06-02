@@ -1,0 +1,44 @@
+{
+  "artist": {
+    "id": 4609257,
+    "name": "Sonsi",
+    "url": "https://genius.com/artists/Sonsi",
+    "genius_song_count": 5,
+    "lyrics_complete_count": 5,
+    "lyrics_missing_count": 0
+  },
+  "fetched_at": "2026-06-02T04:53:32.589436+00:00",
+  "songs_with_lyrics": [
+    {
+      "id": 12601145,
+      "title": "BBA Spice",
+      "release_date": "November 1, 2025",
+      "url": "https://genius.com/Sonsi-bba-spice-lyrics"
+    },
+    {
+      "id": 12652285,
+      "title": "BBA in da house demo",
+      "release_date": "July 14, 2025",
+      "url": "https://genius.com/Sonsi-bba-in-da-house-demo-lyrics"
+    },
+    {
+      "id": 12832495,
+      "title": "FUSUMA",
+      "release_date": "December 13, 2025",
+      "url": "https://genius.com/Sonsi-fusuma-lyrics"
+    },
+    {
+      "id": 12671941,
+      "title": "H2O daddy",
+      "release_date": "November 15, 2025",
+      "url": "https://genius.com/Sonsi-h2o-daddy-lyrics"
+    },
+    {
+      "id": 12832557,
+      "title": "OYJ",
+      "release_date": "February 18, 2026",
+      "url": "https://genius.com/Sonsi-oyj-lyrics"
+    }
+  ],
+  "songs_without_lyrics": []
+}

@@ -1,4 +1,4 @@
-export type RhymeSource = "nwnwn";
+export type RhymeSource = "nwnwn" | "kujirahand" | "local";
 
 export type RhymeCandidate = {
   word: string;

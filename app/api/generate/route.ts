@@ -5,12 +5,20 @@ import { loadRootEnv } from "@/lib/env";
 import { generateLyricsInStyle } from "@/lib/llm/generateInStyle";
 import { generateFullSongLyrics } from "@/lib/llm/generateFullSong";
 import type { SongSectionConfig } from "@/lib/llm/songStructure";
+import {
+  annotateLyricsWithReading,
+  formatLyricsWithReading,
+} from "@/lib/reading/annotateLyrics";
+import { isThemeValid, parseThemeInput } from "@/lib/llm/themeInput";
+import type { LearningModeId } from "@/lib/llm/learningModes";
 
 export async function POST(request: Request) {
   loadRootEnv();
 
   const body = (await request.json()) as {
     slug?: string;
+    mainTheme?: string;
+    subTheme?: string;
     theme?: string;
     bpm?: number;
     bars?: 4 | 8 | 16;
@@ -18,11 +26,14 @@ export async function POST(request: Request) {
     sections?: SongSectionConfig[];
     referenceLine?: string;
     strongRhyme?: boolean;
+    learningMode?: LearningModeId;
   };
 
-  if (!body.slug || !body.theme?.trim()) {
+  const themeInput = parseThemeInput(body);
+
+  if (!body.slug || !isThemeValid(themeInput)) {
     return NextResponse.json(
-      { error: "slug and theme are required" },
+      { error: "slug, mainTheme, and subTheme are required" },
       { status: 400 },
     );
   }
@@ -43,26 +54,36 @@ export async function POST(request: Request) {
       format === "full"
         ? await generateFullSongLyrics({
             artistProfile: profile,
-            theme: body.theme.trim(),
+            mainTheme: themeInput.mainTheme,
+            subTheme: themeInput.subTheme,
             bpm: body.bpm,
             sections: body.sections ?? [],
             referenceLine: body.referenceLine,
             strongRhyme: body.strongRhyme !== false,
+            learningMode: body.learningMode,
           })
         : await generateLyricsInStyle({
             artistProfile: profile,
-            theme: body.theme.trim(),
+            mainTheme: themeInput.mainTheme,
+            subTheme: themeInput.subTheme,
             bpm: body.bpm,
             bars: body.bars ?? 8,
             referenceLine: body.referenceLine,
             strongRhyme: body.strongRhyme !== false,
+            learningMode: body.learningMode,
           });
+
+    const annotatedLines = await annotateLyricsWithReading(result.lyrics);
 
     return NextResponse.json({
       lyrics: result.lyrics,
+      annotatedLines,
+      lyricsWithReading: formatLyricsWithReading(annotatedLines),
       profileName: profile.name,
       rhymeCoverage: result.rhymeCoverage,
+      rhymeMetrics: result.rhymeMetrics,
       rhymeRefined: result.rhymeRefined,
+      repetitionReduced: result.repetitionReduced,
       format,
       ...(format === "full"
         ? {

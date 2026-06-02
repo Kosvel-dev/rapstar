@@ -30,6 +30,41 @@ const ARTIST_BEAT_STYLES: Record<string, ArtistBeatStyle> = {
     defaultBpm: 140,
     keywords: ["drill", "aggressive", "808"],
   },
+  sh1t: {
+    genres: ["drill type beat", "hard trap type beat"],
+    defaultBpm: 140,
+    keywords: ["drill", "dark", "808"],
+  },
+  "son-si": {
+    genres: ["japanese hip hop type beat", "melodic trap type beat"],
+    defaultBpm: 115,
+    keywords: ["melodic", "story", "trap"],
+  },
+  "verry-smol": {
+    genres: ["japanese hip hop type beat", "boom bap type beat"],
+    defaultBpm: 110,
+    keywords: ["cypher", "flow", "story"],
+  },
+  kohjiya: {
+    genres: ["japanese hip hop type beat", "trap type beat"],
+    defaultBpm: 120,
+    keywords: ["rapstar", "new school"],
+  },
+  lex: {
+    genres: ["trap type beat", "melodic trap type beat"],
+    defaultBpm: 135,
+    keywords: ["logic", "melodic", "808"],
+  },
+  "yellow-bucks": {
+    genres: ["drill type beat", "hard trap type beat"],
+    defaultBpm: 130,
+    keywords: ["drill", "aggressive", "808"],
+  },
+  "bad-hop": {
+    genres: ["japanese hip hop type beat", "trap type beat"],
+    defaultBpm: 125,
+    keywords: ["yokohama", "crew", "bounce"],
+  },
 };
 
 function youtubeSearchUrl(query: string): string {

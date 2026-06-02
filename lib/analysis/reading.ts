@@ -61,7 +61,7 @@ export function tokenizeLine(line: string): string[] {
 
 /** 行末の1文字助詞を除いて韻語を取る（ぐカジャ → カジャ、く夜明け → 夜明け） */
 function trimEndGlue(unit: string): string {
-  let trimmed = unit
+  const trimmed = unit
     .replace(/^[ぁ-ん]{1,2}(?=[一-龥ァ-ヴー])/, "")
     .replace(/^[ぁ-ん](?=[ァ-ヴー一-龥])/, "")
     .replace(/^[のはがをにでとへくて](?=[一-龥ぁ-んァ-ヴー])/, "");
@@ -80,7 +80,7 @@ export function lineReadingFromTokens(
   const cleaned = stripReadingAnnotations(text);
   if (!cleaned) return "";
 
-  if (isMostlyKana(cleaned)) {
+  if (isMostlyKana(cleaned) && !/[\u4e00-\u9fff]/.test(cleaned)) {
     return toHiragana(cleaned);
   }
 
@@ -107,7 +107,7 @@ export async function resolveLineReading(
   return lineReadingFromTokens(text, fallbackTokens);
 }
 
-/** 行末の韻単位（末尾2〜5文字の意味のある塊） */
+/** 行末の韻単位（マルチシラブル韻を拾うため末尾2〜6文字の語句） */
 export function extractEndUnit(line: string): string {
   const cleaned = stripReadingAnnotations(line);
   const match = cleaned.match(
@@ -117,13 +117,7 @@ export function extractEndUnit(line: string): string {
 
   const word = match[0];
 
-  // 末尾の語句を優先（最長5文字）
-  const tailMatch = word.match(/([一-龥々]{2,5}|[ァ-ヴー]{2,5}|[ぁ-ん]{2,5})$/u);
-  if (tailMatch) {
-    const trimmed = trimEndGlue(tailMatch[1]);
-    if (trimmed.length >= 2) return trimmed;
-  }
-
-  const fallback = word.length <= 4 ? word : word.slice(-4);
-  return trimEndGlue(fallback);
+  // 活用語尾だけでなく「対象を超えて」のような末尾フレーズを残す。
+  const tailPhrase = word.length <= 6 ? word : word.slice(-6);
+  return trimEndGlue(tailPhrase);
 }

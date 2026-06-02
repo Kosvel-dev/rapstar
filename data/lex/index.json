@@ -1,0 +1,1058 @@
+{
+  "artist": {
+    "id": 2088436,
+    "name": "LEX (JPN)",
+    "url": "https://genius.com/artists/Lex-jpn",
+    "genius_song_count": 174,
+    "lyrics_complete_count": 174,
+    "lyrics_missing_count": 0
+  },
+  "fetched_at": "2026-06-02T05:04:08.902403+00:00",
+  "songs_with_lyrics": [
+    {
+      "id": 10189250,
+      "title": "Fam*ly",
+      "release_date": "March 22, 2024",
+      "url": "https://genius.com/Bad-hop-famly-lyrics"
+    },
+    {
+      "id": 6400987,
+      "title": "Friends",
+      "release_date": "February 11, 2021",
+      "url": "https://genius.com/Bad-hop-friends-lyrics"
+    },
+    {
+      "id": 7917030,
+      "title": "Flower",
+      "release_date": "March 23, 2022",
+      "url": "https://genius.com/Lex-jpn-flower-lyrics"
+    },
+    {
+      "id": 6888538,
+      "title": "STRANGER",
+      "release_date": "July 21, 2021",
+      "url": "https://genius.com/Lex-jpn-yung-sticky-wom-and-only-u-stranger-lyrics"
+    },
+    {
+      "id": 5903048,
+      "title": "Best Way 2 Die",
+      "release_date": "May 22, 2020",
+      "url": "https://genius.com/Dj-chari-and-dj-tatsuki-best-way-2-die-lyrics"
+    },
+    {
+      "id": 12328117,
+      "title": "OCEAN",
+      "release_date": "August 20, 2025",
+      "url": "https://genius.com/Lex-jpn-ocean-lyrics"
+    },
+    {
+      "id": 10371598,
+      "title": "Mama’s Boy",
+      "release_date": "May 8, 2024",
+      "url": "https://genius.com/Keiju-mamas-boy-lyrics"
+    },
+    {
+      "id": 7216559,
+      "title": "WAVEBODY (Remix)",
+      "release_date": "September 22, 2021",
+      "url": "https://genius.com/Jp-the-wavy-wavebody-remix-lyrics"
+    },
+    {
+      "id": 6425317,
+      "title": "TEAM",
+      "release_date": "January 27, 2021",
+      "url": "https://genius.com/Lex-jpn-yung-sticky-wom-and-only-u-team-lyrics"
+    },
+    {
+      "id": 10261595,
+      "title": "明るい部屋 (AKARUIHEYA)",
+      "release_date": "April 10, 2024",
+      "url": "https://genius.com/Lex-jpn-and-lana-akaruiheya-lyrics"
+    },
+    {
+      "id": 7213165,
+      "title": "Taiyo(Remix)",
+      "release_date": "September 19, 2021",
+      "url": "https://genius.com/Kohh-taiyoremix-lyrics"
+    },
+    {
+      "id": 6348395,
+      "title": "CHAMPION",
+      "release_date": "January 22, 2021",
+      "url": "https://genius.com/Leon-fanourakis-champion-lyrics"
+    },
+    {
+      "id": 6610312,
+      "title": "WAVEBODY",
+      "release_date": "March 31, 2021",
+      "url": "https://genius.com/Jp-the-wavy-wavebody-lyrics"
+    },
+    {
+      "id": 5770532,
+      "title": "NiPPON",
+      "release_date": "July 15, 2020",
+      "url": "https://genius.com/Lex-jpn-nippon-lyrics"
+    },
+    {
+      "id": 7228868,
+      "title": "HELP!",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-help-lyrics"
+    },
+    {
+      "id": 6218289,
+      "title": "UPDATE",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-update-lyrics"
+    },
+    {
+      "id": 6283244,
+      "title": "NEON SIGN",
+      "release_date": "May 1, 2020",
+      "url": "https://genius.com/Only-u-neon-sign-lyrics"
+    },
+    {
+      "id": 6218496,
+      "title": "Flex!",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-flex-lyrics"
+    },
+    {
+      "id": 7024964,
+      "title": "I DO WHAT I WANT",
+      "release_date": "July 21, 2021",
+      "url": "https://genius.com/Lex-jpn-yung-sticky-wom-and-only-u-i-do-what-i-want-lyrics"
+    },
+    {
+      "id": 6853270,
+      "title": "CHAMPION (SANTAWORLDVIEW & ralph REMIX)",
+      "release_date": "May 28, 2021",
+      "url": "https://genius.com/Leon-fanourakis-champion-santaworldview-and-ralph-remix-lyrics"
+    },
+    {
+      "id": 8171910,
+      "title": "HAVE A NICE DAY",
+      "release_date": "July 6, 2022",
+      "url": "https://genius.com/Lex-jpn-have-a-nice-day-lyrics"
+    },
+    {
+      "id": 7072271,
+      "title": "なんでも言っちゃって (Perfume)",
+      "release_date": "August 4, 2021",
+      "url": "https://genius.com/Lex-jpn-perfume-lyrics"
+    },
+    {
+      "id": 7228878,
+      "title": "MUSIC",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-music-lyrics"
+    },
+    {
+      "id": 7948468,
+      "title": "大金持ちのあなたと貧乏な私 (Rich Woman, Poor Me)",
+      "release_date": "April 28, 2022",
+      "url": "https://genius.com/Lex-jpn-rich-woman-poor-me-lyrics"
+    },
+    {
+      "id": 7228866,
+      "title": "GOLD",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-gold-lyrics"
+    },
+    {
+      "id": 6984405,
+      "title": "V.I.P.",
+      "release_date": "July 8, 2021",
+      "url": "https://genius.com/Bexey-vip-lyrics"
+    },
+    {
+      "id": 7228874,
+      "title": "Venus",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-venus-lyrics"
+    },
+    {
+      "id": 10654501,
+      "title": "力をくれ (Chikara wo Kure)",
+      "release_date": "July 17, 2024",
+      "url": "https://genius.com/Lex-jpn-chikara-wo-kure-lyrics"
+    },
+    {
+      "id": 12682101,
+      "title": "完璧だ (Kanpekida)",
+      "release_date": "November 26, 2025",
+      "url": "https://genius.com/Lex-jpn-kanpekida-lyrics"
+    },
+    {
+      "id": 7750360,
+      "title": "Perc",
+      "release_date": "February 28, 2022",
+      "url": "https://genius.com/1mill-perc-lyrics"
+    },
+    {
+      "id": 5903018,
+      "title": "4 AM",
+      "release_date": "April 26, 2019",
+      "url": "https://genius.com/Lex-jpn-4-am-lyrics"
+    },
+    {
+      "id": 6601352,
+      "title": "Stay",
+      "release_date": "March 17, 2021",
+      "url": "https://genius.com/Km-jpn-stay-lyrics"
+    },
+    {
+      "id": 5903013,
+      "title": "PLASTIC",
+      "release_date": "April 26, 2019",
+      "url": "https://genius.com/Lex-jpn-plastic-lyrics"
+    },
+    {
+      "id": 5902941,
+      "title": "F*CK",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-fck-lyrics"
+    },
+    {
+      "id": 5908372,
+      "title": "ERiCA",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-erica-lyrics"
+    },
+    {
+      "id": 7228869,
+      "title": "NASA",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-nasa-lyrics"
+    },
+    {
+      "id": 6589969,
+      "title": "Numb",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-numb-lyrics"
+    },
+    {
+      "id": 6846006,
+      "title": "Smash!!!",
+      "release_date": "May 25, 2021",
+      "url": "https://genius.com/Dj-kanji-smash-lyrics"
+    },
+    {
+      "id": 7024965,
+      "title": "115+114=UTOPIA",
+      "release_date": "July 21, 2021",
+      "url": "https://genius.com/Lex-jpn-yung-sticky-wom-and-only-u-115-114-utopia-lyrics"
+    },
+    {
+      "id": 5844167,
+      "title": "95 Project",
+      "release_date": "April 15, 2020",
+      "url": "https://genius.com/Lex-jpn-95-project-lyrics"
+    },
+    {
+      "id": 6589903,
+      "title": "I GOT U",
+      "release_date": "March 14, 2021",
+      "url": "https://genius.com/Lex-jpn-i-got-u-lyrics"
+    },
+    {
+      "id": 10538434,
+      "title": "Red Bull RASEN #1",
+      "release_date": "July 4, 2019",
+      "url": "https://genius.com/Lex-jpn-santaworldview-it-jpn-and-taeyoung-boy-red-bull-rasen-1-lyrics"
+    },
+    {
+      "id": 7228873,
+      "title": "TAMAGOTCHI",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-tamagotchi-lyrics"
+    },
+    {
+      "id": 5905922,
+      "title": "STREET FIGHTER 888",
+      "release_date": "April 26, 2019",
+      "url": "https://genius.com/Lex-jpn-street-fighter-888-lyrics"
+    },
+    {
+      "id": 6517881,
+      "title": "TOKYO DRIFT FREESTYLE!!!",
+      "release_date": "April 13, 2020",
+      "url": "https://genius.com/Lex-jpn-tokyo-drift-freestyle-lyrics"
+    },
+    {
+      "id": 8755196,
+      "title": "King Of Everything",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-king-of-everything-lyrics"
+    },
+    {
+      "id": 7407079,
+      "title": "OK! (Remix)",
+      "release_date": "November 24, 2021",
+      "url": "https://genius.com/Only-u-ok-remix-lyrics"
+    },
+    {
+      "id": 6218290,
+      "title": "PiNK MOLLY",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-pink-molly-lyrics"
+    },
+    {
+      "id": 10934893,
+      "title": "i like it",
+      "release_date": "September 30, 2024",
+      "url": "https://genius.com/Jp-the-wavy-i-like-it-lyrics"
+    },
+    {
+      "id": 8755206,
+      "title": "This is me",
+      "release_date": "January 25, 2023",
+      "url": "https://genius.com/Lex-jpn-this-is-me-lyrics"
+    },
+    {
+      "id": 6610311,
+      "title": "Pick N Choose",
+      "release_date": "March 31, 2021",
+      "url": "https://genius.com/Jp-the-wavy-pick-n-choose-lyrics"
+    },
+    {
+      "id": 6773426,
+      "title": "FUNKY DON",
+      "release_date": "May 11, 2021",
+      "url": "https://genius.com/Sokodomo-funky-don-lyrics"
+    },
+    {
+      "id": 6293694,
+      "title": "DIE IN YOUR ARMS",
+      "release_date": "December 11, 2019",
+      "url": "https://genius.com/Lex-jpn-die-in-your-arms-lyrics"
+    },
+    {
+      "id": 7228870,
+      "title": "Without You",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-without-you-lyrics"
+    },
+    {
+      "id": 7228871,
+      "title": "ちょーステキ (Cho Suteki)",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-cho-suteki-lyrics"
+    },
+    {
+      "id": 5902945,
+      "title": "Romeo & Juliet",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-romeo-and-juliet-lyrics"
+    },
+    {
+      "id": 7972729,
+      "title": "Loved You (rmx)",
+      "release_date": null,
+      "url": "https://genius.com/Only-u-loved-you-rmx-lyrics"
+    },
+    {
+      "id": 11477055,
+      "title": "5xL",
+      "release_date": "April 3, 2024",
+      "url": "https://genius.com/5lack-5xl-lyrics"
+    },
+    {
+      "id": 5844180,
+      "title": "GUESS WHAT?",
+      "release_date": "November 13, 2019",
+      "url": "https://genius.com/Lex-jpn-guess-what-lyrics"
+    },
+    {
+      "id": 9482634,
+      "title": "Rico",
+      "release_date": "August 30, 2023",
+      "url": "https://genius.com/Lex-jpn-rico-lyrics"
+    },
+    {
+      "id": 6239541,
+      "title": "PAPA",
+      "release_date": "December 4, 2020",
+      "url": "https://genius.com/Lex-jpn-papa-lyrics"
+    },
+    {
+      "id": 5532298,
+      "title": "27CLUB",
+      "release_date": "April 22, 2020",
+      "url": "https://genius.com/Kzm-27club-lyrics"
+    },
+    {
+      "id": 11162350,
+      "title": "この世界に国が無かったら (Konosekaini Kuniga Nakattara)",
+      "release_date": "November 27, 2024",
+      "url": "https://genius.com/Lex-jpn-konosekaini-kuniga-nakattara-lyrics"
+    },
+    {
+      "id": 6728297,
+      "title": "Season",
+      "release_date": null,
+      "url": "https://genius.com/Dalu-season-lyrics"
+    },
+    {
+      "id": 7024966,
+      "title": "FERRARI",
+      "release_date": "July 21, 2021",
+      "url": "https://genius.com/Lex-jpn-yung-sticky-wom-and-only-u-ferrari-lyrics"
+    },
+    {
+      "id": 5902921,
+      "title": "WORLD PEACE",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-world-peace-lyrics"
+    },
+    {
+      "id": 10630744,
+      "title": "なんとも思ってねぇ (Nantomoomottenele)",
+      "release_date": "July 10, 2024",
+      "url": "https://genius.com/Dj-chari-nantomoomottenele-lyrics"
+    },
+    {
+      "id": 5197044,
+      "title": "GOOD PEOPLE GOOD COFFEE (Remix)",
+      "release_date": "December 13, 2019",
+      "url": "https://genius.com/Jp-the-wavy-good-people-good-coffee-remix-lyrics"
+    },
+    {
+      "id": 5908378,
+      "title": "あなたの幸せが1番 (YOUR HAPPINESS COMES FIRST)",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-1-your-happiness-comes-first-lyrics"
+    },
+    {
+      "id": 12363081,
+      "title": "HIGHEST",
+      "release_date": "September 3, 2025",
+      "url": "https://genius.com/Ozworld-highest-lyrics"
+    },
+    {
+      "id": 12682109,
+      "title": "億万長者 (Okumanchoja)",
+      "release_date": "November 26, 2025",
+      "url": "https://genius.com/Lex-jpn-okumanchoja-lyrics"
+    },
+    {
+      "id": 5906660,
+      "title": "HAPPY",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-happy-lyrics"
+    },
+    {
+      "id": 6293864,
+      "title": "Valentina",
+      "release_date": null,
+      "url": "https://genius.com/Only-u-valentina-lyrics"
+    },
+    {
+      "id": 12140134,
+      "title": "Shall We",
+      "release_date": "July 16, 2025",
+      "url": "https://genius.com/Stuts-and-zot-on-the-wave-shall-we-lyrics"
+    },
+    {
+      "id": 10314416,
+      "title": "今日くらいはいい子でいようよ (Jillian)",
+      "release_date": "April 24, 2024",
+      "url": "https://genius.com/Lex-jpn-jillian-lyrics"
+    },
+    {
+      "id": 9370962,
+      "title": "FLAME Remix",
+      "release_date": "July 26, 2023",
+      "url": "https://genius.com/Lana-flame-remix-lyrics"
+    },
+    {
+      "id": 6590046,
+      "title": "Numb Remix",
+      "release_date": "November 17, 2018",
+      "url": "https://genius.com/Lex-jpn-numb-remix-lyrics"
+    },
+    {
+      "id": 6676566,
+      "title": "JIYU",
+      "release_date": "April 5, 2021",
+      "url": "https://genius.com/Showy-and-dj-jam-jpn-jiyu-lyrics"
+    },
+    {
+      "id": 7228877,
+      "title": "No.1",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-no1-lyrics"
+    },
+    {
+      "id": 5844171,
+      "title": "ALIEN",
+      "release_date": "December 11, 2019",
+      "url": "https://genius.com/Lex-jpn-alien-lyrics"
+    },
+    {
+      "id": 6001483,
+      "title": "Hills",
+      "release_date": "September 14, 2020",
+      "url": "https://genius.com/Only-u-hills-lyrics"
+    },
+    {
+      "id": 7488278,
+      "title": "WakeMeUp rmx",
+      "release_date": "December 14, 2021",
+      "url": "https://genius.com/Lex-jpn-wakemeup-rmx-lyrics"
+    },
+    {
+      "id": 11950701,
+      "title": "SPEED STAR",
+      "release_date": "January 31, 2019",
+      "url": "https://genius.com/Lex-jpn-speed-star-lyrics"
+    },
+    {
+      "id": 6824380,
+      "title": "Loyalty",
+      "release_date": "May 19, 2021",
+      "url": "https://genius.com/Lex-jpn-loyalty-lyrics"
+    },
+    {
+      "id": 5844208,
+      "title": "STAR",
+      "release_date": "December 11, 2019",
+      "url": "https://genius.com/Lex-jpn-star-lyrics"
+    },
+    {
+      "id": 7024967,
+      "title": "HUNTER",
+      "release_date": "July 21, 2021",
+      "url": "https://genius.com/Lex-jpn-yung-sticky-wom-and-only-u-hunter-lyrics"
+    },
+    {
+      "id": 10344206,
+      "title": "もう一度キスをして (Moichido Kisswoshite)",
+      "release_date": "May 1, 2024",
+      "url": "https://genius.com/Lex-jpn-moichido-kisswoshite-lyrics"
+    },
+    {
+      "id": 10335978,
+      "title": "SPOTLIGHT",
+      "release_date": "April 29, 2024",
+      "url": "https://genius.com/Sokodomo-spotlight-lyrics"
+    },
+    {
+      "id": 9318706,
+      "title": "95 Project (Reprise)",
+      "release_date": "July 12, 2023",
+      "url": "https://genius.com/Lex-jpn-and-km-jpn-95-project-reprise-lyrics"
+    },
+    {
+      "id": 7579093,
+      "title": "Do My Thang",
+      "release_date": "January 11, 2022",
+      "url": "https://genius.com/Dj-kanji-do-my-thang-lyrics"
+    },
+    {
+      "id": 7228872,
+      "title": "HOT",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-hot-lyrics"
+    },
+    {
+      "id": 5847366,
+      "title": "Sexy!",
+      "release_date": "August 5, 2020",
+      "url": "https://genius.com/Lex-jpn-sexy-lyrics"
+    },
+    {
+      "id": 7138407,
+      "title": "No Pressure!!!",
+      "release_date": "August 27, 2021",
+      "url": "https://genius.com/Young-coco-no-pressure-lyrics"
+    },
+    {
+      "id": 7577570,
+      "title": "Japan",
+      "release_date": "January 10, 2022",
+      "url": "https://genius.com/Lex-jpn-japan-lyrics"
+    },
+    {
+      "id": 7228867,
+      "title": "LASER",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-laser-lyrics"
+    },
+    {
+      "id": 6541121,
+      "title": "ARIGATO",
+      "release_date": "March 24, 2021",
+      "url": "https://genius.com/Dj-ryow-arigato-lyrics"
+    },
+    {
+      "id": 11552527,
+      "title": "Damn",
+      "release_date": "March 7, 2025",
+      "url": "https://genius.com/Monyhorse-damn-lyrics"
+    },
+    {
+      "id": 5908371,
+      "title": "BUNNY",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-bunny-lyrics"
+    },
+    {
+      "id": 7228875,
+      "title": "LOVE CARTEL",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-love-cartel-lyrics"
+    },
+    {
+      "id": 12643031,
+      "title": "ALONE",
+      "release_date": "October 29, 2025",
+      "url": "https://genius.com/Lex-jpn-alone-lyrics"
+    },
+    {
+      "id": 8755199,
+      "title": "金パンパンのジーンズ (Jeans)",
+      "release_date": "January 25, 2023",
+      "url": "https://genius.com/Lex-jpn-jeans-lyrics"
+    },
+    {
+      "id": 8928723,
+      "title": "ブチ上げ戦隊 (Buchiagesentai) [Remix]",
+      "release_date": "March 17, 2023",
+      "url": "https://genius.com/Leon-fanourakis-santaworldview-and-xansei-buchiagesentai-remix-lyrics"
+    },
+    {
+      "id": 7407086,
+      "title": "当たり前 (Atarimae)",
+      "release_date": "November 24, 2021",
+      "url": "https://genius.com/Only-u-atarimae-lyrics"
+    },
+    {
+      "id": 12332811,
+      "title": "I’m The One",
+      "release_date": "July 7, 2025",
+      "url": "https://genius.com/Dj-chari-and-dj-tatsuki-im-the-one-lyrics"
+    },
+    {
+      "id": 8338134,
+      "title": "Okanemochi",
+      "release_date": "September 7, 2022",
+      "url": "https://genius.com/Jp-the-wavy-and-bankroll-got-it-okanemochi-lyrics"
+    },
+    {
+      "id": 7228876,
+      "title": "ARE WE STILL FRIENDS?",
+      "release_date": "September 29, 2021",
+      "url": "https://genius.com/Lex-jpn-are-we-still-friends-lyrics"
+    },
+    {
+      "id": 7207574,
+      "title": "Walk in Sky",
+      "release_date": null,
+      "url": "https://genius.com/Hezron-walk-in-sky-lyrics"
+    },
+    {
+      "id": 5641685,
+      "title": "Welcome 2 The Party",
+      "release_date": "June 5, 2020",
+      "url": "https://genius.com/Lex-jpn-welcome-2-the-party-lyrics"
+    },
+    {
+      "id": 5908377,
+      "title": "PAST LiFE",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-past-life-lyrics"
+    },
+    {
+      "id": 8755209,
+      "title": "庭の花 (Niwa no Hana)",
+      "release_date": "January 25, 2023",
+      "url": "https://genius.com/Lex-jpn-niwa-no-hana-lyrics"
+    },
+    {
+      "id": 6462172,
+      "title": "SHIRANAI",
+      "release_date": "February 6, 2021",
+      "url": "https://genius.com/Shark-kid-shiranai-lyrics"
+    },
+    {
+      "id": 9607560,
+      "title": "Psychedelic",
+      "release_date": "October 11, 2023",
+      "url": "https://genius.com/Lex-jpn-psychedelic-lyrics"
+    },
+    {
+      "id": 9749765,
+      "title": "DREAM!",
+      "release_date": "November 15, 2023",
+      "url": "https://genius.com/Only-u-dream-lyrics"
+    },
+    {
+      "id": 5902949,
+      "title": "what ya doing?",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-what-ya-doing-lyrics"
+    },
+    {
+      "id": 8598322,
+      "title": "Come To My World",
+      "release_date": "November 30, 2022",
+      "url": "https://genius.com/Lex-jpn-and-bexey-come-to-my-world-lyrics"
+    },
+    {
+      "id": 6263191,
+      "title": "NEVER LOSE",
+      "release_date": "December 11, 2020",
+      "url": "https://genius.com/Lex-jpn-and-ozworld-never-lose-lyrics"
+    },
+    {
+      "id": 5908373,
+      "title": "FOREVER",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-forever-lyrics"
+    },
+    {
+      "id": 12682102,
+      "title": "BABY",
+      "release_date": "October 1, 2025",
+      "url": "https://genius.com/Lex-jpn-baby-lyrics"
+    },
+    {
+      "id": 6348400,
+      "title": "MOON",
+      "release_date": "January 22, 2021",
+      "url": "https://genius.com/Leon-fanourakis-moon-lyrics"
+    },
+    {
+      "id": 8755198,
+      "title": "Busy, Busy, Busy",
+      "release_date": "January 25, 2023",
+      "url": "https://genius.com/Lex-jpn-busy-busy-busy-lyrics"
+    },
+    {
+      "id": 8755195,
+      "title": "GOD",
+      "release_date": "January 25, 2023",
+      "url": "https://genius.com/Lex-jpn-god-lyrics"
+    },
+    {
+      "id": 8755197,
+      "title": "Killer Queen",
+      "release_date": "January 25, 2023",
+      "url": "https://genius.com/Lex-jpn-killer-queen-lyrics"
+    },
+    {
+      "id": 10708472,
+      "title": "テンションを上げてよ (Tension wo ageteyo)",
+      "release_date": "July 31, 2024",
+      "url": "https://genius.com/Lex-jpn-tension-wo-ageteyo-lyrics"
+    },
+    {
+      "id": 7024968,
+      "title": "SPHiNX",
+      "release_date": "July 21, 2021",
+      "url": "https://genius.com/Lex-jpn-yung-sticky-wom-and-only-u-sphinx-lyrics"
+    },
+    {
+      "id": 8755204,
+      "title": "LOVE PISTOL",
+      "release_date": "January 25, 2023",
+      "url": "https://genius.com/Lex-jpn-love-pistol-lyrics"
+    },
+    {
+      "id": 10704399,
+      "title": "パンケーキ (Pancake)",
+      "release_date": "July 31, 2024",
+      "url": "https://genius.com/Lex-jpn-pancake-lyrics"
+    },
+    {
+      "id": 6293692,
+      "title": "Bust Down",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-bust-down-lyrics"
+    },
+    {
+      "id": 8755207,
+      "title": "If You Forget Me",
+      "release_date": "January 25, 2023",
+      "url": "https://genius.com/Lex-jpn-if-you-forget-me-lyrics"
+    },
+    {
+      "id": 10704377,
+      "title": "Control",
+      "release_date": "July 31, 2024",
+      "url": "https://genius.com/Lex-jpn-control-lyrics"
+    },
+    {
+      "id": 8755200,
+      "title": "READYMADE",
+      "release_date": "January 25, 2023",
+      "url": "https://genius.com/Lex-jpn-readymade-lyrics"
+    },
+    {
+      "id": 12682110,
+      "title": "ひとりぼっちの夜 (Hitoribotchinoyoru)",
+      "release_date": "November 26, 2025",
+      "url": "https://genius.com/Lex-jpn-hitoribotchinoyoru-lyrics"
+    },
+    {
+      "id": 5908374,
+      "title": "Respect Me",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-respect-me-lyrics"
+    },
+    {
+      "id": 6218387,
+      "title": "MDMA",
+      "release_date": "April 15, 2020",
+      "url": "https://genius.com/Lex-jpn-mdma-lyrics"
+    },
+    {
+      "id": 5908376,
+      "title": "I HOPE I NEVER KNOW",
+      "release_date": "August 26, 2020",
+      "url": "https://genius.com/Lex-jpn-i-hope-i-never-know-lyrics"
+    },
+    {
+      "id": 12682105,
+      "title": "普通の人間だって言えないよ (Futsuunoningendatteienaiyo)",
+      "release_date": "November 12, 2025",
+      "url": "https://genius.com/Lex-jpn-futsuunoningendatteienaiyo-lyrics"
+    },
+    {
+      "id": 6293691,
+      "title": "THUNDERSTORM!!",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-thunderstorm-lyrics"
+    },
+    {
+      "id": 6596434,
+      "title": "Pink Vomit",
+      "release_date": "October 28, 2020",
+      "url": "https://genius.com/Sicboy-and-km-jpn-pink-vomit-lyrics"
+    },
+    {
+      "id": 8755208,
+      "title": "Need It",
+      "release_date": "January 25, 2023",
+      "url": "https://genius.com/Lex-jpn-need-it-lyrics"
+    },
+    {
+      "id": 12682104,
+      "title": "昔のように話せるかい？ (Mukashinoyounihanaserukai)",
+      "release_date": "November 26, 2025",
+      "url": "https://genius.com/Lex-jpn-mukashinoyounihanaserukai-lyrics"
+    },
+    {
+      "id": 6293702,
+      "title": "Ihate pussyboy&badbitch",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-ihate-pussyboy-badbitch-lyrics"
+    },
+    {
+      "id": 6293704,
+      "title": "CLEOPATRA",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-cleopatra-lyrics"
+    },
+    {
+      "id": 10708474,
+      "title": "もうすぐ電車がくる (Mousugu Densya Ga Kuru)",
+      "release_date": "July 31, 2024",
+      "url": "https://genius.com/Lex-jpn-mousugu-densya-ga-kuru-lyrics"
+    },
+    {
+      "id": 10704376,
+      "title": "222",
+      "release_date": "July 31, 2024",
+      "url": "https://genius.com/Lex-jpn-222-lyrics"
+    },
+    {
+      "id": 7110582,
+      "title": "NEO",
+      "release_date": "August 15, 2021",
+      "url": "https://genius.com/Saru-jrfool-neo-lyrics"
+    },
+    {
+      "id": 10704382,
+      "title": "物足りねぇ (Monotarinee)",
+      "release_date": "July 31, 2024",
+      "url": "https://genius.com/Lex-jpn-monotarinee-lyrics"
+    },
+    {
+      "id": 6293700,
+      "title": "FLASH!",
+      "release_date": "September 25, 2019",
+      "url": "https://genius.com/Lex-jpn-flash-lyrics"
+    },
+    {
+      "id": 10704375,
+      "title": "XOXO",
+      "release_date": "July 31, 2024",
+      "url": "https://genius.com/Lex-jpn-xoxo-lyrics"
+    },
+    {
+      "id": 10704398,
+      "title": "オキニ (Okini)",
+      "release_date": "July 31, 2024",
+      "url": "https://genius.com/Lex-jpn-okini-lyrics"
+    },
+    {
+      "id": 6293703,
+      "title": "RockFord Hills",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-rockford-hills-lyrics"
+    },
+    {
+      "id": 6293698,
+      "title": "B.B.SIMON",
+      "release_date": "December 11, 2019",
+      "url": "https://genius.com/Lex-jpn-bbsimon-lyrics"
+    },
+    {
+      "id": 12682106,
+      "title": "主人公 (Shujinko)",
+      "release_date": "July 23, 2025",
+      "url": "https://genius.com/Lex-jpn-shujinko-lyrics"
+    },
+    {
+      "id": 6218391,
+      "title": "BLADE 3",
+      "release_date": "April 15, 2020",
+      "url": "https://genius.com/Lex-jpn-blade-3-lyrics"
+    },
+    {
+      "id": 6589924,
+      "title": "Freestyle",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-freestyle-lyrics"
+    },
+    {
+      "id": 11796876,
+      "title": "NUMBER ONE",
+      "release_date": "April 29, 2025",
+      "url": "https://genius.com/Vingo-number-one-lyrics"
+    },
+    {
+      "id": 6218392,
+      "title": "Where Are U Now?",
+      "release_date": "April 15, 2020",
+      "url": "https://genius.com/Lex-jpn-where-are-u-now-lyrics"
+    },
+    {
+      "id": 6293701,
+      "title": "Super",
+      "release_date": null,
+      "url": "https://genius.com/Lex-jpn-super-lyrics"
+    },
+    {
+      "id": 12682249,
+      "title": "WASTED",
+      "release_date": "November 26, 2025",
+      "url": "https://genius.com/Lex-jpn-wasted-lyrics"
+    },
+    {
+      "id": 6004173,
+      "title": "DOMINO",
+      "release_date": "September 5, 2020",
+      "url": "https://genius.com/Cyprus-domino-lyrics"
+    },
+    {
+      "id": 10704400,
+      "title": "カムバック (Come Back)",
+      "release_date": "July 31, 2024",
+      "url": "https://genius.com/Lex-jpn-come-back-lyrics"
+    },
+    {
+      "id": 8755203,
+      "title": "Move",
+      "release_date": "January 25, 2023",
+      "url": "https://genius.com/Lex-jpn-move-lyrics"
+    },
+    {
+      "id": 10708473,
+      "title": "有名人ぶり (Yuumeijin Buri)",
+      "release_date": "July 31, 2024",
+      "url": "https://genius.com/Lex-jpn-yuumeijin-buri-lyrics"
+    },
+    {
+      "id": 11494317,
+      "title": "CHA CHA 愛",
+      "release_date": "January 15, 2025",
+      "url": "https://genius.com/Issei-uno-fifth-cha-cha-lyrics"
+    },
+    {
+      "id": 7534159,
+      "title": "NOT FOREVER",
+      "release_date": "December 27, 2021",
+      "url": "https://genius.com/Lex-jpn-not-forever-lyrics"
+    },
+    {
+      "id": 12682108,
+      "title": "HER",
+      "release_date": "November 26, 2025",
+      "url": "https://genius.com/Lex-jpn-her-lyrics"
+    },
+    {
+      "id": 10704378,
+      "title": "I’m Trying To Know",
+      "release_date": "July 31, 2024",
+      "url": "https://genius.com/Lex-jpn-im-trying-to-know-lyrics"
+    },
+    {
+      "id": 12682103,
+      "title": "Leave Me Alone",
+      "release_date": "November 26, 2025",
+      "url": "https://genius.com/Lex-jpn-leave-me-alone-lyrics"
+    },
+    {
+      "id": 9094455,
+      "title": "Bands",
+      "release_date": "May 5, 2023",
+      "url": "https://genius.com/Keagan-hoffman-bands-lyrics"
+    },
+    {
+      "id": 5541196,
+      "title": "Shining",
+      "release_date": "July 31, 2019",
+      "url": "https://genius.com/Lex-jpn-power-dna-trash-ode-and-yoshiki-ezaki-shining-lyrics"
+    },
+    {
+      "id": 12232768,
+      "title": "READY OR NOT",
+      "release_date": "July 1, 2025",
+      "url": "https://genius.com/Jp-the-wavy-ready-or-not-lyrics"
+    },
+    {
+      "id": 6895146,
+      "title": "OverNight",
+      "release_date": "June 3, 2021",
+      "url": "https://genius.com/Santaworldview-and-miroku-overnight-lyrics"
+    },
+    {
+      "id": 7407096,
+      "title": "Flexing",
+      "release_date": "November 17, 2021",
+      "url": "https://genius.com/Saru-jrfool-flexing-lyrics"
+    },
+    {
+      "id": 9094443,
+      "title": "Just Me",
+      "release_date": "May 5, 2023",
+      "url": "https://genius.com/Keagan-hoffman-just-me-lyrics"
+    },
+    {
+      "id": 13104996,
+      "title": "レベルアップ (level up)",
+      "release_date": "February 4, 2026",
+      "url": "https://genius.com/Lex-jpn-level-up-lyrics"
+    },
+    {
+      "id": 10913099,
+      "title": "Cry in Dubai",
+      "release_date": "May 10, 2023",
+      "url": "https://genius.com/24hrs-and-dj-jam-jpn-cry-in-dubai-lyrics"
+    }
+  ],
+  "songs_without_lyrics": []
+}

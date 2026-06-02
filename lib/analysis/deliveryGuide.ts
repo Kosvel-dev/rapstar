@@ -21,7 +21,6 @@ const STRONG_PATTERN = /!$|^(No way back|I trust|I'm so bad|REVENGE|OVER KILL)/i
 
 export function analyzeDeliveryGuide(
   lines: LineAnalysis[],
-  rawLyrics: string,
 ): DeliveryLineGuide[] {
   const avgMoras =
     lines.length > 0

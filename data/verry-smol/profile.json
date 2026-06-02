@@ -1,0 +1,287 @@
+{
+  "slug": "verry-smol",
+  "name": "VERRY SMoL",
+  "geniusUrl": "https://genius.com/artists/Verry-smol",
+  "songCount": 6,
+  "lineCount": 263,
+  "flow": {
+    "averageMorasPerLine": 12.6,
+    "stdDevMoras": 5.1,
+    "uniformityScore": 39,
+    "typicalBpmRange": [
+      90,
+      130
+    ],
+    "flowStyles": [
+      {
+        "bpmRange": "80",
+        "targetMorasPerBar": 10,
+        "label": "標準フロー",
+        "description": "BPM 80（ミドル） / 4/4 拍子 / 1行 ≒ 10 モーラ（ひらがな10文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "95",
+        "targetMorasPerBar": 8,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 95（ミドル） / 4/4 拍子 / 1行 ≒ 8 モーラ（ひらがな8文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "110",
+        "targetMorasPerBar": 7,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 110（速め） / 4/4 拍子 / 1行 ≒ 7 モーラ（ひらがな7文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "128",
+        "targetMorasPerBar": 6,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 128（速め） / 4/4 拍子 / 1行 ≒ 6 モーラ（ひらがな6文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "145",
+        "targetMorasPerBar": 5,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 145（ハイテンポ） / 4/4 拍子 / 1行 ≒ 5 モーラ（ひらがな5文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      }
+    ]
+  },
+  "rhyme": {
+    "averageEndRhymeScore": 0,
+    "averageInternalRhymeScore": 0,
+    "commonEndVowelTails": [
+      {
+        "tail": "ai",
+        "count": 34
+      },
+      {
+        "tail": "aa",
+        "count": 30
+      },
+      {
+        "tail": "io",
+        "count": 21
+      },
+      {
+        "tail": "ia",
+        "count": 16
+      },
+      {
+        "tail": "ae",
+        "count": 15
+      },
+      {
+        "tail": "ii",
+        "count": 14
+      },
+      {
+        "tail": "ou",
+        "count": 13
+      },
+      {
+        "tail": "ui",
+        "count": 11
+      },
+      {
+        "tail": "ea",
+        "count": 8
+      },
+      {
+        "tail": "oo",
+        "count": 8
+      },
+      {
+        "tail": "au",
+        "count": 7
+      },
+      {
+        "tail": "ao",
+        "count": 7
+      }
+    ]
+  },
+  "vocabulary": {
+    "topWords": [
+      {
+        "word": "VERRY",
+        "count": 7
+      },
+      {
+        "word": "SMoL",
+        "count": 7
+      },
+      {
+        "word": "どうしよう",
+        "count": 5
+      },
+      {
+        "word": "取りに来たんだよ",
+        "count": 4
+      },
+      {
+        "word": "Yukichi",
+        "count": 3
+      },
+      {
+        "word": "like",
+        "count": 3
+      },
+      {
+        "word": "Japanese",
+        "count": 2
+      },
+      {
+        "word": "keep",
+        "count": 2
+      },
+      {
+        "word": "気づけば",
+        "count": 2
+      },
+      {
+        "word": "身体ごと打ち上げ花火",
+        "count": 2
+      },
+      {
+        "word": "羨ましくない俺たち",
+        "count": 2
+      },
+      {
+        "word": "弾け方が大事だから",
+        "count": 2
+      },
+      {
+        "word": "日本人今東京",
+        "count": 2
+      },
+      {
+        "word": "頭っからつま先も",
+        "count": 2
+      },
+      {
+        "word": "嘘で溢れてる",
+        "count": 2
+      },
+      {
+        "word": "BOY",
+        "count": 2
+      },
+      {
+        "word": "義務教育だろ",
+        "count": 2
+      },
+      {
+        "word": "JOJO",
+        "count": 2
+      },
+      {
+        "word": "断り方も教えろよ",
+        "count": 2
+      },
+      {
+        "word": "俺は小さいままか",
+        "count": 2
+      },
+      {
+        "word": "湿ったままの土と乾いた目は分かり合えない",
+        "count": 2
+      },
+      {
+        "word": "遅刻のついでに黄色い落ち葉に出会えたりする",
+        "count": 2
+      },
+      {
+        "word": "風が吹けば終わり",
+        "count": 2
+      },
+      {
+        "word": "もう会えないね帰り道じゃ",
+        "count": 2
+      },
+      {
+        "word": "そういうところも好き",
+        "count": 2
+      },
+      {
+        "word": "消えちゃうもの美しいよ",
+        "count": 2
+      },
+      {
+        "word": "結局いつもと同じ",
+        "count": 2
+      },
+      {
+        "word": "しつこくしか話せないのさ",
+        "count": 2
+      },
+      {
+        "word": "昔からの癖大切に守らなきゃ",
+        "count": 2
+      },
+      {
+        "word": "明日こそイタリアの街で",
+        "count": 2
+      }
+    ],
+    "englishTokenRatio": 0.204,
+    "uniqueWordCount": 30
+  },
+  "delivery": {
+    "traits": [
+      "日英ミックス",
+      "英語アドリブでテンションを上げる",
+      "成り上がり・野心テーマ"
+    ],
+    "adlibPatterns": [
+      {
+        "pattern": "英語フック・アドリブ",
+        "count": 2
+      },
+      {
+        "pattern": "括弧内アドリブ",
+        "count": 6
+      }
+    ],
+    "englishMixLevel": "high",
+    "punchlineDensity": 0,
+    "styleSummary": "日英ミックス、英語アドリブでテンションを上げる、成り上がり・野心テーマ。英語フレーズを随所に挟む。フックで同じフレーズを反復しやすい"
+  },
+  "songs": [
+    {
+      "id": 12585823,
+      "title": "HOOD STAGE",
+      "releaseDate": "October 18, 2025",
+      "url": "https://genius.com/Verry-smol-hood-stage-lyrics"
+    },
+    {
+      "id": 12671943,
+      "title": "雨上がり (Ameagari)",
+      "releaseDate": "March 18, 2026",
+      "url": "https://genius.com/Verry-smol-ameagari-lyrics"
+    },
+    {
+      "id": 13150573,
+      "title": "ベリースモール (VERRY SMoL)",
+      "releaseDate": "February 18, 2026",
+      "url": "https://genius.com/Verry-smol-verry-smol-lyrics"
+    },
+    {
+      "id": 12855407,
+      "title": "イタリアンサーファー (Italian Surfer)",
+      "releaseDate": "November 27, 2025",
+      "url": "https://genius.com/Verry-smol-italian-surfer-lyrics"
+    },
+    {
+      "id": 13356278,
+      "title": "Red Bull RASEN #35",
+      "releaseDate": "April 2, 2026",
+      "url": "https://genius.com/Verry-smol-lilyukichi-and-jinmenusagi-red-bull-rasen-35-lyrics"
+    },
+    {
+      "id": 13549471,
+      "title": "ボーダーの靴下 (Striped Socks)",
+      "releaseDate": "May 13, 2026",
+      "url": "https://genius.com/Verry-smol-striped-socks-lyrics"
+    }
+  ],
+  "generatedAt": "2026-06-02T08:05:58.987Z"
+}

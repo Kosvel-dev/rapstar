@@ -8,6 +8,19 @@ import {
 } from "@/lib/artist/deliveryStyle";
 import type { ArtistProfile, StoredArtistCorpus } from "@/lib/artist/types";
 
+/** 韻・フロー解析は全曲だと Vercel 等でタイムアウトするため上限 */
+const MAX_SONGS_FOR_RHYME_ANALYSIS = 24;
+
+function sampleEvenly<T>(items: T[], max: number): T[] {
+  if (items.length <= max) return items;
+  const step = items.length / max;
+  const picked: T[] = [];
+  for (let i = 0; i < max; i++) {
+    picked.push(items[Math.floor(i * step)]);
+  }
+  return picked;
+}
+
 function flowStylesForArtist(avgMoras: number): ArtistProfile["flow"]["flowStyles"] {
   const bpms = [80, 95, 110, 128, 145];
   return bpms.map((bpm) => {
@@ -44,8 +57,12 @@ export async function buildArtistProfile(
   const vowelTailCounts = new Map<string, number>();
 
   const morasPerLineAll: number[] = [];
+  const songsForRhymeAnalysis = sampleEvenly(
+    songsWithLyrics,
+    MAX_SONGS_FOR_RHYME_ANALYSIS,
+  );
 
-  for (const song of songsWithLyrics) {
+  for (const song of songsForRhymeAnalysis) {
     const lines = extractRapLines(song.lyrics);
     if (lines.length < 2) continue;
 
@@ -58,8 +75,8 @@ export async function buildArtistProfile(
     morasPerLineAll.push(...analysis.flow.morasPerLine);
 
     for (const line of analysis.lines) {
-      const tail = vowelTail(line.endVowels, 2);
-      if (tail.length >= 2) {
+      const tail = vowelTail(line.endVowels, Math.min(4, line.endVowels.length));
+      if (tail.length >= 3) {
         vowelTailCounts.set(tail, (vowelTailCounts.get(tail) ?? 0) + 1);
       }
     }

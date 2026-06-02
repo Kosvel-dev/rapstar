@@ -22,9 +22,9 @@ export async function POST(request: Request) {
     beatsPerBar: body.beatsPerBar ?? 4,
   });
 
-  const rhymeGroups = buildRhymeGroups(analysis.lines);
+  const rhymeGroups = buildRhymeGroups(analysis.lines, analysis.rhymeMatches);
   const rhymeSummary = summarizeRhymeCoverage(analysis.lines, rhymeGroups);
-  const delivery = analyzeDeliveryGuide(analysis.lines, body.lyrics);
+  const delivery = analyzeDeliveryGuide(analysis.lines);
 
   return NextResponse.json({
     analysis,

@@ -15,6 +15,7 @@ import {
   formatVowelTail,
   RHYME_HELP,
 } from "@/lib/ui/labels";
+import { shouldShowReadingForLine } from "@/lib/reading/showReading";
 
 type BeatRec = {
   title: string;
@@ -35,10 +36,61 @@ const GROUP_COLORS = [
   "border-l-orange-400",
 ];
 
+const GROUP_HIGHLIGHT_COLORS = [
+  "bg-amber-400/20 text-amber-200",
+  "bg-emerald-400/20 text-emerald-200",
+  "bg-sky-400/20 text-sky-200",
+  "bg-pink-400/20 text-pink-200",
+  "bg-violet-400/20 text-violet-200",
+  "bg-orange-400/20 text-orange-200",
+];
+
 function lineGroupColor(index: number, groups: RhymeGroup[]): string {
   const gIdx = groups.findIndex((g) => g.lineIndices.includes(index));
   if (gIdx < 0) return "border-l-zinc-700";
   return GROUP_COLORS[gIdx % GROUP_COLORS.length];
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function highlightedLine(text: string, lineIndex: number, groups: RhymeGroup[]) {
+  const words = groups
+    .flatMap((group, groupIndex) =>
+      group.occurrences
+        .filter((occurrence) => occurrence.lineIndex === lineIndex)
+        .map((occurrence) => ({ word: occurrence.word, groupIndex })),
+    )
+    .filter((item) => item.word.length >= 2)
+    .sort((a, b) => b.word.length - a.word.length);
+  if (words.length === 0) return text;
+
+  const groupByWord = new Map(words.map((item) => [item.word, item.groupIndex]));
+  const pattern = new RegExp(
+    `(${[...groupByWord.keys()].map(escapeRegExp).join("|")})`,
+    "g",
+  );
+
+  return text.split(pattern).map((part, index) => {
+    const groupIndex = groupByWord.get(part);
+    if (groupIndex === undefined) return part;
+    return (
+      <mark
+        key={`${part}-${index}`}
+        className={`rounded px-0.5 ${GROUP_HIGHLIGHT_COLORS[groupIndex % GROUP_HIGHLIGHT_COLORS.length]}`}
+      >
+        {part}
+      </mark>
+    );
+  });
+}
+
+function heatColor(score: number): string {
+  if (score >= 80) return "bg-emerald-500";
+  if (score >= 60) return "bg-amber-500";
+  if (score >= 40) return "bg-orange-500";
+  return "bg-red-500";
 }
 
 export function LyricsWithGuide({
@@ -56,10 +108,19 @@ export function LyricsWithGuide({
     <div className="space-y-4">
       <p className="text-xs text-zinc-500">{deliveryLegendText()}</p>
       <div className="rounded-lg border border-zinc-700 bg-zinc-900/60 p-3 text-sm">
+        <p className="font-semibold text-emerald-300">
+          総合韻密度: {analysis.density.overall}/100
+        </p>
         <p className="font-medium text-amber-300">
-          韻が取れている行: {rhymeSummary.endRhymeCoverage}%（
+          3音節以上の行末韻: {rhymeSummary.endRhymeCoverage}%（
           {rhymeSummary.linesWithEndRhyme}/{rhymeSummary.totalLines}行）
         </p>
+        <div className="mt-2 grid grid-cols-2 gap-1 text-xs text-zinc-400">
+          <span>行末韻 {analysis.density.endRhyme}</span>
+          <span>内部韻 {analysis.density.internalRhyme}</span>
+          <span>マルチシラブル {analysis.density.multisyllableRhyme}</span>
+          <span>4小節チェーン {analysis.density.consecutiveRhyme}</span>
+        </div>
         <p className="mt-1 text-zinc-400">{rhymeSummary.verdict}</p>
         <p className="mt-2 text-xs text-zinc-500">{RHYME_HELP}</p>
         {rhymeGroups.length > 0 && (
@@ -69,7 +130,7 @@ export function LyricsWithGuide({
                 key={g.id}
                 className="rounded bg-zinc-800 px-2 py-0.5 text-xs"
               >
-                韻尾 {formatVowelTail(g.tail)} → 行
+                {g.vowelKey} · {g.syllables}音節 → 行
                 {g.lineIndices.map((i) => i + 1).join("・")}
               </span>
             ))}
@@ -80,6 +141,7 @@ export function LyricsWithGuide({
       <div className="max-h-[28rem] space-y-2 overflow-y-auto">
         {analysis.lines.map((line) => {
           const guide = delivery.find((d) => d.index === line.index);
+          const metrics = line.rhymeMetrics;
           return (
             <div
               key={line.index}
@@ -99,7 +161,27 @@ export function LyricsWithGuide({
                     : ""}
                 </span>
               </div>
-              <p className="mt-1">{line.text}</p>
+              <p className="mt-1">{highlightedLine(line.text, line.index, rhymeGroups)}</p>
+              {metrics && (
+                <div className="mt-2">
+                  <div className="flex flex-wrap gap-x-3 text-[11px] text-zinc-400">
+                    <span>韻密度 {metrics.density}%</span>
+                    <span>内部韻 {metrics.internalRhymeCount}組</span>
+                    <span>母音一致 {metrics.vowelMatchRate}%</span>
+                  </div>
+                  <div className="mt-1 h-1 overflow-hidden rounded bg-zinc-800">
+                    <div
+                      className={`h-full ${heatColor(metrics.density)}`}
+                      style={{ width: `${metrics.density}%` }}
+                    />
+                  </div>
+                </div>
+              )}
+              {line.reading && shouldShowReadingForLine(line.text, line.reading) && (
+                <p className="mt-0.5 font-mono text-xs text-sky-400/90">
+                  {line.reading}
+                </p>
+              )}
               {guide && (
                 <p className="mt-1 text-xs text-zinc-400">{guide.note}</p>
               )}

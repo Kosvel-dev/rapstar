@@ -22,9 +22,26 @@ http://localhost:3000
 
 ## 歌詞データの更新
 
+登録アーティスト（Genius から取得）:
+
+| slug | アーティスト | 備考 |
+|------|-------------|------|
+| `masato-hayashi` | Masato Hayashi | RAPSTAR 2025 ファイナリスト |
+| `pxrge-trxxxper` | Pxrge Trxxxper | RAPSTAR 2025 優勝 |
+| `sh1t` | sh1t | RAPSTAR 2025 ファイナリスト |
+| `son-si` | Sonsi | RAPSTAR 2025 ファイナリスト |
+| `verry-smol` | VERRY SMoL | RAPSTAR 2025 ファイナリスト |
+| `kohjiya` | Kohjiya | RAPSTAR 2024 優勝 |
+| `lex` | LEX | 人気ラッパー / RAPSTAR 審査員 |
+| `yellow-bucks` | ¥ellow Bucks | 人気ラッパー |
+| `bad-hop` | BAD HOP | 横浜クルー |
+
 ```powershell
-uv run python scripts/fetch_genius_lyrics.py --preset masato-hayashi
-uv run python scripts/fetch_genius_lyrics.py --preset pxrge-trxxxper
+# 1アーティスト
+uv run python scripts/fetch_genius_lyrics.py --preset lex
+
+# 新規追加分をまとめて取得
+uv run python scripts/fetch_genius_lyrics.py --all-new
 ```
 
 ## デプロイ

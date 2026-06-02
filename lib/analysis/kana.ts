@@ -30,6 +30,7 @@ function moraVowel(char: string): string | null {
     だ: "a", ぢ: "i", づ: "u", で: "e", ど: "o",
     ば: "a", び: "i", ぶ: "u", べ: "e", ぼ: "o",
     ぱ: "a", ぴ: "i", ぷ: "u", ぺ: "e", ぽ: "o",
+    ゔ: "u",
     ぁ: "a", ぃ: "i", ぅ: "u", ぇ: "e", ぉ: "o",
     ゃ: "a", ゅ: "u", ょ: "o",
     ゎ: "a", ゐ: "i", ゑ: "e",
@@ -45,7 +46,12 @@ export function vowelsFromReading(reading: string): string {
   let vowels = "";
   for (let i = 0; i < hira.length; i++) {
     const ch = hira[i];
-    if (ch === "っ" || ch === "ー" || ch === "ん") continue;
+    if (ch === "っ" || ch === "ん") continue;
+    if (ch === "ー") {
+      const previous = vowels.at(-1);
+      if (previous) vowels += previous;
+      continue;
+    }
     const next = hira[i + 1];
     if (next && SMALL_KANA.includes(next)) {
       const v = moraVowel(next);
@@ -90,14 +96,42 @@ export function vowelTail(vowels: string, length = 2): string {
   return vowels.slice(-Math.max(1, length));
 }
 
-/** 母音 tail の一致度 (0〜1) */
-export function tailMatchScore(a: string, b: string, minTail = 2): number {
-  if (!a || !b) return 0;
-  const maxLen = Math.min(a.length, b.length, 4);
+/** 辞書・画面表示向けの母音列キー */
+export function vowelKey(vowels: string): string {
+  return vowels.replace(/[^aiueo]/gi, "").toUpperCase();
+}
+
+export type VowelMatch = {
+  /** 一致した末尾母音列 */
+  tail: string;
+  /** 一致した音節数 */
+  syllables: number;
+  /** 一致率 (0〜1)。4〜6音節を高く評価する */
+  matchRate: number;
+};
+
+/** 末尾母音列の一致を取得。最低3音節を既定値にする。 */
+export function matchVowelTail(
+  a: string,
+  b: string,
+  minTail = 3,
+  maxTail = 6,
+): VowelMatch | null {
+  if (!a || !b) return null;
+  const maxLen = Math.min(a.length, b.length, maxTail);
   for (let len = maxLen; len >= minTail; len--) {
     if (a.slice(-len) === b.slice(-len)) {
-      return len / 4;
+      return {
+        tail: a.slice(-len),
+        syllables: len,
+        matchRate: Math.min(1, len / 5),
+      };
     }
   }
-  return 0;
+  return null;
+}
+
+/** 母音 tail の一致度 (0〜1) */
+export function tailMatchScore(a: string, b: string, minTail = 3): number {
+  return matchVowelTail(a, b, minTail)?.matchRate ?? 0;
 }

@@ -81,7 +81,7 @@ export function computeRhymeQuality(lines: LineAnalysis[]): RhymeQualityMetrics 
         lines[j].endVowels,
         5,
       );
-      if (tailLen >= 2) {
+      if (tailLen >= 3) {
         endPairs.push({
           tailLen,
           jaccard: suffixJaccard(lines[i].text, lines[j].text, 5),

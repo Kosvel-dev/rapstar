@@ -1,0 +1,681 @@
+{
+  "slug": "kohjiya",
+  "name": "Kohjiya",
+  "geniusUrl": "https://genius.com/artists/Kohjiya",
+  "songCount": 71,
+  "lineCount": 1345,
+  "flow": {
+    "averageMorasPerLine": 10,
+    "stdDevMoras": 5.3,
+    "uniformityScore": 36,
+    "typicalBpmRange": [
+      90,
+      130
+    ],
+    "flowStyles": [
+      {
+        "bpmRange": "80",
+        "targetMorasPerBar": 10,
+        "label": "相性◎",
+        "description": "BPM 80（ミドル） / 4/4 拍子 / 1行 ≒ 10 モーラ（ひらがな10文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "95",
+        "targetMorasPerBar": 8,
+        "label": "相性◎",
+        "description": "BPM 95（ミドル） / 4/4 拍子 / 1行 ≒ 8 モーラ（ひらがな8文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "110",
+        "targetMorasPerBar": 7,
+        "label": "標準フロー",
+        "description": "BPM 110（速め） / 4/4 拍子 / 1行 ≒ 7 モーラ（ひらがな7文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "128",
+        "targetMorasPerBar": 6,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 128（速め） / 4/4 拍子 / 1行 ≒ 6 モーラ（ひらがな6文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "145",
+        "targetMorasPerBar": 5,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 145（ハイテンポ） / 4/4 拍子 / 1行 ≒ 5 モーラ（ひらがな5文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      }
+    ]
+  },
+  "rhyme": {
+    "averageEndRhymeScore": 0,
+    "averageInternalRhymeScore": 0,
+    "commonEndVowelTails": [
+      {
+        "tail": "ai",
+        "count": 103
+      },
+      {
+        "tail": "ou",
+        "count": 73
+      },
+      {
+        "tail": "eu",
+        "count": 66
+      },
+      {
+        "tail": "ie",
+        "count": 43
+      },
+      {
+        "tail": "aa",
+        "count": 43
+      },
+      {
+        "tail": "io",
+        "count": 37
+      },
+      {
+        "tail": "ia",
+        "count": 34
+      },
+      {
+        "tail": "au",
+        "count": 33
+      },
+      {
+        "tail": "ae",
+        "count": 33
+      },
+      {
+        "tail": "ao",
+        "count": 31
+      },
+      {
+        "tail": "iu",
+        "count": 29
+      },
+      {
+        "tail": "ii",
+        "count": 27
+      }
+    ]
+  },
+  "vocabulary": {
+    "topWords": [
+      {
+        "word": "Yeah",
+        "count": 123
+      },
+      {
+        "word": "yeah",
+        "count": 122
+      },
+      {
+        "word": "you",
+        "count": 92
+      },
+      {
+        "word": "Big",
+        "count": 69
+      },
+      {
+        "word": "言った",
+        "count": 65
+      },
+      {
+        "word": "You",
+        "count": 59
+      },
+      {
+        "word": "Shoes",
+        "count": 45
+      },
+      {
+        "word": "with",
+        "count": 42
+      },
+      {
+        "word": "know",
+        "count": 33
+      },
+      {
+        "word": "love",
+        "count": 32
+      },
+      {
+        "word": "denied",
+        "count": 31
+      },
+      {
+        "word": "friends",
+        "count": 30
+      },
+      {
+        "word": "don",
+        "count": 30
+      },
+      {
+        "word": "now",
+        "count": 30
+      },
+      {
+        "word": "like",
+        "count": 29
+      },
+      {
+        "word": "flow",
+        "count": 29
+      },
+      {
+        "word": "back",
+        "count": 27
+      },
+      {
+        "word": "baby",
+        "count": 26
+      },
+      {
+        "word": "boy",
+        "count": 24
+      },
+      {
+        "word": "Very",
+        "count": 24
+      },
+      {
+        "word": "very",
+        "count": 24
+      },
+      {
+        "word": "rare",
+        "count": 24
+      },
+      {
+        "word": "All",
+        "count": 23
+      },
+      {
+        "word": "money",
+        "count": 23
+      },
+      {
+        "word": "Boyz",
+        "count": 23
+      },
+      {
+        "word": "yeh",
+        "count": 23
+      },
+      {
+        "word": "Hmm",
+        "count": 22
+      },
+      {
+        "word": "need",
+        "count": 21
+      },
+      {
+        "word": "life",
+        "count": 21
+      },
+      {
+        "word": "Bitch",
+        "count": 20
+      }
+    ],
+    "englishTokenRatio": 0.589,
+    "uniqueWordCount": 30
+  },
+  "delivery": {
+    "traits": [
+      "日英ミックス",
+      "英語アドリブでテンションを上げる",
+      "成り上がり・野心テーマ"
+    ],
+    "adlibPatterns": [
+      {
+        "pattern": "英語フック・アドリブ",
+        "count": 297
+      },
+      {
+        "pattern": "括弧内アドリブ",
+        "count": 279
+      },
+      {
+        "pattern": "ラップ用語混ぜ",
+        "count": 41
+      }
+    ],
+    "englishMixLevel": "high",
+    "punchlineDensity": 0.01,
+    "styleSummary": "日英ミックス、英語アドリブでテンションを上げる、成り上がり・野心テーマ。英語フレーズを随所に挟む。フックで同じフレーズを反復しやすい"
+  },
+  "songs": [
+    {
+      "id": 10506846,
+      "title": "Never Disappoint",
+      "releaseDate": "August 7, 2024",
+      "url": "https://genius.com/Kohjiya-never-disappoint-lyrics"
+    },
+    {
+      "id": 10497617,
+      "title": "HOOD STAGE",
+      "releaseDate": "May 18, 2024",
+      "url": "https://genius.com/Kohjiya-hood-stage-lyrics"
+    },
+    {
+      "id": 11718556,
+      "title": "99 Steps",
+      "releaseDate": "May 7, 2025",
+      "url": "https://genius.com/Stuts-99-steps-lyrics"
+    },
+    {
+      "id": 10635339,
+      "title": "G.O.A.T",
+      "releaseDate": "August 7, 2024",
+      "url": "https://genius.com/Kohjiya-goat-lyrics"
+    },
+    {
+      "id": 10639876,
+      "title": "DNA",
+      "releaseDate": "July 17, 2024",
+      "url": "https://genius.com/Bim-jpn-dna-lyrics"
+    },
+    {
+      "id": 11125024,
+      "title": "Denied",
+      "releaseDate": "November 27, 2024",
+      "url": "https://genius.com/Kohjiya-denied-lyrics"
+    },
+    {
+      "id": 11545703,
+      "title": "Rouge540",
+      "releaseDate": "March 7, 2025",
+      "url": "https://genius.com/3house-rouge540-lyrics"
+    },
+    {
+      "id": 11549437,
+      "title": "Oneway Drive",
+      "releaseDate": "March 5, 2025",
+      "url": "https://genius.com/G-kid-oneway-drive-lyrics"
+    },
+    {
+      "id": 10375996,
+      "title": "DREAMIN’ BOI ISSUE Pt.2",
+      "releaseDate": "February 26, 2025",
+      "url": "https://genius.com/Kohjiya-dreamin-boi-issue-pt2-lyrics"
+    },
+    {
+      "id": 10067739,
+      "title": "Reach Out Rich",
+      "releaseDate": "February 7, 2024",
+      "url": "https://genius.com/Kohjiya-reach-out-rich-lyrics"
+    },
+    {
+      "id": 10067735,
+      "title": "DREAMIN’ BOI ISSUE",
+      "releaseDate": "November 1, 2023",
+      "url": "https://genius.com/Kohjiya-dreamin-boi-issue-lyrics"
+    },
+    {
+      "id": 9928450,
+      "title": "Racin’",
+      "releaseDate": "November 24, 2023",
+      "url": "https://genius.com/Io-jpn-racin-lyrics"
+    },
+    {
+      "id": 10067741,
+      "title": "Shine",
+      "releaseDate": "February 7, 2024",
+      "url": "https://genius.com/Kohjiya-shine-lyrics"
+    },
+    {
+      "id": 10396630,
+      "title": "Fall Down",
+      "releaseDate": "March 26, 2021",
+      "url": "https://genius.com/Kohjiya-fall-down-lyrics"
+    },
+    {
+      "id": 10689118,
+      "title": "Like That",
+      "releaseDate": "July 26, 2024",
+      "url": "https://genius.com/Yungflx-like-that-lyrics"
+    },
+    {
+      "id": 10506565,
+      "title": "17!!",
+      "releaseDate": "May 8, 2020",
+      "url": "https://genius.com/Kohjiya-17-lyrics"
+    },
+    {
+      "id": 7370092,
+      "title": "Rob",
+      "releaseDate": "November 10, 2021",
+      "url": "https://genius.com/Kohjiya-rob-lyrics"
+    },
+    {
+      "id": 11018354,
+      "title": "Broke Boy Rich",
+      "releaseDate": "October 23, 2024",
+      "url": "https://genius.com/Kohjiya-broke-boy-rich-lyrics"
+    },
+    {
+      "id": 10067740,
+      "title": "You",
+      "releaseDate": "February 7, 2024",
+      "url": "https://genius.com/Kohjiya-you-lyrics"
+    },
+    {
+      "id": 10741187,
+      "title": "Kenzo",
+      "releaseDate": "August 14, 2024",
+      "url": "https://genius.com/Kohjiya-and-lj-kenzo-lyrics"
+    },
+    {
+      "id": 10516202,
+      "title": "言った!! Remix",
+      "releaseDate": "June 12, 2024",
+      "url": "https://genius.com/Mikado-jpn-remix-lyrics"
+    },
+    {
+      "id": 10067726,
+      "title": "Childish",
+      "releaseDate": "February 7, 2024",
+      "url": "https://genius.com/Kohjiya-childish-lyrics"
+    },
+    {
+      "id": 10681470,
+      "title": "247",
+      "releaseDate": "July 24, 2024",
+      "url": "https://genius.com/Kohjiya-247-lyrics"
+    },
+    {
+      "id": 10396560,
+      "title": "Naked Eyes",
+      "releaseDate": "May 15, 2024",
+      "url": "https://genius.com/Bonbero-naked-eyes-lyrics"
+    },
+    {
+      "id": 10067738,
+      "title": "Evil Twin",
+      "releaseDate": "February 7, 2024",
+      "url": "https://genius.com/Kohjiya-evil-twin-lyrics"
+    },
+    {
+      "id": 10664808,
+      "title": "Money Trees",
+      "releaseDate": "July 19, 2024",
+      "url": "https://genius.com/Gottz-money-trees-lyrics"
+    },
+    {
+      "id": 10067734,
+      "title": "Kick Back",
+      "releaseDate": "January 24, 2024",
+      "url": "https://genius.com/Kohjiya-kick-back-lyrics"
+    },
+    {
+      "id": 10067737,
+      "title": "KJ Season Freestyle",
+      "releaseDate": "February 7, 2024",
+      "url": "https://genius.com/Kohjiya-kj-season-freestyle-lyrics"
+    },
+    {
+      "id": 5394322,
+      "title": "IRANAI",
+      "releaseDate": "January 15, 2020",
+      "url": "https://genius.com/Lj-iranai-lyrics"
+    },
+    {
+      "id": 11125019,
+      "title": "Lost Friends",
+      "releaseDate": "December 11, 2024",
+      "url": "https://genius.com/Kohjiya-lost-friends-lyrics"
+    },
+    {
+      "id": 11125020,
+      "title": "Upon My Soul",
+      "releaseDate": "December 11, 2024",
+      "url": "https://genius.com/Kohjiya-upon-my-soul-lyrics"
+    },
+    {
+      "id": 11125018,
+      "title": "Phantom",
+      "releaseDate": "December 11, 2024",
+      "url": "https://genius.com/Kohjiya-phantom-lyrics"
+    },
+    {
+      "id": 11125021,
+      "title": "Talk 2 Me",
+      "releaseDate": "December 11, 2024",
+      "url": "https://genius.com/Kohjiya-talk-2-me-lyrics"
+    },
+    {
+      "id": 13339606,
+      "title": "Visitor",
+      "releaseDate": "April 1, 2026",
+      "url": "https://genius.com/Kohjiya-visitor-lyrics"
+    },
+    {
+      "id": 12908483,
+      "title": "Tell Me How It Goes",
+      "releaseDate": "January 1, 2026",
+      "url": "https://genius.com/Kohjiya-tell-me-how-it-goes-lyrics"
+    },
+    {
+      "id": 10067736,
+      "title": "Rarri",
+      "releaseDate": "February 7, 2024",
+      "url": "https://genius.com/Kohjiya-rarri-lyrics"
+    },
+    {
+      "id": 10194561,
+      "title": "Josetsusha!",
+      "releaseDate": "March 6, 2024",
+      "url": "https://genius.com/Kohjiya-josetsusha-lyrics"
+    },
+    {
+      "id": 12088737,
+      "title": "Stand The Rain",
+      "releaseDate": "July 2, 2025",
+      "url": "https://genius.com/Kohjiya-stand-the-rain-lyrics"
+    },
+    {
+      "id": 11125023,
+      "title": "10toes",
+      "releaseDate": "December 11, 2024",
+      "url": "https://genius.com/Kohjiya-10toes-lyrics"
+    },
+    {
+      "id": 13103459,
+      "title": "Ma Boyz",
+      "releaseDate": "February 11, 2026",
+      "url": "https://genius.com/Kohjiya-ma-boyz-lyrics"
+    },
+    {
+      "id": 11125022,
+      "title": "Blue",
+      "releaseDate": "December 11, 2024",
+      "url": "https://genius.com/Kohjiya-blue-lyrics"
+    },
+    {
+      "id": 12148629,
+      "title": "Spotlight (Remix)",
+      "releaseDate": "September 3, 2025",
+      "url": "https://genius.com/Io-jpn-spotlight-remix-lyrics"
+    },
+    {
+      "id": 6875019,
+      "title": "Can’t take back",
+      "releaseDate": "December 21, 2019",
+      "url": "https://genius.com/Xy-gene-cant-take-back-lyrics"
+    },
+    {
+      "id": 10395748,
+      "title": "Change",
+      "releaseDate": "June 21, 2023",
+      "url": "https://genius.com/Madzs-change-lyrics"
+    },
+    {
+      "id": 13343455,
+      "title": "All I Need",
+      "releaseDate": "April 6, 2026",
+      "url": "https://genius.com/Kohjiya-all-i-need-lyrics"
+    },
+    {
+      "id": 11796877,
+      "title": "Lost in you",
+      "releaseDate": "April 29, 2025",
+      "url": "https://genius.com/Vingo-lost-in-you-lyrics"
+    },
+    {
+      "id": 10578278,
+      "title": "With Friends",
+      "releaseDate": "June 26, 2024",
+      "url": "https://genius.com/Only-u-with-friends-lyrics"
+    },
+    {
+      "id": 10396624,
+      "title": "SWIMGOOD",
+      "releaseDate": "March 26, 2021",
+      "url": "https://genius.com/Kohjiya-swimgood-lyrics"
+    },
+    {
+      "id": 13343459,
+      "title": "Life Is Not Automatic",
+      "releaseDate": "April 6, 2026",
+      "url": "https://genius.com/Kohjiya-life-is-not-automatic-lyrics"
+    },
+    {
+      "id": 10815617,
+      "title": "Very Very Rare",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Kohjiya-and-lj-very-very-rare-lyrics"
+    },
+    {
+      "id": 10815620,
+      "title": "100million",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Kohjiya-and-lj-100million-lyrics"
+    },
+    {
+      "id": 10815619,
+      "title": "Speedy Boy",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Kohjiya-and-lj-speedy-boy-lyrics"
+    },
+    {
+      "id": 10395965,
+      "title": "Sunburn",
+      "releaseDate": "August 13, 2021",
+      "url": "https://genius.com/Madzs-sunburn-lyrics"
+    },
+    {
+      "id": 13343452,
+      "title": "Keep Goin’ Rozay",
+      "releaseDate": "April 6, 2026",
+      "url": "https://genius.com/Kohjiya-keep-goin-rozay-lyrics"
+    },
+    {
+      "id": 6589803,
+      "title": "Fake Or Flame",
+      "releaseDate": "March 5, 2021",
+      "url": "https://genius.com/Kohjiya-fake-or-flame-lyrics"
+    },
+    {
+      "id": 10587975,
+      "title": "No Love",
+      "releaseDate": "June 28, 2024",
+      "url": "https://genius.com/Kohjiya-and-cyprus-no-love-lyrics"
+    },
+    {
+      "id": 10836318,
+      "title": "Laugh Now Cry Later",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Kohjiya-and-lj-laugh-now-cry-later-lyrics"
+    },
+    {
+      "id": 13343457,
+      "title": "You & I",
+      "releaseDate": "April 6, 2026",
+      "url": "https://genius.com/Kohjiya-you-and-i-lyrics"
+    },
+    {
+      "id": 10513028,
+      "title": "Cloud 9",
+      "releaseDate": "April 24, 2020",
+      "url": "https://genius.com/Tio-jpn-cloud-9-lyrics"
+    },
+    {
+      "id": 10513088,
+      "title": "Cloud 9 - Remix",
+      "releaseDate": "June 12, 2020",
+      "url": "https://genius.com/Tio-jpn-cloud-9-remix-lyrics"
+    },
+    {
+      "id": 13343454,
+      "title": "Roulette",
+      "releaseDate": "April 6, 2026",
+      "url": "https://genius.com/Kohjiya-roulette-lyrics"
+    },
+    {
+      "id": 13343458,
+      "title": "Back Home",
+      "releaseDate": "April 6, 2026",
+      "url": "https://genius.com/Kohjiya-back-home-lyrics"
+    },
+    {
+      "id": 10989233,
+      "title": "BRIGHT TIMES",
+      "releaseDate": "October 16, 2024",
+      "url": "https://genius.com/Salu-bright-times-lyrics"
+    },
+    {
+      "id": 10423289,
+      "title": "BIG HOMIE",
+      "releaseDate": "December 16, 2022",
+      "url": "https://genius.com/Kohjiya-big-homie-lyrics"
+    },
+    {
+      "id": 11603938,
+      "title": "Go With Flow",
+      "releaseDate": "February 19, 2025",
+      "url": "https://genius.com/Mc-tyson-go-with-flow-lyrics"
+    },
+    {
+      "id": 10815618,
+      "title": "Big Shoes",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Kohjiya-and-lj-big-shoes-lyrics"
+    },
+    {
+      "id": 10815621,
+      "title": "Big Body",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Kohjiya-and-lj-big-body-lyrics"
+    },
+    {
+      "id": 13343456,
+      "title": "G-STAR RAW",
+      "releaseDate": "April 6, 2026",
+      "url": "https://genius.com/Kohjiya-g-star-raw-lyrics"
+    },
+    {
+      "id": 10692813,
+      "title": "今宵",
+      "releaseDate": "September 29, 2023",
+      "url": "https://genius.com/Shurkn-pap--lyrics"
+    },
+    {
+      "id": 13343451,
+      "title": "Set It Off",
+      "releaseDate": "April 6, 2026",
+      "url": "https://genius.com/Kohjiya-set-it-off-lyrics"
+    },
+    {
+      "id": 13343453,
+      "title": "What I Do",
+      "releaseDate": "April 6, 2026",
+      "url": "https://genius.com/Kohjiya-what-i-do-lyrics"
+    }
+  ],
+  "generatedAt": "2026-06-02T08:05:58.250Z"
+}

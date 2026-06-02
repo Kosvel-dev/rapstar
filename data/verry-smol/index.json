@@ -1,0 +1,50 @@
+{
+  "artist": {
+    "id": 4600857,
+    "name": "VERRY SMoL",
+    "url": "https://genius.com/artists/Verry-smol",
+    "genius_song_count": 6,
+    "lyrics_complete_count": 6,
+    "lyrics_missing_count": 0
+  },
+  "fetched_at": "2026-06-02T04:53:48.906755+00:00",
+  "songs_with_lyrics": [
+    {
+      "id": 12585823,
+      "title": "HOOD STAGE",
+      "release_date": "October 18, 2025",
+      "url": "https://genius.com/Verry-smol-hood-stage-lyrics"
+    },
+    {
+      "id": 12671943,
+      "title": "雨上がり (Ameagari)",
+      "release_date": "March 18, 2026",
+      "url": "https://genius.com/Verry-smol-ameagari-lyrics"
+    },
+    {
+      "id": 13150573,
+      "title": "ベリースモール (VERRY SMoL)",
+      "release_date": "February 18, 2026",
+      "url": "https://genius.com/Verry-smol-verry-smol-lyrics"
+    },
+    {
+      "id": 12855407,
+      "title": "イタリアンサーファー (Italian Surfer)",
+      "release_date": "November 27, 2025",
+      "url": "https://genius.com/Verry-smol-italian-surfer-lyrics"
+    },
+    {
+      "id": 13356278,
+      "title": "Red Bull RASEN #35",
+      "release_date": "April 2, 2026",
+      "url": "https://genius.com/Verry-smol-lilyukichi-and-jinmenusagi-red-bull-rasen-35-lyrics"
+    },
+    {
+      "id": 13549471,
+      "title": "ボーダーの靴下 (Striped Socks)",
+      "release_date": "May 13, 2026",
+      "url": "https://genius.com/Verry-smol-striped-socks-lyrics"
+    }
+  ],
+  "songs_without_lyrics": []
+}

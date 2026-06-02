@@ -1,0 +1,50 @@
+{
+  "artist": {
+    "id": 3803934,
+    "name": "sh1t",
+    "url": "https://genius.com/artists/Sh1t",
+    "genius_song_count": 6,
+    "lyrics_complete_count": 6,
+    "lyrics_missing_count": 0
+  },
+  "fetched_at": "2026-06-02T04:53:21.621637+00:00",
+  "songs_with_lyrics": [
+    {
+      "id": 12474368,
+      "title": "SELECTION CYPHER GROUP D",
+      "release_date": "September 27, 2025",
+      "url": "https://genius.com/Sh1t-2-kid-pxrge-trxxxper-bibionatrack-and-ichiro-selection-cypher-group-d-lyrics"
+    },
+    {
+      "id": 12671939,
+      "title": "8point",
+      "release_date": "November 8, 2025",
+      "url": "https://genius.com/Sh1t-and-neetz-8point-lyrics"
+    },
+    {
+      "id": 12549621,
+      "title": "HOOD STAGE",
+      "release_date": "October 11, 2025",
+      "url": "https://genius.com/Sh1t-hood-stage-lyrics"
+    },
+    {
+      "id": 12837513,
+      "title": "reol key",
+      "release_date": "2025",
+      "url": "https://genius.com/Sh1t-reol-key-lyrics"
+    },
+    {
+      "id": 8670431,
+      "title": "No angle of view",
+      "release_date": "August 20, 2022",
+      "url": "https://genius.com/Jetg-no-angle-of-view-lyrics"
+    },
+    {
+      "id": 9946378,
+      "title": "GET UP",
+      "release_date": "July 21, 2023",
+      "url": "https://genius.com/Jetg-get-up-lyrics"
+    }
+  ],
+  "songs_without_lyrics": []
+}

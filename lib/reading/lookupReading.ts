@@ -38,7 +38,7 @@ export async function lookupReading(text: string): Promise<ReadingLookupResult> 
   const cached = cache.get(key);
   if (cached) return cached;
 
-  if (isMostlyKana(key)) {
+  if (isMostlyKana(key) && !/[\u4e00-\u9fff]/.test(key)) {
     const reading = toHiragana(key);
     const result: ReadingLookupResult = {
       reading,
@@ -73,6 +73,8 @@ export async function lookupReading(text: string): Promise<ReadingLookupResult> 
 export async function lookupLineReading(text: string): Promise<string | null> {
   const cleaned = text.trim();
   if (!cleaned) return null;
-  if (isMostlyKana(cleaned)) return toHiragana(cleaned);
+  if (isMostlyKana(cleaned) && !/[\u4e00-\u9fff]/.test(cleaned)) {
+    return toHiragana(cleaned);
+  }
   return lookupFromKuromoji(cleaned);
 }

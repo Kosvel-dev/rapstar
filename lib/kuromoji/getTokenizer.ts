@@ -1,4 +1,5 @@
 import path from "node:path";
+import fs from "node:fs";
 import kuromoji from "kuromoji";
 import type { IpadicFeatures, Tokenizer } from "kuromoji";
 import { isKuromojiEnabled } from "./isEnabled";
@@ -7,6 +8,10 @@ let tokenizerPromise: Promise<Tokenizer<IpadicFeatures>> | null = null;
 let initFailed = false;
 
 function resolveDictPath(): string {
+  const bundled = path.join(process.cwd(), "data", "kuromoji-dict");
+  if (fs.existsSync(path.join(bundled, "base.dat.gz"))) {
+    return bundled;
+  }
   return path.join(process.cwd(), "node_modules", "kuromoji", "dict");
 }
 

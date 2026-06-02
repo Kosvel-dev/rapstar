@@ -5,9 +5,9 @@
   "songCount": 16,
   "lineCount": 1165,
   "flow": {
-    "averageMorasPerLine": 10.2,
-    "stdDevMoras": 5,
-    "uniformityScore": 40,
+    "averageMorasPerLine": 13.3,
+    "stdDevMoras": 6.5,
+    "uniformityScore": 22,
     "typicalBpmRange": [
       90,
       130
@@ -16,13 +16,13 @@
       {
         "bpmRange": "80",
         "targetMorasPerBar": 10,
-        "label": "相性◎",
+        "label": "ゆったり・伸ばし向き",
         "description": "BPM 80（ミドル） / 4/4 拍子 / 1行 ≒ 10 モーラ（ひらがな10文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
       },
       {
         "bpmRange": "95",
         "targetMorasPerBar": 8,
-        "label": "標準フロー",
+        "label": "ゆったり・伸ばし向き",
         "description": "BPM 95（ミドル） / 4/4 拍子 / 1行 ≒ 8 モーラ（ひらがな8文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
       },
       {
@@ -51,51 +51,51 @@
     "commonEndVowelTails": [
       {
         "tail": "ai",
-        "count": 88
+        "count": 103
       },
       {
         "tail": "aa",
-        "count": 88
-      },
-      {
-        "tail": "eu",
-        "count": 49
-      },
-      {
-        "tail": "ui",
-        "count": 47
+        "count": 94
       },
       {
         "tail": "ae",
-        "count": 46
-      },
-      {
-        "tail": "ou",
-        "count": 44
+        "count": 63
       },
       {
         "tail": "au",
-        "count": 44
+        "count": 51
       },
       {
-        "tail": "oi",
+        "tail": "ui",
+        "count": 51
+      },
+      {
+        "tail": "ou",
+        "count": 45
+      },
+      {
+        "tail": "eu",
         "count": 41
       },
       {
         "tail": "ei",
-        "count": 34
+        "count": 39
       },
       {
         "tail": "ia",
-        "count": 33
+        "count": 32
       },
       {
-        "tail": "ao",
+        "tail": "oi",
+        "count": 30
+      },
+      {
+        "tail": "ii",
         "count": 22
       },
       {
-        "tail": "ue",
-        "count": 18
+        "tail": "uu",
+        "count": 21
       }
     ]
   },
@@ -348,5 +348,5 @@
       "url": "https://genius.com/Pxrge-trxxxper-and-over-kill-jpn-trust-myself-lyrics"
     }
   ],
-  "generatedAt": "2026-06-02T02:48:45.512Z"
+  "generatedAt": "2026-06-02T08:05:58.769Z"
 }

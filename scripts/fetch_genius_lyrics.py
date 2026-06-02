@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 from lyricsgenius import Genius
 
 PRESETS: dict[str, dict[str, object]] = {
+    # RAPSTAR 2025 ファイナリスト（既存）
     "masato-hayashi": {
         "artist_id": 2896246,
         "artist_name": "Masato Hayashi",
@@ -24,7 +25,55 @@ PRESETS: dict[str, dict[str, object]] = {
         "artist_name": "Pxrge Trxxxper",
         "output_dir": Path("data/pxrge-trxxxper"),
     },
+    # RAPSTAR 2025 ファイナリスト
+    "sh1t": {
+        "artist_id": 3803934,
+        "artist_name": "sh1t",
+        "output_dir": Path("data/sh1t"),
+    },
+    "son-si": {
+        "artist_id": 4609257,
+        "artist_name": "Sonsi",
+        "output_dir": Path("data/son-si"),
+    },
+    "verry-smol": {
+        "artist_id": 4600857,
+        "artist_name": "VERRY SMoL",
+        "output_dir": Path("data/verry-smol"),
+    },
+    # RAPSTAR 2024 優勝
+    "kohjiya": {
+        "artist_id": 2645135,
+        "artist_name": "Kohjiya",
+        "output_dir": Path("data/kohjiya"),
+    },
+    # 人気 / シーン代表
+    "lex": {
+        "artist_id": 2088436,
+        "artist_name": "LEX (JPN)",
+        "output_dir": Path("data/lex"),
+    },
+    "yellow-bucks": {
+        "artist_id": 2239329,
+        "artist_name": "¥ellow Bucks",
+        "output_dir": Path("data/yellow-bucks"),
+    },
+    "bad-hop": {
+        "artist_id": 611655,
+        "artist_name": "BAD HOP",
+        "output_dir": Path("data/bad-hop"),
+    },
 }
+
+NEW_PRESET_SLUGS = [
+    "sh1t",
+    "son-si",
+    "verry-smol",
+    "kohjiya",
+    "lex",
+    "yellow-bucks",
+    "bad-hop",
+]
 
 
 def parse_args() -> argparse.Namespace:
@@ -34,8 +83,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--preset",
         choices=sorted(PRESETS),
-        default="masato-hayashi",
-        help="Built-in artist preset (default: masato-hayashi)",
+        help="Built-in artist preset",
+    )
+    parser.add_argument(
+        "--all-new",
+        action="store_true",
+        help="Fetch all presets listed in NEW_PRESET_SLUGS",
     )
     parser.add_argument("--artist-name", help="Override artist name")
     parser.add_argument("--artist-id", type=int, help="Override Genius artist ID")
@@ -58,8 +111,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--sort",
         choices=("title", "popularity"),
-        default="title",
-        help="Song order from Genius (default: title)",
+        default="popularity",
+        help="Song order from Genius (default: popularity)",
     )
     return parser.parse_args()
 
@@ -184,14 +237,46 @@ def export_json(artist: object, output_dir: Path, artist_id: int) -> Path:
     return outfile
 
 
+def run_fetch(
+    genius: Genius,
+    *,
+    artist_name: str,
+    artist_id: int,
+    output_dir: Path,
+    max_songs: int | None,
+    include_features: bool,
+    sort: str,
+) -> int:
+    artist = fetch_artist(
+        genius,
+        artist_name,
+        artist_id,
+        max_songs=max_songs,
+        include_features=include_features,
+        sort=sort,
+    )
+    outfile = export_json(artist, output_dir, artist_id)
+    complete = sum(1 for song in artist.songs if song.lyrics)
+    print()
+    print(f"Artist: {artist.name}")
+    print(f"Songs saved: {len(artist.songs)}")
+    print(f"With lyrics: {complete}")
+    print(f"Output: {outfile.resolve()}")
+    return complete
+
+
 def main() -> int:
     load_dotenv()
     args = parse_args()
 
-    preset = PRESETS[args.preset]
-    artist_name = args.artist_name or str(preset["artist_name"])
-    artist_id = args.artist_id or int(preset["artist_id"])
-    output_dir = args.output_dir or Path(str(preset["output_dir"]))
+    if not args.preset and not args.all_new:
+        if not (args.artist_id and args.output_dir and args.artist_name):
+            print(
+                "Specify --preset, --all-new, or "
+                "--artist-id + --artist-name + --output-dir",
+                file=sys.stderr,
+            )
+            return 1
 
     token = os.environ.get("GENIUS_ACCESS_TOKEN")
     if not token:
@@ -204,23 +289,32 @@ def main() -> int:
         return 1
 
     genius = build_genius(token)
-    artist = fetch_artist(
-        genius,
-        artist_name,
-        artist_id,
-        max_songs=args.max_songs,
-        include_features=not args.no_features,
-        sort=args.sort,
-    )
+    slugs = NEW_PRESET_SLUGS if args.all_new else [args.preset]  # type: ignore[list-item]
 
-    outfile = export_json(artist, output_dir, artist_id)
-    complete = sum(1 for song in artist.songs if song.lyrics)
+    for slug in slugs:
+        preset = PRESETS[slug]
+        artist_name = args.artist_name or str(preset["artist_name"])
+        artist_id = args.artist_id or int(preset["artist_id"])
+        output_dir = args.output_dir or Path(str(preset["output_dir"]))
 
-    print()
-    print(f"Artist: {artist.name}")
-    print(f"Songs saved: {len(artist.songs)}")
-    print(f"With lyrics: {complete}")
-    print(f"Output: {outfile.resolve()}")
+        if args.all_new or len(slugs) > 1:
+            print(f"\n{'=' * 60}\nFetching preset: {slug}\n{'=' * 60}")
+
+        try:
+            run_fetch(
+                genius,
+                artist_name=artist_name,
+                artist_id=artist_id,
+                output_dir=output_dir,
+                max_songs=args.max_songs,
+                include_features=not args.no_features,
+                sort=args.sort,
+            )
+        except Exception as exc:
+            print(f"FAILED {slug}: {exc}", file=sys.stderr)
+            if not args.all_new:
+                return 1
+
     return 0
 
 

@@ -6,13 +6,22 @@ import type { LyricAnalysis } from "@/lib/analysis/types";
 import type { DeliveryLineGuide } from "@/lib/analysis/deliveryGuide";
 import type { RhymeGroup, RhymeSummary } from "@/lib/analysis/rhymeGroups";
 import { PracticePanel, LyricsWithGuide } from "@/components/PracticePanel";
+import { LyricsReadingView } from "@/components/LyricsReadingView";
 import { SongStructureEditor } from "@/components/SongStructureEditor";
+import type { AnnotatedLyricLine } from "@/lib/reading/annotateLyrics";
 import { englishMixLabel, formatVowelTail } from "@/lib/ui/labels";
 import {
   defaultStructureForArtist,
   THEME_PRESETS,
   type SongSectionConfig,
 } from "@/lib/llm/songStructure";
+import { MAIN_THEME_CATEGORIES } from "@/lib/llm/lyricCraftGuide";
+import {
+  DEFAULT_LEARNING_MODE,
+  LEARNING_MODES,
+  type LearningModeId,
+} from "@/lib/llm/learningModes";
+import type { RhymeCoverageMetrics } from "@/lib/llm/refineRhymes";
 
 type ArtistListItem = {
   slug: string;
@@ -25,6 +34,13 @@ type Tab = "profile" | "analyze" | "write" | "practice";
 const DEFAULT_BPM: Record<string, number> = {
   "masato-hayashi": 105,
   "pxrge-trxxxper": 140,
+  "sh1t": 140,
+  "son-si": 115,
+  "verry-smol": 110,
+  "kohjiya": 120,
+  lex: 135,
+  "yellow-bucks": 130,
+  "bad-hop": 125,
 };
 
 export default function HomePage() {
@@ -43,7 +59,8 @@ export default function HomePage() {
   const [delivery, setDelivery] = useState<DeliveryLineGuide[]>([]);
   const [analyzeLoading, setAnalyzeLoading] = useState(false);
 
-  const [theme, setTheme] = useState("成り上がりとアンチへの返し");
+  const [mainTheme, setMainTheme] = useState("成功");
+  const [subTheme, setSubTheme] = useState("成り上がりとアンチへの返し");
   const [bars, setBars] = useState<4 | 8 | 16>(8);
   const [generateFormat, setGenerateFormat] = useState<"bars" | "full">("full");
   const [songSections, setSongSections] = useState<SongSectionConfig[]>(() =>
@@ -53,21 +70,32 @@ export default function HomePage() {
   const [generateLoading, setGenerateLoading] = useState(false);
   const [generateError, setGenerateError] = useState("");
   const [strongRhyme, setStrongRhyme] = useState(true);
+  const [learningMode, setLearningMode] =
+    useState<LearningModeId>(DEFAULT_LEARNING_MODE);
   const [generatedRhymeCoverage, setGeneratedRhymeCoverage] = useState<
     number | null
   >(null);
+  const [generatedRhymeMetrics, setGeneratedRhymeMetrics] =
+    useState<RhymeCoverageMetrics | null>(null);
   const [rhymeRefined, setRhymeRefined] = useState(false);
+  const [repetitionReduced, setRepetitionReduced] = useState(false);
+  const [annotatedLines, setAnnotatedLines] = useState<AnnotatedLyricLine[]>([]);
+  const [lyricsWithReading, setLyricsWithReading] = useState("");
+  const [showReadingView, setShowReadingView] = useState(true);
 
   const [rhymeQuery, setRhymeQuery] = useState("フロー");
   const [rhymes, setRhymes] = useState<
-    { word: string; reading?: string; tail: string; strength: number }[]
+    {
+      word: string;
+      reading?: string;
+      tail: string;
+      vowelKey: string;
+      syllables: number;
+      matchRate: number;
+      strength: number;
+    }[]
   >([]);
   const [rhymeTail, setRhymeTail] = useState("");
-
-  useEffect(() => {
-    if (DEFAULT_BPM[slug]) setBpm(DEFAULT_BPM[slug]);
-    setSongSections(defaultStructureForArtist(slug));
-  }, [slug]);
 
   useEffect(() => {
     fetch("/api/artists")
@@ -81,8 +109,8 @@ export default function HomePage() {
     setProfileError("");
     try {
       const res = await fetch(`/api/artists/${artistSlug}/profile`);
-      if (!res.ok) throw new Error("プロファイル取得に失敗");
       const data = await res.json();
+      if (!res.ok) throw new Error(data.error ?? "プロファイル取得に失敗");
       setProfile(data.profile);
     } catch (e) {
       setProfileError(e instanceof Error ? e.message : "エラー");
@@ -93,8 +121,16 @@ export default function HomePage() {
   }, []);
 
   useEffect(() => {
-    if (slug) loadProfile(slug);
+    if (!slug) return;
+    const timeoutId = window.setTimeout(() => void loadProfile(slug), 0);
+    return () => window.clearTimeout(timeoutId);
   }, [slug, loadProfile]);
+
+  function changeArtist(nextSlug: string) {
+    setSlug(nextSlug);
+    if (DEFAULT_BPM[nextSlug]) setBpm(DEFAULT_BPM[nextSlug]);
+    setSongSections(defaultStructureForArtist(nextSlug));
+  }
 
   async function runAnalyze() {
     setAnalyzeLoading(true);
@@ -118,28 +154,38 @@ export default function HomePage() {
     setGenerateLoading(true);
     setGenerateError("");
     setGenerated("");
+    setAnnotatedLines([]);
+    setLyricsWithReading("");
     setGeneratedRhymeCoverage(null);
+    setGeneratedRhymeMetrics(null);
     setRhymeRefined(false);
+    setRepetitionReduced(false);
     try {
       const res = await fetch("/api/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           slug,
-          theme,
+          mainTheme,
+          subTheme,
           bpm,
           bars,
           format: generateFormat,
           sections: generateFormat === "full" ? songSections : undefined,
           strongRhyme,
+          learningMode,
         }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? "生成失敗");
       setGenerated(data.lyrics);
       setLyrics(data.lyrics);
+      setAnnotatedLines(data.annotatedLines ?? []);
+      setLyricsWithReading(data.lyricsWithReading ?? "");
       setGeneratedRhymeCoverage(data.rhymeCoverage ?? null);
+      setGeneratedRhymeMetrics(data.rhymeMetrics ?? null);
       setRhymeRefined(Boolean(data.rhymeRefined));
+      setRepetitionReduced(Boolean(data.repetitionReduced));
     } catch (e) {
       setGenerateError(e instanceof Error ? e.message : "エラー");
     } finally {
@@ -164,12 +210,12 @@ export default function HomePage() {
             </p>
             <h1 className="text-2xl font-bold">アーティスト解析 & リリック制作</h1>
             <p className="mt-1 text-sm text-zinc-400">
-              歌詞から韻・フロー・歌い方を分析し、似た文体で歌詞を生成。ビートに乗って練習できます
+              歌詞から韻・フロー・歌い方を分析し、統計的特徴を使って歌詞を生成。ビートに乗って練習できます
             </p>
           </div>
           <select
             value={slug}
-            onChange={(e) => setSlug(e.target.value)}
+            onChange={(e) => changeArtist(e.target.value)}
             className="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm"
           >
             {artists.map((a) => (
@@ -349,13 +395,13 @@ export default function HomePage() {
               {rhymes.length > 0 && (
                 <div className="mt-2 text-sm text-zinc-400">
                   <p className="text-xs text-zinc-500">
-                    「{rhymeQuery}」と韻が踏める語（末尾母音 {formatVowelTail(rhymeTail)}）:
+                    「{rhymeQuery}」と踏める3〜6音節の母音韻（{formatVowelTail(rhymeTail)}）:
                   </p>
                   <p className="mt-1">
                     {rhymes
                       .map(
                         (r) =>
-                          `${r.word}${r.reading ? `(${r.reading})` : ""}`,
+                          `${r.word}${r.reading ? `(${r.reading})` : ""} [${r.vowelKey} / ${r.syllables}音節 / ${r.matchRate}%]`,
                       )
                       .join("、")}
                   </p>
@@ -382,14 +428,33 @@ export default function HomePage() {
         {tab === "write" && (
           <section className="grid gap-6 lg:grid-cols-2">
             <Panel title="生成条件">
-              <label className="mb-1 block text-sm text-zinc-400">テーマ</label>
+              <label className="mb-1 block text-sm text-zinc-400">
+                大テーマ（主軸）
+              </label>
+              <select
+                value={mainTheme}
+                onChange={(e) => setMainTheme(e.target.value)}
+                className="mb-3 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
+              >
+                {MAIN_THEME_CATEGORIES.map((t) => (
+                  <option key={t} value={t}>
+                    {t}
+                  </option>
+                ))}
+              </select>
+              <label className="mb-1 block text-sm text-zinc-400">
+                小テーマ（人物・場所・具体状況）
+              </label>
               {THEME_PRESETS[slug] && (
                 <div className="mb-2 flex flex-wrap gap-2">
                   {THEME_PRESETS[slug].map((p) => (
                     <button
                       key={p.label}
                       type="button"
-                      onClick={() => setTheme(p.theme)}
+                      onClick={() => {
+                        setMainTheme(p.mainTheme);
+                        setSubTheme(p.subTheme);
+                      }}
                       className="rounded bg-zinc-800 px-2 py-1 text-xs hover:bg-zinc-700"
                     >
                       {p.label}
@@ -398,8 +463,8 @@ export default function HomePage() {
                 </div>
               )}
               <input
-                value={theme}
-                onChange={(e) => setTheme(e.target.value)}
+                value={subTheme}
+                onChange={(e) => setSubTheme(e.target.value)}
                 placeholder="例: Gangに愛はない。仲間に見せたい drama"
                 className="mb-4 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
               />
@@ -425,6 +490,23 @@ export default function HomePage() {
                 <option value="full">曲全体（Intro / Verse / Hook…）</option>
                 <option value="bars">一部だけ（4 / 8 / 16 小節）</option>
               </select>
+              <label className="mb-1 block text-sm text-zinc-400">
+                韻の学習モード
+              </label>
+              <select
+                value={learningMode}
+                onChange={(e) => setLearningMode(e.target.value as LearningModeId)}
+                className="mb-1 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
+              >
+                {LEARNING_MODES.map((mode) => (
+                  <option key={mode.id} value={mode.id}>
+                    {mode.label}
+                  </option>
+                ))}
+              </select>
+              <p className="mb-4 text-xs text-zinc-500">
+                {LEARNING_MODES.find((mode) => mode.id === learningMode)?.description}
+              </p>
               {generateFormat === "bars" ? (
                 <>
                   <label className="mb-1 block text-sm text-zinc-400">行数</label>
@@ -454,7 +536,7 @@ export default function HomePage() {
                   onChange={(e) => setStrongRhyme(e.target.checked)}
                   className="rounded border-zinc-600"
                 />
-                韻を強めに生成（AABB + 韻候補 + 自動修正）
+                韻を強めに生成（内部韻 + 4小節チェーン + 自動修正）
               </label>
               <button
                 type="button"
@@ -470,7 +552,7 @@ export default function HomePage() {
                       : "生成中…"
                   : generateFormat === "full"
                     ? "曲全体を生成"
-                    : `${profile?.name ?? "アーティスト"}風に生成`}
+                    : `${profile?.name ?? "プロファイル"}統計で生成`}
               </button>
               {generateError && (
                 <p className="mt-3 text-sm text-red-400">{generateError}</p>
@@ -482,14 +564,58 @@ export default function HomePage() {
             <Panel title="生成結果">
               {generatedRhymeCoverage !== null && (
                 <p className="mb-3 text-sm text-amber-300">
-                  韻カバー: {generatedRhymeCoverage}%
+                  総合韻密度: {generatedRhymeCoverage}/100
                   {rhymeRefined && "（韻が弱かったので自動で行末を修正しました）"}
+                  {repetitionReduced && "（同じ語句が多かったので言い換えました）"}
                   {generatedRhymeCoverage >= 55 && !rhymeRefined && " — 韻がしっかり取れています"}
                 </p>
               )}
-              <pre className="whitespace-pre-wrap text-sm leading-relaxed text-zinc-200">
-                {generated || "ここに生成された歌詞が表示されます"}
-              </pre>
+              {generatedRhymeMetrics && (
+                <div className="mb-3 grid grid-cols-2 gap-1 text-xs text-zinc-400">
+                  <span>行末韻 {generatedRhymeMetrics.endRhymeCoverage}</span>
+                  <span>内部韻 {generatedRhymeMetrics.internalRhymeCoverage}</span>
+                  <span>マルチシラブル {generatedRhymeMetrics.multisyllableCoverage}</span>
+                  <span>4小節チェーン {generatedRhymeMetrics.chainCoverage}</span>
+                </div>
+              )}
+              {generated ? (
+                <>
+                  <div className="mb-3 flex flex-wrap gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setShowReadingView(true)}
+                      className={`rounded px-3 py-1 text-xs ${showReadingView ? "bg-sky-900/60 text-sky-200" : "bg-zinc-800 text-zinc-400"}`}
+                    >
+                      読み仮名付き
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowReadingView(false)}
+                      className={`rounded px-3 py-1 text-xs ${!showReadingView ? "bg-zinc-700 text-zinc-200" : "bg-zinc-800 text-zinc-400"}`}
+                    >
+                      歌詞のみ
+                    </button>
+                    {lyricsWithReading && (
+                      <button
+                        type="button"
+                        onClick={() => navigator.clipboard.writeText(lyricsWithReading)}
+                        className="rounded bg-zinc-800 px-3 py-1 text-xs text-zinc-300 hover:bg-zinc-700"
+                      >
+                        読み仮名付きでコピー
+                      </button>
+                    )}
+                  </div>
+                  {showReadingView && annotatedLines.length > 0 ? (
+                    <LyricsReadingView lines={annotatedLines} />
+                  ) : (
+                    <pre className="whitespace-pre-wrap text-sm leading-relaxed text-zinc-200">
+                      {generated}
+                    </pre>
+                  )}
+                </>
+              ) : (
+                <p className="text-sm text-zinc-500">ここに生成された歌詞が表示されます</p>
+              )}
               {generated && (
                 <button
                   type="button"

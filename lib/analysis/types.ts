@@ -4,12 +4,25 @@ export type WordAnalysis = {
   reading: string;
   vowels: string;
   moras: number;
+  start?: number;
+  end?: number;
+};
+
+/** 小節単位の韻ヒートマップ */
+export type LineRhymeMetrics = {
+  density: number;
+  internalRhymeCount: number;
+  vowelMatchRate: number;
+  endRhyme: number;
+  multisyllableRhyme: number;
+  consecutiveRhyme: number;
 };
 
 /** 行ごとの解析 */
 export type LineAnalysis = {
   index: number;
   text: string;
+  section?: string;
   /** 行全体の読み（ひらがな） */
   reading: string;
   endUnit: string;
@@ -17,6 +30,7 @@ export type LineAnalysis = {
   endVowels: string;
   moras: number;
   tokens: WordAnalysis[];
+  rhymeMetrics?: LineRhymeMetrics;
 };
 
 /** 韻の一致（行末 or 内部） */
@@ -27,9 +41,13 @@ export type RhymeMatch = {
   vowelsA: string;
   vowelsB: string;
   tail: string;
+  vowelKey: string;
   lineIndexA: number;
   lineIndexB: number;
   strength: number;
+  syllables: number;
+  matchRate: number;
+  multisyllable: boolean;
 };
 
 /** フロー分析 */
@@ -47,15 +65,30 @@ export type FlowAnalysis = {
 export type RhymeDensityBreakdown = {
   endRhyme: number;
   internalRhyme: number;
-  inputWordUsage: number;
-  flowUniformity: number;
+  multisyllableRhyme: number;
+  consecutiveRhyme: number;
   overall: number;
+  /** 生成条件の参考値。総合韻密度には加算しない。 */
+  inputWordUsage?: number;
+  /** フローの参考値。総合韻密度には加算しない。 */
+  flowUniformity?: number;
+};
+
+/** 4小節単位で維持されたライムチェーン */
+export type RhymeChain = {
+  startLineIndex: number;
+  endLineIndex: number;
+  tail: string;
+  vowelKey: string;
+  lineIndices: number[];
+  coverage: number;
 };
 
 /** 歌詞全体の解析結果 */
 export type LyricAnalysis = {
   lines: LineAnalysis[];
   rhymeMatches: RhymeMatch[];
+  rhymeChains: RhymeChain[];
   flow: FlowAnalysis;
   density: RhymeDensityBreakdown;
   /** 論文ベース韻品質（P9-3 参考） */

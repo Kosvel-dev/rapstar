@@ -1,0 +1,944 @@
+{
+  "slug": "yellow-bucks",
+  "name": "¥ellow Bucks",
+  "geniusUrl": "https://genius.com/artists/Ellow-bucks",
+  "songCount": 114,
+  "lineCount": 1694,
+  "flow": {
+    "averageMorasPerLine": 10.3,
+    "stdDevMoras": 5.4,
+    "uniformityScore": 35,
+    "typicalBpmRange": [
+      90,
+      130
+    ],
+    "flowStyles": [
+      {
+        "bpmRange": "80",
+        "targetMorasPerBar": 10,
+        "label": "相性◎",
+        "description": "BPM 80（ミドル） / 4/4 拍子 / 1行 ≒ 10 モーラ（ひらがな10文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "95",
+        "targetMorasPerBar": 8,
+        "label": "標準フロー",
+        "description": "BPM 95（ミドル） / 4/4 拍子 / 1行 ≒ 8 モーラ（ひらがな8文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "110",
+        "targetMorasPerBar": 7,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 110（速め） / 4/4 拍子 / 1行 ≒ 7 モーラ（ひらがな7文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "128",
+        "targetMorasPerBar": 6,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 128（速め） / 4/4 拍子 / 1行 ≒ 6 モーラ（ひらがな6文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      },
+      {
+        "bpmRange": "145",
+        "targetMorasPerBar": 5,
+        "label": "ゆったり・伸ばし向き",
+        "description": "BPM 145（ハイテンポ） / 4/4 拍子 / 1行 ≒ 5 モーラ（ひらがな5文字前後） / 行ごとの長さを揃え、リズムに乗る語感で書く"
+      }
+    ]
+  },
+  "rhyme": {
+    "averageEndRhymeScore": 0,
+    "averageInternalRhymeScore": 0,
+    "commonEndVowelTails": [
+      {
+        "tail": "ai",
+        "count": 125
+      },
+      {
+        "tail": "ou",
+        "count": 61
+      },
+      {
+        "tail": "ii",
+        "count": 57
+      },
+      {
+        "tail": "ae",
+        "count": 52
+      },
+      {
+        "tail": "aa",
+        "count": 52
+      },
+      {
+        "tail": "eu",
+        "count": 51
+      },
+      {
+        "tail": "au",
+        "count": 50
+      },
+      {
+        "tail": "ia",
+        "count": 48
+      },
+      {
+        "tail": "ee",
+        "count": 34
+      },
+      {
+        "tail": "ui",
+        "count": 31
+      },
+      {
+        "tail": "ue",
+        "count": 28
+      },
+      {
+        "tail": "iu",
+        "count": 27
+      }
+    ]
+  },
+  "vocabulary": {
+    "topWords": [
+      {
+        "word": "you",
+        "count": 257
+      },
+      {
+        "word": "yeah",
+        "count": 226
+      },
+      {
+        "word": "Yeah",
+        "count": 209
+      },
+      {
+        "word": "got",
+        "count": 173
+      },
+      {
+        "word": "What",
+        "count": 154
+      },
+      {
+        "word": "know",
+        "count": 127
+      },
+      {
+        "word": "get",
+        "count": 124
+      },
+      {
+        "word": "like",
+        "count": 121
+      },
+      {
+        "word": "shit",
+        "count": 118
+      },
+      {
+        "word": "You",
+        "count": 115
+      },
+      {
+        "word": "money",
+        "count": 108
+      },
+      {
+        "word": "higher",
+        "count": 102
+      },
+      {
+        "word": "wanna",
+        "count": 98
+      },
+      {
+        "word": "Get",
+        "count": 94
+      },
+      {
+        "word": "not",
+        "count": 93
+      },
+      {
+        "word": "Let",
+        "count": 92
+      },
+      {
+        "word": "good",
+        "count": 85
+      },
+      {
+        "word": "Hey",
+        "count": 83
+      },
+      {
+        "word": "with",
+        "count": 77
+      },
+      {
+        "word": "roll",
+        "count": 73
+      },
+      {
+        "word": "top",
+        "count": 71
+      },
+      {
+        "word": "trust",
+        "count": 70
+      },
+      {
+        "word": "Bitch",
+        "count": 69
+      },
+      {
+        "word": "just",
+        "count": 69
+      },
+      {
+        "word": "wow",
+        "count": 68
+      },
+      {
+        "word": "fuck",
+        "count": 61
+      },
+      {
+        "word": "big",
+        "count": 61
+      },
+      {
+        "word": "bucks",
+        "count": 60
+      },
+      {
+        "word": "what",
+        "count": 59
+      },
+      {
+        "word": "here",
+        "count": 59
+      }
+    ],
+    "englishTokenRatio": 0.742,
+    "uniqueWordCount": 30
+  },
+  "delivery": {
+    "traits": [
+      "日英ミックス",
+      "英語アドリブでテンションを上げる",
+      "アンチ・世間への言及が多い",
+      "成り上がり・野心テーマ"
+    ],
+    "adlibPatterns": [
+      {
+        "pattern": "英語フック・アドリブ",
+        "count": 695
+      },
+      {
+        "pattern": "括弧内アドリブ",
+        "count": 370
+      },
+      {
+        "pattern": "伸ばし・余韻",
+        "count": 1
+      },
+      {
+        "pattern": "ラップ用語混ぜ",
+        "count": 72
+      }
+    ],
+    "englishMixLevel": "high",
+    "punchlineDensity": 0.01,
+    "styleSummary": "日英ミックス、英語アドリブでテンションを上げる、アンチ・世間への言及が多い、成り上がり・野心テーマ。英語フレーズを随所に挟む。フックで同じフレーズを反復しやすい"
+  },
+  "songs": [
+    {
+      "id": 9642364,
+      "title": "Higher (Remix)",
+      "releaseDate": "October 20, 2023",
+      "url": "https://genius.com/Ellow-bucks-higher-remix-lyrics"
+    },
+    {
+      "id": 7370013,
+      "title": "Grow Up",
+      "releaseDate": "April 11, 2019",
+      "url": "https://genius.com/Ellow-bucks-grow-up-lyrics"
+    },
+    {
+      "id": 5572501,
+      "title": "With My Way",
+      "releaseDate": "October 31, 2019",
+      "url": "https://genius.com/Ellow-bucks-with-my-way-lyrics"
+    },
+    {
+      "id": 7626340,
+      "title": "GIOTF",
+      "releaseDate": "January 24, 2022",
+      "url": "https://genius.com/Ellow-bucks-giotf-lyrics"
+    },
+    {
+      "id": 5576009,
+      "title": "ヤングトーカイテイオー (Young Tokai Teio)",
+      "releaseDate": "April 24, 2019",
+      "url": "https://genius.com/Ellow-bucks-young-tokai-teio-lyrics"
+    },
+    {
+      "id": 6318344,
+      "title": "Ninja",
+      "releaseDate": "September 25, 2019",
+      "url": "https://genius.com/Ellow-bucks-and-playsson-ninja-lyrics"
+    },
+    {
+      "id": 10053247,
+      "title": "HOT BOYZ",
+      "releaseDate": "February 14, 2024",
+      "url": "https://genius.com/Eyden-hot-boyz-lyrics"
+    },
+    {
+      "id": 6202320,
+      "title": "Tamo na Frente",
+      "releaseDate": "July 7, 2020",
+      "url": "https://genius.com/Playsson-tamo-na-frente-lyrics"
+    },
+    {
+      "id": 6202256,
+      "title": "To The Top X’mas 2019",
+      "releaseDate": "December 10, 2019",
+      "url": "https://genius.com/Ellow-bucks-to-the-top-xmas-2019-lyrics"
+    },
+    {
+      "id": 10449359,
+      "title": "SPECIAL CYPHER 2024",
+      "releaseDate": "May 25, 2024",
+      "url": "https://genius.com/Ellow-bucks-lex-jpn-seeda-r-r-shitei-and-ralph-special-cypher-2024-lyrics"
+    },
+    {
+      "id": 7216559,
+      "title": "WAVEBODY (Remix)",
+      "releaseDate": "September 22, 2021",
+      "url": "https://genius.com/Jp-the-wavy-wavebody-remix-lyrics"
+    },
+    {
+      "id": 5890333,
+      "title": "My Resort",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-my-resort-lyrics"
+    },
+    {
+      "id": 8222776,
+      "title": "F with U",
+      "releaseDate": "July 22, 2022",
+      "url": "https://genius.com/Ellow-bucks-f-with-u-lyrics"
+    },
+    {
+      "id": 5646128,
+      "title": "博徒2020",
+      "releaseDate": "October 2, 2019",
+      "url": "https://genius.com/Dj-ryow-2020-lyrics"
+    },
+    {
+      "id": 8222775,
+      "title": "Remember",
+      "releaseDate": "July 21, 2022",
+      "url": "https://genius.com/Ellow-bucks-remember-lyrics"
+    },
+    {
+      "id": 5890361,
+      "title": "Balls Out",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-balls-out-lyrics"
+    },
+    {
+      "id": 5572529,
+      "title": "Wow Wow Wow",
+      "releaseDate": "October 31, 2019",
+      "url": "https://genius.com/Ellow-bucks-wow-wow-wow-lyrics"
+    },
+    {
+      "id": 6523332,
+      "title": "どうってことねえ Remix (Dottekotone Remix)",
+      "releaseDate": "February 24, 2021",
+      "url": "https://genius.com/Simon-jpn-and-ymg-remix-dottekotone-remix-lyrics"
+    },
+    {
+      "id": 8175546,
+      "title": "In Da Club",
+      "releaseDate": "July 7, 2022",
+      "url": "https://genius.com/Ellow-bucks-in-da-club-lyrics"
+    },
+    {
+      "id": 10878636,
+      "title": "My Resort Pt.2",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-my-resort-pt2-lyrics"
+    },
+    {
+      "id": 6183763,
+      "title": "Chain on my neck",
+      "releaseDate": "December 17, 2020",
+      "url": "https://genius.com/Mc-tyson-chain-on-my-neck-lyrics"
+    },
+    {
+      "id": 5890355,
+      "title": "Yessir",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-yessir-lyrics"
+    },
+    {
+      "id": 8222779,
+      "title": "Crown",
+      "releaseDate": "July 20, 2022",
+      "url": "https://genius.com/Ellow-bucks-crown-lyrics"
+    },
+    {
+      "id": 5572622,
+      "title": "Trust In Bucks Remix",
+      "releaseDate": "October 31, 2019",
+      "url": "https://genius.com/Ellow-bucks-trust-in-bucks-remix-lyrics"
+    },
+    {
+      "id": 8578985,
+      "title": "WHO ARE U? 2022",
+      "releaseDate": "November 22, 2022",
+      "url": "https://genius.com/Dj-ryow-who-are-u-2022-lyrics"
+    },
+    {
+      "id": 8175548,
+      "title": "Della Waya",
+      "releaseDate": "July 7, 2022",
+      "url": "https://genius.com/Ellow-bucks-della-waya-lyrics"
+    },
+    {
+      "id": 5813916,
+      "title": "Bussin’",
+      "releaseDate": "July 15, 2020",
+      "url": "https://genius.com/Ak-69-bussin-lyrics"
+    },
+    {
+      "id": 6041567,
+      "title": "LIFE IS WOW",
+      "releaseDate": "August 5, 2019",
+      "url": "https://genius.com/Ellow-bucks-life-is-wow-lyrics"
+    },
+    {
+      "id": 8222778,
+      "title": "You Made Me",
+      "releaseDate": "July 7, 2022",
+      "url": "https://genius.com/Ellow-bucks-you-made-me-lyrics"
+    },
+    {
+      "id": 8788049,
+      "title": "I Know What",
+      "releaseDate": "February 8, 2023",
+      "url": "https://genius.com/Dj-ryow-i-know-what-lyrics"
+    },
+    {
+      "id": 10879004,
+      "title": "Big Shit Trouble",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-big-shit-trouble-lyrics"
+    },
+    {
+      "id": 6202246,
+      "title": "BABY",
+      "releaseDate": "December 20, 2020",
+      "url": "https://genius.com/Ellow-bucks-baby-lyrics"
+    },
+    {
+      "id": 6692207,
+      "title": "I’m the shit",
+      "releaseDate": "April 11, 2021",
+      "url": "https://genius.com/Ak-69-im-the-shit-lyrics"
+    },
+    {
+      "id": 6240059,
+      "title": "Do What You Can",
+      "releaseDate": "December 25, 2020",
+      "url": "https://genius.com/Dj-chari-and-dj-tatsuki-do-what-you-can-lyrics"
+    },
+    {
+      "id": 8175543,
+      "title": "Ride With Me",
+      "releaseDate": "July 7, 2022",
+      "url": "https://genius.com/Ellow-bucks-ride-with-me-lyrics"
+    },
+    {
+      "id": 10211551,
+      "title": "Ready To Fight",
+      "releaseDate": "March 27, 2024",
+      "url": "https://genius.com/Dj-ryow-ready-to-fight-lyrics"
+    },
+    {
+      "id": 10654501,
+      "title": "力をくれ (Chikara wo Kure)",
+      "releaseDate": "July 17, 2024",
+      "url": "https://genius.com/Lex-jpn-chikara-wo-kure-lyrics"
+    },
+    {
+      "id": 10882358,
+      "title": "Run It Up",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-run-it-up-lyrics"
+    },
+    {
+      "id": 8175549,
+      "title": "Money Maker",
+      "releaseDate": "July 7, 2022",
+      "url": "https://genius.com/Ellow-bucks-money-maker-lyrics"
+    },
+    {
+      "id": 6541114,
+      "title": "Money Dance",
+      "releaseDate": "March 17, 2021",
+      "url": "https://genius.com/Dj-ryow-money-dance-lyrics"
+    },
+    {
+      "id": 8175545,
+      "title": "Watch Out",
+      "releaseDate": "July 7, 2022",
+      "url": "https://genius.com/Ellow-bucks-watch-out-lyrics"
+    },
+    {
+      "id": 7370092,
+      "title": "Rob",
+      "releaseDate": "November 10, 2021",
+      "url": "https://genius.com/Kohjiya-rob-lyrics"
+    },
+    {
+      "id": 5890358,
+      "title": "We Know It",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-we-know-it-lyrics"
+    },
+    {
+      "id": 8175544,
+      "title": "Tonight",
+      "releaseDate": "July 7, 2022",
+      "url": "https://genius.com/Ellow-bucks-tonight-lyrics"
+    },
+    {
+      "id": 7752470,
+      "title": "Link Up",
+      "releaseDate": "March 4, 2022",
+      "url": "https://genius.com/Awich-link-up-lyrics"
+    },
+    {
+      "id": 5576024,
+      "title": "Trust In Bucks",
+      "releaseDate": "April 24, 2019",
+      "url": "https://genius.com/Ellow-bucks-trust-in-bucks-lyrics"
+    },
+    {
+      "id": 5598368,
+      "title": "MAINICHI (Nagoya Remix)",
+      "releaseDate": "May 22, 2020",
+      "url": "https://genius.com/Miyachi-mainichi-nagoya-remix-lyrics"
+    },
+    {
+      "id": 5890362,
+      "title": "Keep Smoking",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-keep-smoking-lyrics"
+    },
+    {
+      "id": 5890360,
+      "title": "Everywhere",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-everywhere-lyrics"
+    },
+    {
+      "id": 10882360,
+      "title": "Where Did You Go?",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-where-did-you-go-lyrics"
+    },
+    {
+      "id": 9203972,
+      "title": "Higher",
+      "releaseDate": "June 7, 2023",
+      "url": "https://genius.com/Ellow-bucks-higher-lyrics"
+    },
+    {
+      "id": 7575868,
+      "title": "I’m Back",
+      "releaseDate": "January 10, 2022",
+      "url": "https://genius.com/Ellow-bucks-im-back-lyrics"
+    },
+    {
+      "id": 8175550,
+      "title": "Smoke",
+      "releaseDate": "July 7, 2022",
+      "url": "https://genius.com/Ellow-bucks-smoke-lyrics"
+    },
+    {
+      "id": 10879005,
+      "title": "MALIBU",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-malibu-lyrics"
+    },
+    {
+      "id": 12939798,
+      "title": "456",
+      "releaseDate": "January 21, 2026",
+      "url": "https://genius.com/Ellow-bucks-456-lyrics"
+    },
+    {
+      "id": 5890356,
+      "title": "Aesthetics",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-aesthetics-lyrics"
+    },
+    {
+      "id": 8222777,
+      "title": "Navigator",
+      "releaseDate": "July 7, 2022",
+      "url": "https://genius.com/Ellow-bucks-navigator-lyrics"
+    },
+    {
+      "id": 5672065,
+      "title": "AIN’T CHANGE",
+      "releaseDate": "December 1, 2019",
+      "url": "https://genius.com/Cz-tiger-aint-change-lyrics"
+    },
+    {
+      "id": 7332282,
+      "title": "Mary Jane",
+      "releaseDate": "October 15, 2021",
+      "url": "https://genius.com/Mukuro-mary-jane-lyrics"
+    },
+    {
+      "id": 8993380,
+      "title": "GOOD PU$$¥",
+      "releaseDate": "April 21, 2023",
+      "url": "https://genius.com/Leon-fanourakis-santaworldview-and-xansei-good-pu-lyrics"
+    },
+    {
+      "id": 10882357,
+      "title": "Drop It",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-drop-it-lyrics"
+    },
+    {
+      "id": 11796878,
+      "title": "Made in Japan",
+      "releaseDate": "April 29, 2025",
+      "url": "https://genius.com/Vingo-made-in-japan-lyrics"
+    },
+    {
+      "id": 10882362,
+      "title": "Night Time",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-night-time-lyrics"
+    },
+    {
+      "id": 12656860,
+      "title": "NOOFFSEASON",
+      "releaseDate": "November 8, 2025",
+      "url": "https://genius.com/Benjazzy-nooffseason-lyrics"
+    },
+    {
+      "id": 12939801,
+      "title": "Still In The City",
+      "releaseDate": "January 21, 2026",
+      "url": "https://genius.com/Ellow-bucks-still-in-the-city-lyrics"
+    },
+    {
+      "id": 5890353,
+      "title": "Fillin’ Up (Intro)",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-fillin-up-intro-lyrics"
+    },
+    {
+      "id": 9009403,
+      "title": "Asian Flow",
+      "releaseDate": "April 10, 2023",
+      "url": "https://genius.com/Tee-tttg-asian-flow-lyrics"
+    },
+    {
+      "id": 11552525,
+      "title": "上 (Ue)",
+      "releaseDate": "March 7, 2025",
+      "url": "https://genius.com/Monyhorse-ue-lyrics"
+    },
+    {
+      "id": 6917532,
+      "title": "Light It Up",
+      "releaseDate": "June 30, 2021",
+      "url": "https://genius.com/Banty-foot-light-it-up-lyrics"
+    },
+    {
+      "id": 9203976,
+      "title": "Shake It",
+      "releaseDate": "June 7, 2023",
+      "url": "https://genius.com/Ellow-bucks-shake-it-lyrics"
+    },
+    {
+      "id": 10882356,
+      "title": "Blessed",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-blessed-lyrics"
+    },
+    {
+      "id": 6879389,
+      "title": "Go Ahead",
+      "releaseDate": "June 4, 2021",
+      "url": "https://genius.com/Ellow-bucks-and-zi-stefan-chen-go-ahead-lyrics"
+    },
+    {
+      "id": 8175547,
+      "title": "Shut Up",
+      "releaseDate": "July 7, 2022",
+      "url": "https://genius.com/Ellow-bucks-shut-up-lyrics"
+    },
+    {
+      "id": 6042056,
+      "title": "Light",
+      "releaseDate": "May 22, 2020",
+      "url": "https://genius.com/Add-creative-light-lyrics"
+    },
+    {
+      "id": 9203977,
+      "title": "What?",
+      "releaseDate": "June 7, 2023",
+      "url": "https://genius.com/Ellow-bucks-what-lyrics"
+    },
+    {
+      "id": 5890363,
+      "title": "Insurance",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-insurance-lyrics"
+    },
+    {
+      "id": 6541115,
+      "title": "W.T.M.F.N?",
+      "releaseDate": "March 24, 2021",
+      "url": "https://genius.com/Dj-ryow-wtmfn-lyrics"
+    },
+    {
+      "id": 6932744,
+      "title": "THE MOMENT",
+      "releaseDate": "June 28, 2021",
+      "url": "https://genius.com/Ai-jpn-the-moment-lyrics"
+    },
+    {
+      "id": 7183639,
+      "title": "HIPHOPスニッカーズ® (HIP HOP SNICKERS®)",
+      "releaseDate": "September 8, 2021",
+      "url": "https://genius.com/Ellow-bucks-hiphop-hip-hop-snickers-lyrics"
+    },
+    {
+      "id": 10878287,
+      "title": "Jeep ‘N’ Benzo",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-jeep-n-benzo-lyrics"
+    },
+    {
+      "id": 5572574,
+      "title": "MAZE",
+      "releaseDate": "October 31, 2019",
+      "url": "https://genius.com/Ellow-bucks-maze-lyrics"
+    },
+    {
+      "id": 12939803,
+      "title": "New Nails",
+      "releaseDate": "January 21, 2026",
+      "url": "https://genius.com/Ellow-bucks-new-nails-lyrics"
+    },
+    {
+      "id": 5890364,
+      "title": "IDWLU",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-idwlu-lyrics"
+    },
+    {
+      "id": 12210788,
+      "title": "Summer Ride",
+      "releaseDate": "July 30, 2025",
+      "url": "https://genius.com/Lana-summer-ride-lyrics"
+    },
+    {
+      "id": 5890365,
+      "title": "After",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-after-lyrics"
+    },
+    {
+      "id": 9855102,
+      "title": "Up & Down",
+      "releaseDate": "December 6, 2023",
+      "url": "https://genius.com/Watson-jpn-up-and-down-lyrics"
+    },
+    {
+      "id": 6215190,
+      "title": "Scenario",
+      "releaseDate": "November 18, 2020",
+      "url": "https://genius.com/Dj-pmx-scenario-lyrics"
+    },
+    {
+      "id": 9203975,
+      "title": "Money in the Bag",
+      "releaseDate": "June 7, 2023",
+      "url": "https://genius.com/Ellow-bucks-money-in-the-bag-lyrics"
+    },
+    {
+      "id": 10879003,
+      "title": "Shuffle",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-shuffle-lyrics"
+    },
+    {
+      "id": 8968935,
+      "title": "KAMEHAMEHA (Remix)",
+      "releaseDate": "March 29, 2023",
+      "url": "https://genius.com/Carz-jpn-and-lilyukichi-kamehameha-remix-lyrics"
+    },
+    {
+      "id": 12939805,
+      "title": "Where I’m From",
+      "releaseDate": "January 21, 2026",
+      "url": "https://genius.com/Ellow-bucks-where-im-from-lyrics"
+    },
+    {
+      "id": 10882359,
+      "title": "Catalina",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-catalina-lyrics"
+    },
+    {
+      "id": 7245956,
+      "title": "Check Me Out",
+      "releaseDate": "October 1, 2021",
+      "url": "https://genius.com/Ellow-bucks-check-me-out-lyrics"
+    },
+    {
+      "id": 10882361,
+      "title": "Phone Call",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-phone-call-lyrics"
+    },
+    {
+      "id": 9281028,
+      "title": "SHAKE THAT ASS",
+      "releaseDate": "November 5, 2019",
+      "url": "https://genius.com/Flight-a-shake-that-ass-lyrics"
+    },
+    {
+      "id": 5890354,
+      "title": "Ready Or Not",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-ready-or-not-lyrics"
+    },
+    {
+      "id": 5890359,
+      "title": "Do Not Enter",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-do-not-enter-lyrics"
+    },
+    {
+      "id": 7040382,
+      "title": "Let Me Smoke Ya Gas (Crib Talk)",
+      "releaseDate": null,
+      "url": "https://genius.com/Ellow-bucks-let-me-smoke-ya-gas-crib-talk-lyrics"
+    },
+    {
+      "id": 11295604,
+      "title": "PANDEMIC",
+      "releaseDate": "May 4, 2020",
+      "url": "https://genius.com/Ellow-bucks-and-tee-tttg-pandemic-lyrics"
+    },
+    {
+      "id": 5890357,
+      "title": "Blue Spring Season",
+      "releaseDate": "August 21, 2020",
+      "url": "https://genius.com/Ellow-bucks-blue-spring-season-lyrics"
+    },
+    {
+      "id": 6853314,
+      "title": "OASIS",
+      "releaseDate": "May 28, 2021",
+      "url": "https://genius.com/Shurkn-pap-oasis-lyrics"
+    },
+    {
+      "id": 9203978,
+      "title": "I’m Drippin’",
+      "releaseDate": "June 7, 2023",
+      "url": "https://genius.com/Ellow-bucks-im-drippin-lyrics"
+    },
+    {
+      "id": 10879006,
+      "title": "Still Smoking",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-still-smoking-lyrics"
+    },
+    {
+      "id": 5646145,
+      "title": "We Runnin",
+      "releaseDate": "September 4, 2019",
+      "url": "https://genius.com/Dj-ryow-we-runnin-lyrics"
+    },
+    {
+      "id": 12939800,
+      "title": "8UP",
+      "releaseDate": "October 17, 2025",
+      "url": "https://genius.com/Ellow-bucks-8up-lyrics"
+    },
+    {
+      "id": 10882242,
+      "title": "One More",
+      "releaseDate": "September 13, 2024",
+      "url": "https://genius.com/Ellow-bucks-one-more-lyrics"
+    },
+    {
+      "id": 7337723,
+      "title": "Space$hip",
+      "releaseDate": "October 29, 2021",
+      "url": "https://genius.com/Bpace-space-hip-lyrics"
+    },
+    {
+      "id": 12939713,
+      "title": "Who I Am",
+      "releaseDate": "January 7, 2026",
+      "url": "https://genius.com/Ellow-bucks-who-i-am-lyrics"
+    },
+    {
+      "id": 10380038,
+      "title": "Gorgeous",
+      "releaseDate": "May 7, 2024",
+      "url": "https://genius.com/Wilywnka-gorgeous-lyrics"
+    },
+    {
+      "id": 9268671,
+      "title": "My Bitch Is Rich",
+      "releaseDate": "June 25, 2023",
+      "url": "https://genius.com/Playsson-my-bitch-is-rich-lyrics"
+    },
+    {
+      "id": 7370033,
+      "title": "Eazy Breezy",
+      "releaseDate": "September 8, 2021",
+      "url": "https://genius.com/Daiki-blunt-eazy-breezy-lyrics"
+    },
+    {
+      "id": 8731029,
+      "title": "OGYB",
+      "releaseDate": null,
+      "url": "https://genius.com/Moke-og-ogyb-lyrics"
+    },
+    {
+      "id": 12651546,
+      "title": "DO it",
+      "releaseDate": "April 22, 2020",
+      "url": "https://genius.com/Dj-hazime-and-dj-watarai-do-it-lyrics"
+    },
+    {
+      "id": 11295164,
+      "title": "Dimension Rise",
+      "releaseDate": "November 22, 2019",
+      "url": "https://genius.com/Ice-kid-jpn-dimension-rise-lyrics"
+    }
+  ],
+  "generatedAt": "2026-06-02T08:05:59.334Z"
+}
