@@ -1,11 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
 
-/** ローカル（web/）と Vercel（リポジトリルート/data）の両方に対応 */
+/** ローカル（web/data）と Vercel（web/data）・開発（../data）に対応 */
 export function getDataRoot(): string {
   const candidates = [
-    path.join(process.cwd(), "..", "data"),
     path.join(process.cwd(), "data"),
+    path.join(process.cwd(), "..", "data"),
   ];
   for (const p of candidates) {
     if (fs.existsSync(p)) return p;

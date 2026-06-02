@@ -1,0 +1,110 @@
+{
+  "artist": {
+    "id": 4197590,
+    "name": "Pxrge Trxxxper",
+    "url": "https://genius.com/artists/Pxrge-trxxxper",
+    "genius_song_count": 16,
+    "lyrics_complete_count": 16,
+    "lyrics_missing_count": 0
+  },
+  "fetched_at": "2026-06-02T02:48:38.441019+00:00",
+  "songs_with_lyrics": [
+    {
+      "id": 11541630,
+      "title": "03- Drill Cypher 2025",
+      "release_date": "March 1, 2025",
+      "url": "https://genius.com/03-performance-03-drill-cypher-2025-lyrics"
+    },
+    {
+      "id": 11197522,
+      "title": "BIOHAZARD",
+      "release_date": "September 26, 2024",
+      "url": "https://genius.com/Pxrge-trxxxper-biohazard-lyrics"
+    },
+    {
+      "id": 11828732,
+      "title": "DEATH NOTE (REMIX)",
+      "release_date": "May 9, 2025",
+      "url": "https://genius.com/Pxrge-trxxxper-jin-dogg-over-kill-jpn-and-nemland-death-note-remix-lyrics"
+    },
+    {
+      "id": 11273776,
+      "title": "Devil",
+      "release_date": "December 27, 2024",
+      "url": "https://genius.com/999dobby-devil-lyrics"
+    },
+    {
+      "id": 12908025,
+      "title": "Einstein",
+      "release_date": "December 24, 2025",
+      "url": "https://genius.com/Pxrge-trxxxper-and-over-kill-jpn-einstein-lyrics"
+    },
+    {
+      "id": 13538037,
+      "title": "GAME CHANGER",
+      "release_date": "March 13, 2026",
+      "url": "https://genius.com/Pxrge-trxxxper-game-changer-lyrics"
+    },
+    {
+      "id": 12549614,
+      "title": "HOOD STAGE",
+      "release_date": "October 11, 2025",
+      "url": "https://genius.com/Pxrge-trxxxper-hood-stage-lyrics"
+    },
+    {
+      "id": 13537594,
+      "title": "I Got It",
+      "release_date": "April 27, 2026",
+      "url": "https://genius.com/Pxrge-trxxxper-and-over-kill-jpn-i-got-it-lyrics"
+    },
+    {
+      "id": 11497689,
+      "title": "IKETENNA",
+      "release_date": "January 23, 2025",
+      "url": "https://genius.com/Pxrge-trxxxper-iketenna-lyrics"
+    },
+    {
+      "id": 12627906,
+      "title": "ORENOMANE",
+      "release_date": "November 7, 2025",
+      "url": "https://genius.com/Pxrge-trxxxper-and-over-kill-jpn-orenomane-lyrics"
+    },
+    {
+      "id": 12554948,
+      "title": "Red Bull 64 bars",
+      "release_date": "October 2, 2025",
+      "url": "https://genius.com/Pxrge-trxxxper-red-bull-64-bars-lyrics"
+    },
+    {
+      "id": 12671945,
+      "title": "REVENGE",
+      "release_date": "January 30, 2026",
+      "url": "https://genius.com/Pxrge-trxxxper-revenge-lyrics"
+    },
+    {
+      "id": 12832517,
+      "title": "The Claimant",
+      "release_date": "January 30, 2026",
+      "url": "https://genius.com/Pxrge-trxxxper-the-claimant-lyrics"
+    },
+    {
+      "id": 12300935,
+      "title": "This Voice",
+      "release_date": "May 16, 2025",
+      "url": "https://genius.com/Pxrge-trxxxper-this-voice-lyrics"
+    },
+    {
+      "id": 13537592,
+      "title": "This Voice [Remix]",
+      "release_date": "May 15, 2026",
+      "url": "https://genius.com/Pxrge-trxxxper-and-over-kill-jpn-this-voice-remix-lyrics"
+    },
+    {
+      "id": 13537599,
+      "title": "Trust Myself",
+      "release_date": "May 15, 2026",
+      "url": "https://genius.com/Pxrge-trxxxper-and-over-kill-jpn-trust-myself-lyrics"
+    }
+  ],
+  "songs_without_lyrics": []
+}
