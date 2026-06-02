@@ -47,18 +47,18 @@ export function SongStructureEditor({ sections, onChange, artistSlug }: Props) {
         <span className="text-xs text-zinc-500">合計 {totalBars(sections)} 小節</span>
       </div>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="grid grid-cols-3 gap-2">
         <button
           type="button"
           onClick={() => applyPreset(PRESET_AINT_NO_LOVE)}
-          className="rounded bg-zinc-800 px-2 py-1 text-xs hover:bg-zinc-700"
+          className="min-h-9 rounded bg-zinc-800 px-2 py-1 text-[11px] leading-tight hover:bg-zinc-700 sm:text-xs"
         >
           Ain&apos;t No Love 型
         </button>
         <button
           type="button"
           onClick={() => applyPreset(PRESET_SIMPLE)}
-          className="rounded bg-zinc-800 px-2 py-1 text-xs hover:bg-zinc-700"
+          className="min-h-9 rounded bg-zinc-800 px-2 py-1 text-[11px] leading-tight hover:bg-zinc-700 sm:text-xs"
         >
           シンプル
         </button>
@@ -67,7 +67,7 @@ export function SongStructureEditor({ sections, onChange, artistSlug }: Props) {
           onClick={() =>
             applyPreset(defaultStructureForArtist(artistSlug))
           }
-          className="rounded bg-zinc-800 px-2 py-1 text-xs hover:bg-zinc-700"
+          className="min-h-9 rounded bg-zinc-800 px-2 py-1 text-[11px] leading-tight hover:bg-zinc-700 sm:text-xs"
         >
           アーティスト標準
         </button>
@@ -77,7 +77,7 @@ export function SongStructureEditor({ sections, onChange, artistSlug }: Props) {
         {sections.map((sec, i) => (
           <div
             key={sec.id}
-            className="flex flex-wrap items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/50 p-2"
+            className="grid grid-cols-[1rem_minmax(0,1fr)_auto_auto] items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-900/50 p-2"
           >
             <span className="w-5 text-xs text-zinc-600">{i + 1}</span>
             <select
@@ -85,7 +85,7 @@ export function SongStructureEditor({ sections, onChange, artistSlug }: Props) {
               onChange={(e) =>
                 updateSection(sec.id, { type: e.target.value as SectionType })
               }
-              className="flex-1 rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-sm"
+              className="min-h-10 min-w-0 rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-base sm:text-sm"
             >
               {SECTION_TYPES.map((t) => (
                 <option key={t} value={t}>
@@ -104,7 +104,7 @@ export function SongStructureEditor({ sections, onChange, artistSlug }: Props) {
                     bars: Math.min(32, Math.max(1, Number(e.target.value) || 1)),
                   })
                 }
-                className="w-16 rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-sm"
+                className="min-h-10 w-12 rounded border border-zinc-700 bg-zinc-900 px-1 py-1 text-center text-base sm:w-16 sm:px-2 sm:text-sm"
               />
               <span className="text-xs text-zinc-500">小節</span>
             </div>
@@ -112,7 +112,7 @@ export function SongStructureEditor({ sections, onChange, artistSlug }: Props) {
               type="button"
               onClick={() => removeSection(sec.id)}
               disabled={sections.length <= 1}
-              className="rounded px-2 py-1 text-xs text-zinc-500 hover:bg-zinc-800 hover:text-red-400 disabled:opacity-30"
+              className="min-h-10 rounded px-2 py-1 text-xs text-zinc-500 hover:bg-zinc-800 hover:text-red-400 disabled:opacity-30"
               aria-label="削除"
             >
               ✕
@@ -124,7 +124,7 @@ export function SongStructureEditor({ sections, onChange, artistSlug }: Props) {
       <button
         type="button"
         onClick={addSection}
-        className="w-full rounded border border-dashed border-zinc-700 py-2 text-xs text-zinc-400 hover:border-zinc-500 hover:text-zinc-300"
+        className="min-h-11 w-full rounded border border-dashed border-zinc-700 py-2 text-xs text-zinc-400 hover:border-zinc-500 hover:text-zinc-300"
       >
         + パートを追加
       </button>

@@ -105,9 +105,11 @@ export function LyricsWithGuide({
   delivery: DeliveryLineGuide[];
 }) {
   return (
-    <div className="space-y-4">
-      <p className="text-xs text-zinc-500">{deliveryLegendText()}</p>
-      <div className="rounded-lg border border-zinc-700 bg-zinc-900/60 p-3 text-sm">
+    <div className="min-w-0 space-y-4">
+      <p className="text-[11px] leading-relaxed text-zinc-500 sm:text-xs">
+        {deliveryLegendText()}
+      </p>
+      <div className="min-w-0 rounded-lg border border-zinc-700 bg-zinc-900/60 p-3 text-sm">
         <p className="font-semibold text-emerald-300">
           総合韻密度: {analysis.density.overall}/100
         </p>
@@ -115,7 +117,7 @@ export function LyricsWithGuide({
           3音節以上の行末韻: {rhymeSummary.endRhymeCoverage}%（
           {rhymeSummary.linesWithEndRhyme}/{rhymeSummary.totalLines}行）
         </p>
-        <div className="mt-2 grid grid-cols-2 gap-1 text-xs text-zinc-400">
+        <div className="mt-2 grid grid-cols-2 gap-1 text-[11px] text-zinc-400 sm:text-xs">
           <span>行末韻 {analysis.density.endRhyme}</span>
           <span>内部韻 {analysis.density.internalRhyme}</span>
           <span>マルチシラブル {analysis.density.multisyllableRhyme}</span>
@@ -128,7 +130,7 @@ export function LyricsWithGuide({
             {rhymeGroups.slice(0, 6).map((g) => (
               <span
                 key={g.id}
-                className="rounded bg-zinc-800 px-2 py-0.5 text-xs"
+                className="max-w-full break-all rounded bg-zinc-800 px-2 py-0.5 text-[11px] sm:text-xs"
               >
                 {g.vowelKey} · {g.syllables}音節 → 行
                 {g.lineIndices.map((i) => i + 1).join("・")}
@@ -138,14 +140,14 @@ export function LyricsWithGuide({
         )}
       </div>
 
-      <div className="max-h-[28rem] space-y-2 overflow-y-auto">
+      <div className="max-h-[32rem] min-w-0 space-y-2 overflow-y-auto pr-0.5 sm:max-h-[28rem]">
         {analysis.lines.map((line) => {
           const guide = delivery.find((d) => d.index === line.index);
           const metrics = line.rhymeMetrics;
           return (
             <div
               key={line.index}
-              className={`rounded border-l-4 p-2 text-sm ${lineGroupColor(line.index, rhymeGroups)} ${guide ? INTENSITY_COLOR[guide.intensity] : ""}`}
+              className={`min-w-0 rounded border-l-4 p-2 text-sm ${lineGroupColor(line.index, rhymeGroups)} ${guide ? INTENSITY_COLOR[guide.intensity] : ""}`}
             >
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xs text-zinc-500">行{line.index + 1}</span>
@@ -154,14 +156,16 @@ export function LyricsWithGuide({
                     {INTENSITY_LABEL[guide.intensity]}
                   </span>
                 )}
-                <span className="text-xs text-zinc-500">
+                <span className="break-all text-[11px] text-zinc-500 sm:text-xs">
                   {line.moras}モーラ · 韻「{line.endUnit}」
                   {line.endVowels
                     ? ` · 母音 ${formatVowelTail(vowelTail(line.endVowels, 2))}`
                     : ""}
                 </span>
               </div>
-              <p className="mt-1">{highlightedLine(line.text, line.index, rhymeGroups)}</p>
+              <p className="mt-1 break-words leading-relaxed">
+                {highlightedLine(line.text, line.index, rhymeGroups)}
+              </p>
               {metrics && (
                 <div className="mt-2">
                   <div className="flex flex-wrap gap-x-3 text-[11px] text-zinc-400">
@@ -178,12 +182,14 @@ export function LyricsWithGuide({
                 </div>
               )}
               {line.reading && shouldShowReadingForLine(line.text, line.reading) && (
-                <p className="mt-0.5 font-mono text-xs text-sky-400/90">
+                <p className="mt-0.5 break-all font-mono text-[11px] leading-relaxed text-sky-400/90 sm:text-xs">
                   {line.reading}
                 </p>
               )}
               {guide && (
-                <p className="mt-1 text-xs text-zinc-400">{guide.note}</p>
+                <p className="mt-1 text-[11px] leading-relaxed text-zinc-400 sm:text-xs">
+                  {guide.note}
+                </p>
               )}
             </div>
           );
@@ -253,7 +259,7 @@ export function PracticePanel({
     : null;
 
   return (
-    <section className="grid gap-6 lg:grid-cols-2">
+    <section className="grid gap-4 lg:grid-cols-2 lg:gap-6">
       <div className="space-y-4">
         <Panel title="フリービート（YouTube）">
           <label className="mb-1 block text-sm text-zinc-400">
@@ -288,7 +294,7 @@ export function PracticePanel({
                     <button
                       type="button"
                       onClick={() => setEmbedId(b.videoId!)}
-                      className="rounded bg-zinc-800 px-2 py-1 text-xs hover:bg-zinc-700"
+                      className="min-h-9 rounded bg-zinc-800 px-2 py-1 text-xs hover:bg-zinc-700"
                     >
                       このビートで練習
                     </button>
@@ -307,7 +313,7 @@ export function PracticePanel({
             value={embedId}
             onChange={(e) => setEmbedId(e.target.value.trim())}
             placeholder="例: dQw4w9WgXcQ（URLの v= の後ろ）"
-            className="mt-1 w-full rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-sm"
+            className="mt-1 min-h-11 w-full rounded border border-zinc-700 bg-zinc-900 px-2 py-1 text-base sm:text-sm"
           />
         </Panel>
 
@@ -330,14 +336,14 @@ export function PracticePanel({
             value={lyrics}
             onChange={(e) => setLyrics(e.target.value)}
             rows={8}
-            className="w-full rounded border border-zinc-700 bg-zinc-900 p-3 text-sm"
+            className="w-full rounded border border-zinc-700 bg-zinc-900 p-3 text-base sm:text-sm"
             placeholder="生成した歌詞 or 自分のラップを貼る"
           />
           <button
             type="button"
             onClick={analyze}
             disabled={loading || !lyrics.trim()}
-            className="mt-2 rounded-lg bg-amber-500 px-4 py-2 text-sm font-medium text-black disabled:opacity-50"
+            className="mt-2 min-h-11 w-full rounded-lg bg-amber-500 px-4 py-2 text-sm font-medium text-black disabled:opacity-50 sm:w-auto"
           >
             {loading ? "解析中…" : "韻 + 歌い方を解析"}
           </button>
@@ -375,8 +381,8 @@ function Panel({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-5">
-      <h2 className="mb-3 text-lg font-semibold">{title}</h2>
+    <div className="min-w-0 rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 sm:p-5">
+      <h2 className="mb-3 text-base font-semibold sm:text-lg">{title}</h2>
       {children}
     </div>
   );

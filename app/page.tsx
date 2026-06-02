@@ -202,21 +202,23 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
-      <header className="border-b border-zinc-800 px-6 py-5">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-end justify-between gap-4">
-          <div>
+      <header className="border-b border-zinc-800 px-4 py-4 sm:px-6 sm:py-5">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between sm:gap-4">
+          <div className="min-w-0">
             <p className="text-xs uppercase tracking-[0.2em] text-amber-400">
               ラップスター
             </p>
-            <h1 className="text-2xl font-bold">アーティスト解析 & リリック制作</h1>
-            <p className="mt-1 text-sm text-zinc-400">
+            <h1 className="mt-1 text-xl font-bold leading-tight sm:text-2xl">
+              アーティスト解析 & リリック制作
+            </h1>
+            <p className="mt-1 text-xs leading-relaxed text-zinc-400 sm:text-sm">
               歌詞から韻・フロー・歌い方を分析し、統計的特徴を使って歌詞を生成。ビートに乗って練習できます
             </p>
           </div>
           <select
             value={slug}
             onChange={(e) => changeArtist(e.target.value)}
-            className="rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm"
+            className="min-h-11 w-full rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 text-base sm:w-auto sm:text-sm"
           >
             {artists.map((a) => (
               <option key={a.slug} value={a.slug}>
@@ -230,7 +232,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      <nav className="mx-auto flex max-w-6xl gap-2 px-6 pt-4">
+      <nav className="no-scrollbar mx-auto flex max-w-6xl gap-2 overflow-x-auto px-4 pt-3 pb-1 sm:px-6 sm:pt-4">
         {(
           [
             ["profile", "プロファイル"],
@@ -243,7 +245,7 @@ export default function HomePage() {
             key={id}
             type="button"
             onClick={() => setTab(id)}
-            className={`rounded-full px-4 py-2 text-sm ${
+            className={`min-h-10 shrink-0 whitespace-nowrap rounded-full px-3 py-2 text-xs sm:px-4 sm:text-sm ${
               tab === id
                 ? "bg-amber-500 text-black font-medium"
                 : "bg-zinc-900 text-zinc-300 hover:bg-zinc-800"
@@ -254,7 +256,7 @@ export default function HomePage() {
         ))}
       </nav>
 
-      <main className="mx-auto max-w-6xl px-6 py-6">
+      <main className="mx-auto max-w-6xl px-4 py-4 sm:px-6 sm:py-6">
         {tab === "profile" && (
           <section className="space-y-6">
             {profileLoading && (
@@ -263,7 +265,7 @@ export default function HomePage() {
             {profileError && <p className="text-red-400">{profileError}</p>}
             {profile && (
               <>
-                <div className="grid gap-4 md:grid-cols-3">
+                <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
                   <StatCard label="曲数" value={String(profile.songCount)} />
                   <StatCard
                     label="平均モーラ/行"
@@ -366,28 +368,28 @@ export default function HomePage() {
                 onChange={(e) => setLyrics(e.target.value)}
                 rows={14}
                 placeholder="解析したい歌詞を貼り付け…"
-                className="w-full rounded-lg border border-zinc-700 bg-zinc-900 p-3 text-sm"
+                className="w-full rounded-lg border border-zinc-700 bg-zinc-900 p-3 text-base sm:text-sm"
               />
               <button
                 type="button"
                 onClick={runAnalyze}
                 disabled={analyzeLoading || !lyrics.trim()}
-                className="mt-3 rounded-lg bg-amber-500 px-4 py-2 text-sm font-medium text-black disabled:opacity-50"
+                className="mt-3 min-h-11 w-full rounded-lg bg-amber-500 px-4 py-2 text-sm font-medium text-black disabled:opacity-50 sm:w-auto"
               >
                 {analyzeLoading ? "解析中…" : "韻・フローを解析"}
               </button>
 
-              <div className="mt-4 flex gap-2">
+              <div className="mt-4 flex flex-col gap-2 sm:flex-row">
                 <input
                   value={rhymeQuery}
                   onChange={(e) => setRhymeQuery(e.target.value)}
                   placeholder="韻を踏みたい語（例: フロー）"
-                  className="flex-1 rounded border border-zinc-700 bg-zinc-900 px-3 py-2 text-sm"
+                  className="min-h-11 flex-1 rounded border border-zinc-700 bg-zinc-900 px-3 py-2 text-base sm:text-sm"
                 />
                 <button
                   type="button"
                   onClick={runRhymes}
-                  className="rounded bg-zinc-800 px-3 py-2 text-sm"
+                  className="min-h-11 rounded bg-zinc-800 px-3 py-2 text-sm"
                 >
                   韻候補を探す
                 </button>
@@ -397,14 +399,22 @@ export default function HomePage() {
                   <p className="text-xs text-zinc-500">
                     「{rhymeQuery}」と踏める3〜6音節の母音韻（{formatVowelTail(rhymeTail)}）:
                   </p>
-                  <p className="mt-1">
-                    {rhymes
-                      .map(
-                        (r) =>
-                          `${r.word}${r.reading ? `(${r.reading})` : ""} [${r.vowelKey} / ${r.syllables}音節 / ${r.matchRate}%]`,
-                      )
-                      .join("、")}
-                  </p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {rhymes.map((r) => (
+                      <span
+                        key={`${r.word}-${r.reading ?? ""}`}
+                        className="max-w-full rounded-lg border border-zinc-800 bg-zinc-900 px-2 py-1 text-xs"
+                      >
+                        <span className="break-all text-zinc-200">
+                          {r.word}
+                          {r.reading ? `（${r.reading}）` : ""}
+                        </span>
+                        <span className="ml-1 whitespace-nowrap text-zinc-500">
+                          {r.vowelKey} · {r.syllables}音 · {r.matchRate}%
+                        </span>
+                      </span>
+                    ))}
+                  </div>
                 </div>
               )}
             </Panel>
@@ -434,7 +444,7 @@ export default function HomePage() {
               <select
                 value={mainTheme}
                 onChange={(e) => setMainTheme(e.target.value)}
-                className="mb-3 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
+                className="mb-3 min-h-11 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2 text-base sm:text-sm"
               >
                 {MAIN_THEME_CATEGORIES.map((t) => (
                   <option key={t} value={t}>
@@ -455,7 +465,7 @@ export default function HomePage() {
                         setMainTheme(p.mainTheme);
                         setSubTheme(p.subTheme);
                       }}
-                      className="rounded bg-zinc-800 px-2 py-1 text-xs hover:bg-zinc-700"
+                      className="min-h-9 rounded bg-zinc-800 px-2 py-1 text-xs hover:bg-zinc-700"
                     >
                       {p.label}
                     </button>
@@ -466,7 +476,7 @@ export default function HomePage() {
                 value={subTheme}
                 onChange={(e) => setSubTheme(e.target.value)}
                 placeholder="例: Gangに愛はない。仲間に見せたい drama"
-                className="mb-4 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
+                className="mb-4 min-h-11 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2 text-base sm:text-sm"
               />
               <label className="mb-1 block text-sm text-zinc-400">
                 テンポ（BPM）: {bpm}
@@ -485,7 +495,7 @@ export default function HomePage() {
                 onChange={(e) =>
                   setGenerateFormat(e.target.value as "bars" | "full")
                 }
-                className="mb-4 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
+                className="mb-4 min-h-11 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2 text-base sm:text-sm"
               >
                 <option value="full">曲全体（Intro / Verse / Hook…）</option>
                 <option value="bars">一部だけ（4 / 8 / 16 小節）</option>
@@ -496,7 +506,7 @@ export default function HomePage() {
               <select
                 value={learningMode}
                 onChange={(e) => setLearningMode(e.target.value as LearningModeId)}
-                className="mb-1 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
+                className="mb-1 min-h-11 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2 text-base sm:text-sm"
               >
                 {LEARNING_MODES.map((mode) => (
                   <option key={mode.id} value={mode.id}>
@@ -515,7 +525,7 @@ export default function HomePage() {
                     onChange={(e) =>
                       setBars(Number(e.target.value) as 4 | 8 | 16)
                     }
-                    className="mb-4 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2"
+                    className="mb-4 min-h-11 w-full rounded border border-zinc-700 bg-zinc-900 px-3 py-2 text-base sm:text-sm"
                   >
                     <option value={4}>4小節（約4行）</option>
                     <option value={8}>8小節（約8行）</option>
@@ -542,7 +552,7 @@ export default function HomePage() {
                 type="button"
                 onClick={runGenerate}
                 disabled={generateLoading}
-                className="rounded-lg bg-amber-500 px-4 py-2 font-medium text-black disabled:opacity-50"
+                className="min-h-12 w-full rounded-lg bg-amber-500 px-4 py-2 font-medium text-black disabled:opacity-50 sm:w-auto"
               >
                 {generateLoading
                   ? generateFormat === "full"
@@ -580,18 +590,18 @@ export default function HomePage() {
               )}
               {generated ? (
                 <>
-                  <div className="mb-3 flex flex-wrap gap-2">
+                  <div className="mb-3 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
                     <button
                       type="button"
                       onClick={() => setShowReadingView(true)}
-                      className={`rounded px-3 py-1 text-xs ${showReadingView ? "bg-sky-900/60 text-sky-200" : "bg-zinc-800 text-zinc-400"}`}
+                      className={`min-h-9 rounded px-3 py-1 text-xs ${showReadingView ? "bg-sky-900/60 text-sky-200" : "bg-zinc-800 text-zinc-400"}`}
                     >
                       読み仮名付き
                     </button>
                     <button
                       type="button"
                       onClick={() => setShowReadingView(false)}
-                      className={`rounded px-3 py-1 text-xs ${!showReadingView ? "bg-zinc-700 text-zinc-200" : "bg-zinc-800 text-zinc-400"}`}
+                      className={`min-h-9 rounded px-3 py-1 text-xs ${!showReadingView ? "bg-zinc-700 text-zinc-200" : "bg-zinc-800 text-zinc-400"}`}
                     >
                       歌詞のみ
                     </button>
@@ -599,7 +609,7 @@ export default function HomePage() {
                       <button
                         type="button"
                         onClick={() => navigator.clipboard.writeText(lyricsWithReading)}
-                        className="rounded bg-zinc-800 px-3 py-1 text-xs text-zinc-300 hover:bg-zinc-700"
+                        className="col-span-2 min-h-9 rounded bg-zinc-800 px-3 py-1 text-xs text-zinc-300 hover:bg-zinc-700"
                       >
                         読み仮名付きでコピー
                       </button>
@@ -608,7 +618,7 @@ export default function HomePage() {
                   {showReadingView && annotatedLines.length > 0 ? (
                     <LyricsReadingView lines={annotatedLines} />
                   ) : (
-                    <pre className="whitespace-pre-wrap text-sm leading-relaxed text-zinc-200">
+                    <pre className="whitespace-pre-wrap break-all text-sm leading-relaxed text-zinc-200">
                       {generated}
                     </pre>
                   )}
@@ -620,7 +630,7 @@ export default function HomePage() {
                 <button
                   type="button"
                   onClick={() => setTab("practice")}
-                  className="mt-4 rounded-lg bg-zinc-800 px-4 py-2 text-sm hover:bg-zinc-700"
+                  className="mt-4 min-h-11 w-full rounded-lg bg-zinc-800 px-4 py-2 text-sm hover:bg-zinc-700 sm:w-auto"
                 >
                   ビート乗り練習へ →
                 </button>
@@ -646,9 +656,9 @@ export default function HomePage() {
 
 function StatCard({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-4">
+    <div className="min-w-0 rounded-xl border border-zinc-800 bg-zinc-900/60 p-3 sm:p-4">
       <p className="text-xs text-zinc-500">{label}</p>
-      <p className="mt-1 text-2xl font-semibold">{value}</p>
+      <p className="mt-1 break-words text-lg font-semibold sm:text-2xl">{value}</p>
     </div>
   );
 }
@@ -661,8 +671,8 @@ function Panel({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-5">
-      <h2 className="mb-3 text-lg font-semibold">{title}</h2>
+    <div className="min-w-0 rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 sm:p-5">
+      <h2 className="mb-3 text-base font-semibold sm:text-lg">{title}</h2>
       {children}
     </div>
   );
