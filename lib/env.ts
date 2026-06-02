@@ -1,10 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
 
-/** rapstar ルートの .env を web から読み込む（Vercel ではダッシュボードの環境変数を使用） */
+/** ルートの .env を読み込む（Vercel ではダッシュボードの環境変数を使用） */
 export function loadRootEnv(): void {
   if (process.env.VERCEL) return;
-  const envPath = path.join(process.cwd(), "..", ".env");
+  const envPath = path.join(process.cwd(), ".env");
   if (!fs.existsSync(envPath)) return;
 
   const content = fs.readFileSync(envPath, "utf-8");

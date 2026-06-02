@@ -4,5 +4,5 @@ __pycache__/
 *.pyc
 .cursor/
 .vercel/
-web/node_modules/
-web/.next/
+node_modules/
+.next/
