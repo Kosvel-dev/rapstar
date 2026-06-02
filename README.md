@@ -43,6 +43,10 @@ uv run python scripts/fetch_genius_lyrics.py --preset pxrge-trxxxper
 
 ## デプロイ
 
-Vercel の **Root Directory** を `web` に設定してください。
+- **GitHub**: https://github.com/Kosvel-dev/rapstar
+- **本番 URL**: https://web-three-blush-26.vercel.app
 
-GitHub 連携後、上記の環境変数を Vercel ダッシュボードで設定します。
+Vercel プロジェクト `web` に GitHub 連携済みです。  
+Vercel ダッシュボード → Project Settings → **Root Directory** を `web` に設定してください（Git push 時の自動デプロイ用）。
+
+環境変数は Vercel ダッシュボード（または `vercel env`）で設定します。
